@@ -1,8 +1,8 @@
 # cucumber-html-reporter
-Generate Cucumber HTML reports from JSON.
+Generate Cucumber HTML reports with pie charts
 > Available HTML themes: `['bootstrap', 'foundation', 'simple']`
 
-## Sample HTML Reports:
+## Sample HTML Reports
 
 1. [Bootstrap Theme Reports with Pie Chart][3]
 2. [Foundation Theme Reports][4]
@@ -16,12 +16,14 @@ npm install cucumber-html-reporter --save-dev
 
 ## Usage
 
+Example `bootstrap` theme:
+
 ``` bash
 
 var reporter = require('cucumber-html-reporter');
 
 var options = {
-        theme: 'bootstrap', //available themes: ['bootstrap', 'foundation', 'simple']
+        theme: 'bootstrap',
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
         reportSuiteAsScenarios: true
@@ -32,26 +34,26 @@ var options = {
 
 ## Options
 
-1. `theme`
+#### `theme`
 Available: `['bootstrap', 'foundation', 'simple']`
 Type: `String`
 
 Select the Theme for HTML report.
 
 
-2. `jsonFile`
+#### `jsonFile`
 Type: `String`
 
 Provide path of the Cucumber JSON format file
 
 
-3. `output`
+#### `output`
 Type: `String`
 
 Provide HTML output file path and name
 
 
-4. `reportSuiteAsScenarios`
+#### `reportSuiteAsScenarios`
 Type: `Boolean`
 Supported in the Bootstrap theme. 
 
