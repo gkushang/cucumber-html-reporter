@@ -1,7 +1,7 @@
 cucumber-html-reporter
 ======================
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![Join the chat at https://gitter.im/paypal/nemo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/paypal/cucumber-html-reporter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)]
 
 Generate Cucumber HTML reports with pie charts
 > Available HTML themes: `['bootstrap', 'foundation', 'simple']`
