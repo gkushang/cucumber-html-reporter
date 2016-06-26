@@ -16,7 +16,7 @@ Feature: Unhappy HTML reporting
   Scenario: Fred wants to see if steps are pending in the HTML report
     Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
     When he left one of the step as a pending
-    Then cucumber-html-reporter should create HTML report with pending step/snippets
+    Then cucumber-html-reporter should report pending step in HTML report
 
   @undefinedStep
   Scenario: Fred wants to see if steps are undefined on the HTML report

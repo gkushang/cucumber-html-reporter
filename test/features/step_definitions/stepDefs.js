@@ -28,8 +28,14 @@ var stepDefs = function stepDefs() {
     });
     
     this.Then(/^he left one of the step as a pending$/, function(callback) {
+        callback(null, 'pending');
+
+    });
+
+    this.Then(/^cucumber-html-reporter should report pending step in HTML report$/, function(callback) {
         callback();
     });
+    
     
     this.Then(/^the output should contain the skipped steps in the HTML pie chart$/, function(callback) {
         callback();
