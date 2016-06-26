@@ -37,35 +37,6 @@ var options = {
     reporter.generate(options);
 ```
 
-
-``` bash
-
-var reporter = require('cucumber-html-reporter');
-
-var hooks = function() {
-    ...
-    ...
-    ...
-    
-    this.registerHandler('AfterFeatures', function (features, callback) {
-        var options = {
-                theme: 'bootstrap',
-                output: 'test/report/cucumber_report.html',
-                jsonFile: 'test/report/cucumber_report.json',
-                reportSuiteAsScenarios: true
-            };
-
-        reporter.generate(options);
-        callback();
-    });
-    
-    ...
-    ...
-    ...
-};
-
-```
-
 ## Options
 
 #### `theme`
