@@ -1,2 +1,71 @@
 # cucumber-html-reporter
-Generate Cucumber HTML reports from JSON. Available HTML themes: ['bootstrap', 'foundation', 'simple']
+Generate Cucumber HTML reports from JSON.
+> Available HTML themes: `['bootstrap', 'foundation', 'simple']`
+
+## Sample HTML Reports:
+
+1. [Bootstrap Theme Reports with Pie Chart][3]
+2. [Foundation Theme Reports][4]
+3. [Simple Theme Reports][5]
+
+## Install
+
+``` bash
+npm install cucumber-html-reporter --save-dev
+```
+
+## Usage
+
+``` bash
+
+var reporter = require('cucumber-html-reporter');
+
+var options = {
+        theme: 'bootstrap', //available themes: ['bootstrap', 'foundation', 'simple']
+        jsonFile: 'test/report/cucumber_report.json',
+        output: 'test/report/cucumber_report.html',
+        reportSuiteAsScenarios: true
+    };
+
+    reporter.generate(options);
+```
+
+## Options
+
+1. `theme`
+Available: `['bootstrap', 'foundation', 'simple']`
+Type: `String`
+
+Select the Theme for HTML report.
+
+
+2. `jsonFile`
+Type: `String`
+
+Provide path of the Cucumber JSON format file
+
+
+3. `output`
+Type: `String`
+
+Provide HTML output file path and name
+
+
+4. `reportSuiteAsScenarios`
+Type: `Boolean`
+Supported in the Bootstrap theme. 
+
+`true`: Reports total number of passed/failed scenarios as HEADER.
+`false`: Reports total number of passed/failed features as HEADER.
+
+
+## Credits
+
+Credit goes to [grunt-cucumberjs][1] module for extracting the HTML Reporing part from the module. Thanks to all the contributors for making this available to the wider audience of [cucumber-js][2] community.
+
+[1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
+[2]: https://github.com/cucumber/cucumber-js "CucumberJs"
+[3]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html "Bootstrap Theme Reports"
+[4]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-foundation.html "Foundation Theme Reports"
+[5]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-simple.html "Simple Theme Reports"
+
