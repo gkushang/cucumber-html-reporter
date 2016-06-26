@@ -64,7 +64,8 @@ Supported in the Bootstrap theme.
 
 ## Credits
 
-Credit goes to [grunt-cucumberjs][1] module for extracting the HTML Reporing part from the module. Thanks to all the contributors for making this available to the wider audience of [cucumber-js][2] community.
+Credit goes to [grunt-cucumberjs][1] module for developing pretty the HTML reporting. This HTML reporting part was extracted out of the grunt task from [grunt-cucumberjs][1]. 
+Thanks to all the contributors for making this available to the wider audience of [cucumber-js][2] community.
 
 [1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
 [2]: https://github.com/cucumber/cucumber-js "CucumberJs"
