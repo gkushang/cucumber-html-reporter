@@ -1,2 +1,2 @@
 # cucumber-html-reporter
-Generates Cucumber HTML reports in three different themes
+Generate Cucumber HTML reports from JSON. Available HTML themes: ['bootstrap', 'foundation', 'simple']
