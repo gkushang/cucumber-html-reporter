@@ -2,6 +2,8 @@
 Generate Cucumber HTML reports with pie charts
 > Available HTML themes: `['bootstrap', 'foundation', 'simple']`
 
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter)
+
 ## Sample HTML Reports
 
 1. [Bootstrap Theme Reports with Pie Chart][3]

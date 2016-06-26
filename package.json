@@ -10,7 +10,6 @@
   "scripts": {
     "test": "npm run features",
     "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json",
-    "assert": "node test/features/assert/assertReport.js"
   },
   "devDependencies": {
     "cucumber": "^1.2.0"
