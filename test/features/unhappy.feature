@@ -8,24 +8,24 @@ Feature: Unhappy HTML reporting
   @attachScreenshot
   Scenario: Fred wants to see a Screenshot attached to the HTML report
     Given Fred runs a failing cucumber scenario
-    When he choose "html" output as one of the formatter
+    When he has the JSON cucumber formatted file at the end of run
     And a failing scenario captures a screenshot
-    Then the output should contain test results with screenshot in HTML format
+    Then cucumber-html-reporter should create HTML report with Screenshot
 
   @pendingStep
   Scenario: Fred wants to see if steps are pending in the HTML report
     Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
     When he left one of the step as a pending
-    Then the output should contain the pending test in the HTML pie chart
+    Then cucumber-html-reporter should create HTML report with pending step/snippets
 
   @undefinedStep
   Scenario: Fred wants to see if steps are undefined on the HTML report
     Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
     When he left this step as a undefined
-    Then the output should contain the undefined steps in the HTML pie chart
+    Then cucumber-html-reporter should create undefined step in HTML report
 
   @skippedStep
   Scenario: Fred wants to see if steps are skipped on the HTML report
     Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
     When he left this step as a pending
-    Then the output should contain the skipped steps in the HTML pie chart
+    Then cucumber-html-reporter should create HTML report with skipped step
