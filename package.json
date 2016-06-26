@@ -7,9 +7,13 @@
     "name": "kushang gajjar",
     "email": "g.kushang@gmail.com"
   },
+  "contributors": [{
+    "name": "grunt-cucumberjs",
+    "url": "https://www.npmjs.com/package/grunt-cucumberjs"
+  }],
   "scripts": {
     "test": "npm run features",
-    "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json",
+    "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json"
   },
   "devDependencies": {
     "cucumber": "^1.2.0"
@@ -36,7 +40,6 @@
     "fs": "0.0.2",
     "js-base64": "^2.1.9",
     "jsonfile": "^2.3.1",
-    "lodash": "^4.13.1",
-    "underscore": "^1.8.3"
+    "lodash": "^4.13.1"
   }
 }

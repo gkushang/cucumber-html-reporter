@@ -1,4 +1,4 @@
-Feature: Happy HTML reporting with cucumber-parallel executions
+Feature: Happy HTML reporting
 
   In order to review cucumber reports
   Fred, a cucumber user
@@ -10,14 +10,14 @@ Feature: Happy HTML reporting with cucumber-parallel executions
   @testPassing
   Scenario: Fred wants to see passing scenarios in the HTML report
     Given Fred runs a passing cucumber scenario
-    When he choose "html" output as one of the formatter
-    Then the output should contain test results in HTML format
+    When he has the JSON cucumber formatted file at the end of run
+    Then cucumber-html-reporter should create HTML report
 
   @testScenarioOutline
   Scenario Outline: Fred wants to run scenario outline and print on HTML report
     Given Fred runs a passing cucumber scenario on behalf of "<name>"
-    When he choose "html" output as one of the formatter
-    Then the output should contain test results in HTML format
+    When he has the JSON cucumber formatted file at the end of run
+    Then cucumber-html-reporter should create HTML report
 
     Examples:
       | name |
@@ -27,8 +27,8 @@ Feature: Happy HTML reporting with cucumber-parallel executions
   @testAttachDebugData
   Scenario: Fred wants to print test data in the HTML reports for debugging purpose
     Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
-    When he choose "html" output as one of the formatter
-    Then the output should contain test data attached to the Given step in HTML format
+    When he has the JSON cucumber formatted file at the end of run
+    Then cucumber-html-reporter should create HTML report with test-data
 
 
   @testDataTable
@@ -37,5 +37,5 @@ Feature: Happy HTML reporting with cucumber-parallel executions
       | id | name   |
       | 1  | data-A |
       | 2  | data-B |
-    When he choose "html" output as one of the formatter
-    Then the output should contain data table attached in HTML format
+    When he has the JSON cucumber formatted file at the end of run
+    Then cucumber-html-reporter should create HTML report with data-table
