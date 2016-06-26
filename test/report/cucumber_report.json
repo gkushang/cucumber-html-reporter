@@ -13,7 +13,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 2938622
+              "duration": 2337069
             },
             "hidden": true,
             "match": {
@@ -26,7 +26,7 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 280038
+              "duration": 270092
             },
             "line": 8,
             "match": {
@@ -39,7 +39,7 @@
             "name": "Fred runs a passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 250469
+              "duration": 165728
             },
             "line": 12,
             "match": {
@@ -52,7 +52,7 @@
             "name": "he has the JSON cucumber formatted file at the end of run",
             "result": {
               "status": "passed",
-              "duration": 149658
+              "duration": 133410
             },
             "line": 13,
             "match": {
@@ -65,7 +65,7 @@
             "name": "cucumber-html-reporter should create HTML report",
             "result": {
               "status": "passed",
-              "duration": 232983
+              "duration": 130462
             },
             "line": 14,
             "match": {
@@ -92,7 +92,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 460405
+              "duration": 227958
             },
             "hidden": true,
             "match": {
@@ -105,7 +105,7 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 92836
+              "duration": 87747
             },
             "line": 8,
             "match": {
@@ -118,7 +118,7 @@
             "name": "Fred runs a passing cucumber scenario on behalf of \"John\"",
             "result": {
               "status": "passed",
-              "duration": 121613
+              "duration": 117231
             },
             "line": 18,
             "match": {
@@ -131,7 +131,7 @@
             "name": "he has the JSON cucumber formatted file at the end of run",
             "result": {
               "status": "passed",
-              "duration": 88811
+              "duration": 95725
             },
             "line": 19,
             "match": {
@@ -144,7 +144,7 @@
             "name": "cucumber-html-reporter should create HTML report",
             "result": {
               "status": "passed",
-              "duration": 111847
+              "duration": 324225
             },
             "line": 20,
             "match": {
@@ -171,7 +171,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 123046
+              "duration": 197871
             },
             "hidden": true,
             "match": {
@@ -184,7 +184,7 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 133651
+              "duration": 90031
             },
             "line": 8,
             "match": {
@@ -197,7 +197,7 @@
             "name": "Fred runs a passing cucumber scenario on behalf of \"Bob\"",
             "result": {
               "status": "passed",
-              "duration": 91769
+              "duration": 88727
             },
             "line": 18,
             "match": {
@@ -210,7 +210,7 @@
             "name": "he has the JSON cucumber formatted file at the end of run",
             "result": {
               "status": "passed",
-              "duration": 89816
+              "duration": 86390
             },
             "line": 19,
             "match": {
@@ -223,7 +223,7 @@
             "name": "cucumber-html-reporter should create HTML report",
             "result": {
               "status": "passed",
-              "duration": 136048
+              "duration": 128021
             },
             "line": 20,
             "match": {
@@ -250,7 +250,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 138488
+              "duration": 247581
             },
             "hidden": true,
             "match": {
@@ -263,7 +263,7 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 88387
+              "duration": 89996
             },
             "line": 8,
             "match": {
@@ -276,7 +276,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 329422
+              "duration": 330648
             },
             "line": 29,
             "embeddings": [
@@ -295,7 +295,7 @@
             "name": "he has the JSON cucumber formatted file at the end of run",
             "result": {
               "status": "passed",
-              "duration": 86720
+              "duration": 104947
             },
             "line": 30,
             "match": {
@@ -308,7 +308,7 @@
             "name": "cucumber-html-reporter should create HTML report with test-data",
             "result": {
               "status": "passed",
-              "duration": 258112
+              "duration": 92618
             },
             "line": 31,
             "match": {
@@ -335,7 +335,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 137013
+              "duration": 135080
             },
             "hidden": true,
             "match": {
@@ -348,7 +348,7 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 98388
+              "duration": 87559
             },
             "line": 8,
             "match": {
@@ -384,7 +384,7 @@
             "name": "Fred runs a passing scenario for the following data set",
             "result": {
               "status": "passed",
-              "duration": 199784
+              "duration": 164549
             },
             "line": 36,
             "match": {
@@ -397,7 +397,7 @@
             "name": "he has the JSON cucumber formatted file at the end of run",
             "result": {
               "status": "passed",
-              "duration": 242730
+              "duration": 99262
             },
             "line": 40,
             "match": {
@@ -410,7 +410,7 @@
             "name": "cucumber-html-reporter should create HTML report with data-table",
             "result": {
               "status": "passed",
-              "duration": 123893
+              "duration": 90263
             },
             "line": 41,
             "match": {
@@ -448,7 +448,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 157143
+              "duration": 140237
             },
             "hidden": true,
             "match": {
@@ -461,7 +461,7 @@
             "name": "Fred runs a failing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 148098
+              "duration": 116226
             },
             "line": 10,
             "match": {
@@ -474,7 +474,7 @@
             "name": "he has the JSON cucumber formatted file at the end of run",
             "result": {
               "status": "passed",
-              "duration": 451225
+              "duration": 101031
             },
             "line": 11,
             "match": {
@@ -487,7 +487,7 @@
             "name": "a failing scenario captures a screenshot",
             "result": {
               "status": "passed",
-              "duration": 542681
+              "duration": 1795724
             },
             "line": 12,
             "embeddings": [
@@ -506,7 +506,7 @@
             "name": "cucumber-html-reporter should create HTML report with Screenshot",
             "result": {
               "status": "passed",
-              "duration": 100353
+              "duration": 111211
             },
             "line": 13,
             "match": {
@@ -533,7 +533,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 123623
+              "duration": 123263
             },
             "hidden": true,
             "match": {
@@ -546,7 +546,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 147536
+              "duration": 116514
             },
             "line": 17,
             "embeddings": [
@@ -565,7 +565,7 @@
             "name": "he left one of the step as a pending",
             "result": {
               "status": "passed",
-              "duration": 115215
+              "duration": 168736
             },
             "line": 18,
             "match": {
@@ -578,7 +578,7 @@
             "name": "cucumber-html-reporter should create HTML report with pending step/snippets",
             "result": {
               "status": "passed",
-              "duration": 241110
+              "duration": 131310
             },
             "line": 19,
             "match": {
@@ -605,7 +605,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 338112
+              "duration": 124409
             },
             "hidden": true,
             "match": {
@@ -618,7 +618,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 135517
+              "duration": 126049
             },
             "line": 23,
             "embeddings": [
@@ -669,7 +669,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 120499
+              "duration": 227751
             },
             "hidden": true,
             "match": {
@@ -682,7 +682,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 102276
+              "duration": 98443
             },
             "line": 29,
             "embeddings": [

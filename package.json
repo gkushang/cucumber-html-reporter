@@ -7,6 +7,10 @@
     "name": "kushang gajjar",
     "email": "g.kushang@gmail.com"
   },
+  "contributors": [{
+    "name": "grunt-cucumberjs",
+    "url": "https://www.npmjs.com/package/grunt-cucumberjs"
+  }],
   "scripts": {
     "test": "npm run features",
     "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json"
