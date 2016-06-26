@@ -1,0 +1,121 @@
+<% _.each(suite.features, function(feature, featureIndex) { %>
+<% if (featureIndex === 0 || featureIndex % 2 === 0) { %>
+<div class="row">
+<% } %>
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapseFeature<%= featureIndex %>">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <b><%= feature.keyword %>:</b><%= feature.name %>
+            <span class="label-container">
+              <% if (feature.scenarios.passed) { %><span class="label label-success"><%= feature.scenarios.passed %></span><% } %>
+              <% if (feature.scenarios.failed) { %><span class="label label-danger"><%= feature.scenarios.failed %></span><% } %>
+              <% if (feature.scenarios.notdefined) { %><span class="label label-info"><%= feature.scenarios.notdefined %></span><% } %>
+              <% if (feature.scenarios.skipped) { %><span class="label label-warning"><%= feature.scenarios.skipped %></span><% } %>
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFeature<%= featureIndex %>" class="panel-collapse collapse">
+        <div class="panel-body">
+          <% _.each(feature.elements, function(element, scenarioIndex) { %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %><%=scenarioIndex %>">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b><%= element.keyword %>:</b><%= element.name %>
+                    <span class="label-container">
+                      <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
+                      <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
+                      <% if (element.skipped) { %><span class="label label-warning" title="Skipped"><%= element.skipped %></span><% } %>
+                      <% if (element.failed) { %><span class="label label-danger" title="Failed"><%= element.failed %></span><% } %>
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario<%= featureIndex %><%= scenarioIndex %>" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <% _.each(element.steps, function(step, stepIndex) { %>
+                    <p class="scenario-container">
+                    <% if(step.result) { %>
+                      <% if(step.result.status === 'passed') { %>
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      <% } else if(step.result.status === 'failed') { %>
+                        <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
+                      <% } else if(step.result.status === 'skipped') { %>
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      <% } else { %>
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      <% } %>
+                    <% } %>
+                      <span class="text">
+                        <span class="keyword highlight"><%= step.keyword %></span>
+                        <%= step.name %>
+                         <% if(step.arguments) { %>
+                            <% for( var i = 0; i < step.arguments.length; i++ ) { %>
+                              <table class="arguments">
+                                <% var rows = step.arguments[i]["rows"]; %>
+                                <% for( var j = 0; j < rows.length; j++ ) { %>
+                                  <tr>
+                                  <% var cells = rows[j]["cells"]; %>
+                                  <% for( var k = 0; k < cells.length; k++ ) { %>
+                                    <td>
+                                      <%= cells[k] %>
+                                    </td>
+                                  <% } %>
+                                  </tr>
+                                <% } %>
+                              </table>
+                            <% } %>
+                          <% } %>
+                      </span>
+                    <% if(step.result) { %>
+                      <% if(step.result.status === 'undefined') { %>
+                        <pre>
+this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function(<% for (var i=1; i<(step.name.split('"').length / 2); i++) { %>arg<%= i %>, <% } %>callback) {
+  callback.pending();
+});
+                        </pre>
+                      <% } %>
+
+                      <% if (step.result.error_message) { %>
+                        <a href="#error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Error</a>
+                        <div id="error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
+                          <%= step.result.error_message %>
+                        </div>
+                      <% } %>
+
+                      <% if (step.text) { %>
+                           <a href="#info<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Info</a>
+                           <div id="info<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
+                             <%= step.text %>
+                           </div>
+                      <% } %>
+
+                       <% if (step.image) { %>
+                                                <a class="toggle" href="#">Screenshot -</a>
+                                                <a class="screenshot" href="<%= step.image %>">
+                                                 <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
+                                                 </a>
+                       <% } %>
+
+                    <% } %>
+                    </p>
+                  <% }); %>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% if ((featureIndex != 0 && ((featureIndex + 1) % 2 == 0)) || (featureIndex === (suite.features.length -1))) { %>
+</div>
+  <% } %>
+<% }); %>

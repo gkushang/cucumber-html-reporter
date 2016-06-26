@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style type="text/css">
+      <%= styles %>
+    </style>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Cucumberjs Report</a>
+          <div class="project-name visible-md visible-lg"><%= suite.name %></div>
+          <div class="label-container">
+            <span class="label label-success">Passed: <%= suite.passed %></span>
+            <span class="label label-danger">Failed: <%= suite.failed %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on"><%= suite.time %></div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      <%= features %>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : <%= suite.features.summary.failed %>,
+                                                            "passed" : <%= suite.features.summary.passed %>
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : <%= suite.scenarios.failed %>,
+                                                            "passed" : <%= suite.scenarios.passed %>,
+                                                            "notdefined" : <%= suite.scenarios.notdefined %>,
+                                                            "skipped" : <%= suite.scenarios.skipped %>
+                                                        })
+                                            });
+    </script>
+    <script>
+      <%= script %>
+      <%= piechart %>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "cucumber-html-reporter",
+  "version": "0.1.0",
+  "description": "Generates Cucumber HTML reports in three different themes",
+  "main": "index.js",
+  "author": {
+    "name": "kushang gajjar",
+    "email": "g.kushang@gmail.com"
+  },
+  "scripts": {
+    "test": "npm run features",
+    "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json",
+    "assert": "node test/features/assert/assertReport.js"
+  },
+  "devDependencies": {
+    "cucumber": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkushang/cucumber-html-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gkushang/cucumber-html-reporter/issues",
+    "email": "g.kushang@gmail.com"
+  },
+  "keywords": [
+    "cucumber",
+    "html",
+    "cucumber-html-reporter",
+    "html report",
+    "json to html"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
+  "dependencies": {
+    "commondir": "^1.0.1",
+    "fs": "0.0.2",
+    "js-base64": "^2.1.9",
+    "jsonfile": "^2.3.1",
+    "lodash": "^4.13.1",
+    "underscore": "^1.8.3"
+  }
+}

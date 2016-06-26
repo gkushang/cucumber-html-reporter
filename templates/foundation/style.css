@@ -1,0 +1,16 @@
+p {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+header {
+  background-color: #2ba6cb;
+  padding: 22px 0;
+}
+
+header h1, 
+header h4   { color: #fff !important; }
+header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.right-col  { text-align: right; }
+
+.highlight { color: #5EC7E5; }

@@ -1,0 +1,76 @@
+.panel-heading {
+  padding: 0;
+}
+.panel-heading a {
+  padding: 10px 15px;
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.panel-heading i.glyphicon-chevron-down {
+  display: none;
+}
+.panel-heading i.glyphicon-chevron-right {
+  display: inline-block;
+}
+.panel-heading.open i.glyphicon-chevron-down {
+  display: inline-block;
+}
+.panel-heading.open i.glyphicon-chevron-right {
+  display: none;
+}
+.generated-on {
+  text-align: right;
+  padding-bottom: 10px;
+}
+.panel-title b {
+  padding-right: 10px;
+}
+.panel-heading .label-container {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.panel-heading .label-container label {
+  margin-left: 5px;
+  padding: 5px;
+}
+.navbar .label-container {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+.navbar {
+  margin-bottom: 10px;
+}
+.navbar .label {
+  font-size: 20px;
+}
+.navbar .project-name {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chart {
+  padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+  fill: #f5f5f5;
+}
+
+table.arguments {
+  margin-left: 20px;
+}
+
+table.arguments td {
+  border: 1px;
+  border-style: solid;
+  padding-left: 4px;
+  padding-right: 4px;
+}
