@@ -2,1069 +2,1566 @@
 <html>
   <head>
     <title>Cucumber Feature Report</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.3.2/css/foundation.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <style type="text/css">
-      p {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      .panel-heading {
+  padding: 0;
+}
+.panel-heading a {
+  padding: 10px 15px;
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.panel-heading i.glyphicon-chevron-down {
+  display: none;
+}
+.panel-heading i.glyphicon-chevron-right {
+  display: inline-block;
+}
+.panel-heading.open i.glyphicon-chevron-down {
+  display: inline-block;
+}
+.panel-heading.open i.glyphicon-chevron-right {
+  display: none;
+}
+.generated-on {
+  text-align: right;
+  padding-bottom: 10px;
+}
+.panel-title b {
+  padding-right: 10px;
+}
+.panel-heading .label-container {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.panel-heading .label-container label {
+  margin-left: 5px;
+  padding: 5px;
+}
+.navbar .label-container {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+.navbar {
+  margin-bottom: 10px;
+}
+.navbar .label {
+  font-size: 20px;
+}
+.navbar .project-name {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-header {
-  background-color: #2ba6cb;
-  padding: 22px 0;
+.chart {
+  padding-bottom: 15px;
 }
 
-header h1, 
-header h4   { color: #fff !important; }
-header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; -webkit-font-smoothing: antialiased; }
+div.chart div div svg rect {
+  fill: #f5f5f5;
+}
 
-.right-col  { text-align: right; }
+table.arguments {
+  margin-left: 20px;
+}
 
-.highlight { color: #5EC7E5; }
+table.arguments td {
+  border: 1px;
+  border-style: solid;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 
     </style>
   </head>
   <body>
-    <header>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Cucumberjs Report</a>
+          <div class="project-name visible-md visible-lg">cucumber-html-reporter</div>
+          <div class="label-container">
+            <span class="label label-success">Passed: 6</span>
+            <span class="label label-danger">Failed: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Sun Jun 26 2016 15:05:26 GMT-0400 (EDT)</div>
+
       <div class="row">
-        <div class="large-6 columns">
-          <h1 class="subheader">cucumber-html-reporter</h1>
-          <h4 class="subheader">Feature tests</h4>
-        </div>
-        <div class="large-6 columns right-col">
-          <h1 class="subheader">0.1.0</h1>
-          <h4 id="buildTime" class="subheader">Sun Jun 26 2016 14:33:43 GMT-0400 (EDT)</h4>
-        </div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
       </div>
-    </header>
-    <br /><br />
 
-    
-<div class="row">
-  <div class="large-12 columns">
-
-    <h3 class="subheader"><span class="highlight">Feature: </span>Happy HTML reporting with cucumber-parallel executions</h3>
-    <p class="subheader">  In order to review cucumber reports<br />  Fred, a cucumber user<br />  Wants to have cucumber reports in HTML</p>
-    <br />
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to see passing scenarios in the HTML report 
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> this feature runs with background</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred runs a passing cucumber scenario</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he choose "html" output as one of the formatter</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain test results in HTML format</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to run scenario outline and print on HTML report 
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> this feature runs with background</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred runs a passing cucumber scenario on behalf of "John"</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he choose "html" output as one of the formatter</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain test results in HTML format</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to run scenario outline and print on HTML report 
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> this feature runs with background</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred runs a passing cucumber scenario on behalf of "Bob"</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he choose "html" output as one of the formatter</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain test results in HTML format</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to print test data in the HTML reports for debugging purpose 
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> this feature runs with background</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-             <a href="#info032" data-toggle="collapse">+ Show Info</a>
-             <div id="info032" class="collapse">
-               test data to be printed
-             </div>
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he choose "html" output as one of the formatter</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain test data attached to the Given step in HTML format</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to use data table and print on HTML report 
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> this feature runs with background</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred runs a passing scenario for the following data set</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he choose "html" output as one of the formatter</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain data table attached in HTML format</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-     
-    <br />
-    <hr />
-  </div>
-</div>
+      
 
 <div class="row">
-  <div class="large-12 columns">
 
-    <h3 class="subheader"><span class="highlight">Feature: </span>Unhappy HTML reporting</h3>
-    <p class="subheader">  In order to review cucumber reports<br />  Fred, a cucumber user<br />  Wants to have cucumber reports in HTML</p>
-    <br />
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to see a Screenshot attached to the HTML report 
-            
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapseFeature0">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <b>Feature:</b>Happy HTML reporting with cucumber-parallel executions
+            <span class="label-container">
+              <span class="label label-success">5</span>
+              
+              
+              
+            </span>
           </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred runs a failing cucumber scenario</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he choose "html" output as one of the formatter</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">And </span> a failing scenario captures a screenshot</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-                 <a class="toggle" href="#">Screenshot -</a>
-                  <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot4926.png">
-                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot4926.png"/>
-                   </a>
+        </h4>
+      </div>
+      <div id="collapseFeature0" class="panel-collapse collapse">
+        <div class="panel-body">
           
-              </p>              
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario00">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see passing scenarios in the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">5</span>
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario00" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
 
-              
+                      
 
-            
+                      
 
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain test results with screenshot in HTML format</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
+                       
 
-        
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        this feature runs with background
+                         
+                            
+                          
+                      </span>
+                    
+                      
 
-		 
-              </p>              
+                      
 
-              
+                      
 
-            
-          </div>
-        </section> 
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred runs a passing cucumber scenario
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he choose "html" output as one of the formatter
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain test results in HTML format
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario01">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to run scenario outline and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">5</span>
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario01" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        this feature runs with background
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred runs a passing cucumber scenario on behalf of "John"
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he choose "html" output as one of the formatter
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain test results in HTML format
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario02">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to run scenario outline and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">5</span>
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario02" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        this feature runs with background
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred runs a passing cucumber scenario on behalf of "Bob"
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he choose "html" output as one of the formatter
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain test results in HTML format
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario03">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to print test data in the HTML reports for debugging purpose
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">5</span>
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario03" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        this feature runs with background
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info032" data-toggle="collapse">+ Show Info</a>
+                           <div id="info032" class="collapse">
+                             test data to be printed
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he choose "html" output as one of the formatter
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain test data attached to the Given step in HTML format
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario04">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to use data table and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">5</span>
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario04" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        this feature runs with background
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred runs a passing scenario for the following data set
+                         
+                            
+                              <table class="arguments">
+                                
+                                
+                                  <tr>
+                                  
+                                  
+                                    <td>
+                                      id
+                                    </td>
+                                  
+                                    <td>
+                                      name
+                                    </td>
+                                  
+                                  </tr>
+                                
+                                  <tr>
+                                  
+                                  
+                                    <td>
+                                      1
+                                    </td>
+                                  
+                                    <td>
+                                      data-A
+                                    </td>
+                                  
+                                  </tr>
+                                
+                                  <tr>
+                                  
+                                  
+                                    <td>
+                                      2
+                                    </td>
+                                  
+                                    <td>
+                                      data-B
+                                    </td>
+                                  
+                                  </tr>
+                                
+                              </table>
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he choose "html" output as one of the formatter
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain data table attached in HTML format
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
       </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to see if steps are pending in the HTML report 
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-             <a href="#info111" data-toggle="collapse">+ Show Info</a>
-             <div id="info111" class="collapse">
-               test data to be printed
-             </div>
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he left one of the step as a pending</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain the pending test in the HTML pie chart</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to see if steps are undefined on the HTML report 
-            
-              <span class="label right">Skipped</span>
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-             <a href="#info121" data-toggle="collapse">+ Show Info</a>
-             <div id="info121" class="collapse">
-               test data to be printed
-             </div>
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he left this step as a undefined</span>
-		
-                <small>
-                
-                  <span class="label right">undefined</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain the undefined steps in the HTML pie chart</span>
-		
-                <small>
-                
-                  <span class="label right">undefined</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-    
-      <div class="section-container accordion" data-section="accordion">
-        <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa>Scenario: </span>Fred wants to see if steps are skipped on the HTML report 
-            
-              <span class="label right">Skipped</span>
-            
-          </a>
-          </p>
-
-          <div class="content" data-section-content>
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Before </span> </span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Given </span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
-		
-                <small>
-                
-                  <span class="success label right">Success</span>
-                
-                </small>
-		
-
-        
-             <a href="#info131" data-toggle="collapse">+ Show Info</a>
-             <div id="info131" class="collapse">
-               test data to be printed
-             </div>
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">When </span> he left this step as a pending</span>
-		
-                <small>
-                
-                  <span class="label right">undefined</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-
-              <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> the output should contain the skipped steps in the HTML pie chart</span>
-		
-                <small>
-                
-                  <span class="label right">Skipped</span>
-                
-                </small>
-		
-
-        
-
-		 
-              </p>              
-
-              
-
-            
-          </div>
-        </section> 
-      </div>
-     
-    <br />
-    <hr />
+    </div>
   </div>
-</div>
- 
-
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-    <script>
-      window.onload = function() {
   
-  //  Accordion hide/show
-  var accordionTitles = document.getElementsByClassName('accordion-title');
 
-  //  Convert node list to array
-  Array.prototype.slice.call(accordionTitles).forEach(function(title){
 
-    title.onclick = function() { 
-      var content = next(title),
-          style = window.getComputedStyle(content),
-          display = style.getPropertyValue('display');
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapseFeature1">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <b>Feature:</b>Unhappy HTML reporting
+            <span class="label-container">
+              <span class="label label-success">1</span>
+              
+              <span class="label label-info">2</span>
+              <span class="label label-warning">1</span>
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFeature1" class="panel-collapse collapse">
+        <div class="panel-body">
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario10">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see a Screenshot attached to the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">5</span>
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario10" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
 
-      if (display === 'block') {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
-      return false; 
-    }
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred runs a failing cucumber scenario
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he choose "html" output as one of the formatter
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">And </span>
+                        a failing scenario captures a screenshot
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+                                                <a class="toggle" href="#">Screenshot -</a>
+                                                <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot8245.png">
+                                                 <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot8245.png"/>
+                                                 </a>
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain test results with screenshot in HTML format
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario11">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see if steps are pending in the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">3</span>
+                      
+                      <span class="label label-warning" title="Skipped">1</span>
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario11" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info111" data-toggle="collapse">+ Show Info</a>
+                           <div id="info111" class="collapse">
+                             test data to be printed
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he left one of the step as a pending
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain the pending test in the HTML pie chart
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario12">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see if steps are undefined on the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">2</span>
+                      <span class="label label-info" title="Undefined">2</span>
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario12" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info121" data-toggle="collapse">+ Show Info</a>
+                           <div id="info121" class="collapse">
+                             test data to be printed
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he left this step as a undefined
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre>
+this.Then(/^he left this step as a undefined$/, function(callback) {
+  callback.pending();
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain the undefined steps in the HTML pie chart
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre>
+this.Then(/^the output should contain the undefined steps in the HTML pie chart$/, function(callback) {
+  callback.pending();
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario13">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see if steps are skipped on the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">2</span>
+                      <span class="label label-info" title="Undefined">1</span>
+                      <span class="label label-warning" title="Skipped">1</span>
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario13" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                        
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info131" data-toggle="collapse">+ Show Info</a>
+                           <div id="info131" class="collapse">
+                             test data to be printed
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                        he left this step as a pending
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre>
+this.Then(/^he left this step as a pending$/, function(callback) {
+  callback.pending();
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        the output should contain the skipped steps in the HTML pie chart
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : 0,
+                                                            "passed" : 2
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : 0,
+                                                            "passed" : 6,
+                                                            "notdefined" : 2,
+                                                            "skipped" : 1
+                                                        })
+                                            });
+    </script>
+    <script>
+      $(document).ready(function() {
+  $('.collapse').on('hide.bs.collapse', function (e) {
+    e.stopPropagation();
+    $(this).prev().removeClass('open');
+  }).on('show.bs.collapse', function (e) {
+    e.stopPropagation();
+    $(this).prev().addClass('open');
   });
 
-  //  Update build time to since
-  var buildTimeElem = document.getElementById("buildTime");
-  buildTimeElem.innerHTML = 'Built ' + moment(buildTimeElem.innerHTML).fromNow();
-};
+  $('a.toggle').on('click', function(){
+    if($(this).text() === 'Screenshot -'){
+      $(this).text('Screenshot +');
+      $(this).siblings('a.screenshot').find('img').hide();
+    } else {
+      $(this).text('Screenshot -');
+      $(this).siblings('a.screenshot').find('img').show();
+    }
+  });
+  var $generated = $('.generated-on');
 
-/* 
-   Credit to John Resig for this function 
-   taken from Pro JavaScript techniques 
-*/
-function next(elem) {
-    do {
-        elem = elem.nextSibling;
-    } while (elem && elem.nodeType !== 1);
-    return elem;        
-}
+  $generated.text('Generated ' + moment($generated.text()).fromNow());
 
-$(document).ready(function() {
-    $('a.toggle').on('click', function(){
-        if($(this).text() === 'Screenshot -'){
-            $(this).text('Screenshot +');
-            $(this).siblings('a.screenshot').find('img').hide();
-        } else {
-            $(this).text('Screenshot -');
-            $(this).siblings('a.screenshot').find('img').show();
-        }
-    });
+
 });
 
+      
     </script>
-
   </body>
 </html>

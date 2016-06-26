@@ -13,7 +13,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 2349093
+              "duration": 2553679
             },
             "hidden": true,
             "match": {
@@ -26,11 +26,11 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 264204
+              "duration": 269653
             },
             "line": 8,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:27"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:28"
             }
           },
           {
@@ -39,11 +39,11 @@
             "name": "Fred runs a passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 154800
+              "duration": 236272
             },
             "line": 12,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:31"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:32"
             }
           },
           {
@@ -52,11 +52,11 @@
             "name": "he choose \"html\" output as one of the formatter",
             "result": {
               "status": "passed",
-              "duration": 130445
+              "duration": 126487
             },
             "line": 13,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:39"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:40"
             }
           },
           {
@@ -65,11 +65,11 @@
             "name": "the output should contain test results in HTML format",
             "result": {
               "status": "passed",
-              "duration": 235261
+              "duration": 109608
             },
             "line": 14,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:43"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:44"
             }
           }
         ],
@@ -92,7 +92,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 216785
+              "duration": 304430
             },
             "hidden": true,
             "match": {
@@ -105,11 +105,11 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 82227
+              "duration": 106089
             },
             "line": 8,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:27"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:28"
             }
           },
           {
@@ -118,11 +118,11 @@
             "name": "Fred runs a passing cucumber scenario on behalf of \"John\"",
             "result": {
               "status": "passed",
-              "duration": 111637
+              "duration": 131242
             },
             "line": 18,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:35"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:36"
             }
           },
           {
@@ -131,11 +131,11 @@
             "name": "he choose \"html\" output as one of the formatter",
             "result": {
               "status": "passed",
-              "duration": 842843
+              "duration": 88524
             },
             "line": 19,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:39"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:40"
             }
           },
           {
@@ -144,11 +144,11 @@
             "name": "the output should contain test results in HTML format",
             "result": {
               "status": "passed",
-              "duration": 100510
+              "duration": 319764
             },
             "line": 20,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:43"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:44"
             }
           }
         ],
@@ -171,7 +171,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 137946
+              "duration": 125607
             },
             "hidden": true,
             "match": {
@@ -184,11 +184,11 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 146371
+              "duration": 113124
             },
             "line": 8,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:27"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:28"
             }
           },
           {
@@ -197,11 +197,11 @@
             "name": "Fred runs a passing cucumber scenario on behalf of \"Bob\"",
             "result": {
               "status": "passed",
-              "duration": 151157
+              "duration": 242217
             },
             "line": 18,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:35"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:36"
             }
           },
           {
@@ -210,11 +210,11 @@
             "name": "he choose \"html\" output as one of the formatter",
             "result": {
               "status": "passed",
-              "duration": 97367
+              "duration": 104834
             },
             "line": 19,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:39"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:40"
             }
           },
           {
@@ -223,11 +223,11 @@
             "name": "the output should contain test results in HTML format",
             "result": {
               "status": "passed",
-              "duration": 126523
+              "duration": 101683
             },
             "line": 20,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:43"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:44"
             }
           }
         ],
@@ -250,7 +250,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 256155
+              "duration": 709250
             },
             "hidden": true,
             "match": {
@@ -263,11 +263,11 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 134209
+              "duration": 136016
             },
             "line": 8,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:27"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:28"
             }
           },
           {
@@ -276,7 +276,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 674584
+              "duration": 374220
             },
             "line": 29,
             "embeddings": [
@@ -286,7 +286,7 @@
               }
             ],
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:72"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:73"
             }
           },
           {
@@ -295,11 +295,11 @@
             "name": "he choose \"html\" output as one of the formatter",
             "result": {
               "status": "passed",
-              "duration": 95501
+              "duration": 304840
             },
             "line": 30,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:39"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:40"
             }
           },
           {
@@ -308,11 +308,11 @@
             "name": "the output should contain test data attached to the Given step in HTML format",
             "result": {
               "status": "passed",
-              "duration": 357651
+              "duration": 302371
             },
             "line": 31,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:77"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:78"
             }
           }
         ],
@@ -335,7 +335,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 193946
+              "duration": 138798
             },
             "hidden": true,
             "match": {
@@ -348,11 +348,11 @@
             "name": "this feature runs with background",
             "result": {
               "status": "passed",
-              "duration": 90013
+              "duration": 215650
             },
             "line": 8,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:27"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:28"
             }
           },
           {
@@ -384,11 +384,11 @@
             "name": "Fred runs a passing scenario for the following data set",
             "result": {
               "status": "passed",
-              "duration": 176562
+              "duration": 499397
             },
             "line": 36,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:81"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:82"
             }
           },
           {
@@ -397,11 +397,11 @@
             "name": "he choose \"html\" output as one of the formatter",
             "result": {
               "status": "passed",
-              "duration": 207193
+              "duration": 92882
             },
             "line": 40,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:39"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:40"
             }
           },
           {
@@ -410,11 +410,11 @@
             "name": "the output should contain data table attached in HTML format",
             "result": {
               "status": "passed",
-              "duration": 174646
+              "duration": 113717
             },
             "line": 41,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:86"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:87"
             }
           }
         ],
@@ -448,7 +448,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 245170
+              "duration": 156750
             },
             "hidden": true,
             "match": {
@@ -461,11 +461,11 @@
             "name": "Fred runs a failing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 121511
+              "duration": 134319
             },
             "line": 10,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:47"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:48"
             }
           },
           {
@@ -474,11 +474,11 @@
             "name": "he choose \"html\" output as one of the formatter",
             "result": {
               "status": "passed",
-              "duration": 91525
+              "duration": 121547
             },
             "line": 11,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:39"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:40"
             }
           },
           {
@@ -487,7 +487,7 @@
             "name": "a failing scenario captures a screenshot",
             "result": {
               "status": "passed",
-              "duration": 483221
+              "duration": 351732
             },
             "line": 12,
             "embeddings": [
@@ -497,7 +497,7 @@
               }
             ],
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:51"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:52"
             }
           },
           {
@@ -506,11 +506,11 @@
             "name": "the output should contain test results with screenshot in HTML format",
             "result": {
               "status": "passed",
-              "duration": 140981
+              "duration": 129331
             },
             "line": 13,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:56"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:57"
             }
           }
         ],
@@ -533,7 +533,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 250141
+              "duration": 129353
             },
             "hidden": true,
             "match": {
@@ -546,7 +546,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 112030
+              "duration": 280305
             },
             "line": 17,
             "embeddings": [
@@ -556,7 +556,7 @@
               }
             ],
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:72"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:73"
             }
           },
           {
@@ -565,11 +565,11 @@
             "name": "he left one of the step as a pending",
             "result": {
               "status": "passed",
-              "duration": 115017
+              "duration": 116751
             },
             "line": 18,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:60"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:61"
             }
           },
           {
@@ -581,7 +581,7 @@
             },
             "line": 19,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:64"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:65"
             }
           }
         ],
@@ -604,7 +604,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 114764
+              "duration": 143594
             },
             "hidden": true,
             "match": {
@@ -617,7 +617,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 129505
+              "duration": 136884
             },
             "line": 23,
             "embeddings": [
@@ -627,7 +627,7 @@
               }
             ],
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:72"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:73"
             }
           },
           {
@@ -668,7 +668,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 115061
+              "duration": 233371
             },
             "hidden": true,
             "match": {
@@ -681,7 +681,7 @@
             "name": "Fred attaches the \"test data to be printed\" to the Given step of passing cucumber scenario",
             "result": {
               "status": "passed",
-              "duration": 92669
+              "duration": 98178
             },
             "line": 29,
             "embeddings": [
@@ -691,7 +691,7 @@
               }
             ],
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:72"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:73"
             }
           },
           {
@@ -712,7 +712,7 @@
             },
             "line": 31,
             "match": {
-              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:68"
+              "location": "/Users/kugajjar/Documents/workspace/cucumber-html-reporter/test/features/step_definitions/stepDefs.js:69"
             }
           }
         ],

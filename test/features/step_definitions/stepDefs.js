@@ -11,16 +11,13 @@ var stepDefs = function stepDefs() {
 
     this.registerHandler('AfterFeatures', function (features, callback) {
         var options = {
-            // theme: 'bootstrap',
+            templateDir: 'templates/bootstrap', //this is required only for unit-test of this module, otherwise pass `theme: [value]` as an option
             output: 'test/report/cucumber_report.html',
-            jsonFile: 'test/report/cucumber_report.json'
+            jsonFile: 'test/report/cucumber_report.json',
+            reportSuiteAsScenarios: true
         };
-
-        //this is required only for unit-test of this module
-        // specify templateDir
-        options.templateDir = 'templates/foundation';
-
         reporter.generate(options);
+        
         callback();
     });
 
