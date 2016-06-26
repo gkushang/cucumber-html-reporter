@@ -58,6 +58,7 @@ Type: `Boolean`
 Supported in the Bootstrap theme. 
 
 `true`: Reports total number of passed/failed scenarios as HEADER.
+
 `false`: Reports total number of passed/failed features as HEADER.
 
 
