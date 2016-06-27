@@ -42,7 +42,7 @@ var options = {
     reporter.generate(options);
 ```
 
-E.g. Plugin the above code to the cucumber's `AfterFeatures` hook
+>> Plugin the above code to the cucumber's `AfterFeatures` hook
 
 ## Options
 
