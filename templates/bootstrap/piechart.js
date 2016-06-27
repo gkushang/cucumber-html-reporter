@@ -12,13 +12,13 @@ function drawChart(chartData) {
 
     if (total === 1) {
         title = total + ' ' + chartData.title.slice(0, -1)
-    }else {
+    } else {
         title = total + ' ' + chartData.title;
     }
 
     var options = {
         width: '100%',
-        height: 240 ,
+        height: 240,
         title: title,
         is3D: true,
         colors: ['#5cb85c', '#d9534f', '#5bc0de', '#f0ad4e'],
