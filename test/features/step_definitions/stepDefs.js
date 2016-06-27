@@ -34,7 +34,7 @@ var stepDefs = function stepDefs() {
     this.Then(/^cucumber-html-reporter should report pending step with code-snippets in HTML report$/, function(callback) {
         callback();
     });
-    
+
     this.Then(/^Fred attaches the "([^"]*)" to the Given step of passing cucumber scenario$/, function(testData, callback) {
         this.scenario.attach(testData);
         callback();
