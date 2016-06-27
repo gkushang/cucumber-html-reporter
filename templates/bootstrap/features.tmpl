@@ -14,6 +14,7 @@
               <% if (feature.scenarios.passed) { %><span class="label label-success"><%= feature.scenarios.passed %></span><% } %>
               <% if (feature.scenarios.failed) { %><span class="label label-danger"><%= feature.scenarios.failed %></span><% } %>
               <% if (feature.scenarios.notdefined) { %><span class="label label-info"><%= feature.scenarios.notdefined %></span><% } %>
+              <% if (feature.scenarios.pending) { %><span class="label label-info"><%= feature.scenarios.pending %></span><% } %>
               <% if (feature.scenarios.skipped) { %><span class="label label-warning"><%= feature.scenarios.skipped %></span><% } %>
             </span>
           </a>
@@ -32,6 +33,7 @@
                     <span class="label-container">
                       <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
                       <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
+                      <% if (element.pending) { %><span class="label label-info" title="Penddding"><%= element.pending %></span><% } %>
                       <% if (element.skipped) { %><span class="label label-warning" title="Skipped"><%= element.skipped %></span><% } %>
                       <% if (element.failed) { %><span class="label label-danger" title="Failed"><%= element.failed %></span><% } %>
                     </span>

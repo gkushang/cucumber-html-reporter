@@ -6,7 +6,7 @@ var stepDefs = function stepDefs() {
         callback();
     });
 
-    this.Then(/^Fred runs a passing cucumber scenario$/, function(callback) {
+    this.Then(/^Fred runs a(?: passing|) cucumber scenario$/, function(callback) {
         callback();
     });
 
@@ -27,19 +27,14 @@ var stepDefs = function stepDefs() {
         callback();
     });
 
-    this.Then(/^he left one of the step as a pending$/, function(callback) {
+    this.Then(/^he throws the pending exception from this step$/, function(callback) {
         callback(null, 'pending');
-
     });
 
-    this.Then(/^cucumber-html-reporter should report pending step in HTML report$/, function(callback) {
+    this.Then(/^cucumber-html-reporter should report pending step with code-snippets in HTML report$/, function(callback) {
         callback();
     });
-
-    this.Then(/^the output should contain the skipped steps in the HTML pie chart$/, function(callback) {
-        callback();
-    });
-
+    
     this.Then(/^Fred attaches the "([^"]*)" to the Given step of passing cucumber scenario$/, function(testData, callback) {
         this.scenario.attach(testData);
         callback();

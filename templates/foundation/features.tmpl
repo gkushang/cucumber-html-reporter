@@ -13,6 +13,8 @@
               <span class="alert label right">Failed</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'undefined'; })) {  %>
               <span class="label right">Skipped</span>
+            <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'pending'; })) {  %>
+               <span class="label right">Skipped</span>
             <% } else if(_.every(element.steps, function(step){ return step.result && step.result.status === 'success' })) { %>
               <span class="success label right">Success</span>
             <% } %>
@@ -30,7 +32,7 @@
                   <span class="alert label right">Failed</span>
                 <% } else if(step.result.status === 'skipped') { %>
                   <span class="label right">Skipped</span>
-                <% } else if(step.result.status === 'undefined') { %>
+                <% } else if(step.result.status === 'undefined' || step.result.status === 'pending') { %>
                   <span class="label right">undefined</span>
                 <% } else { %>
                   <span class="success label right">Success</span>
