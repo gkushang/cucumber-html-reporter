@@ -26,8 +26,6 @@ npm install cucumber-html-reporter --save-dev
 
 ## Usage
 
-Example `bootstrap` theme:
-
 ``` bash
 
 var reporter = require('cucumber-html-reporter');
@@ -40,6 +38,36 @@ var options = {
     };
 
     reporter.generate(options);
+```
+
+###### Example usage with Cucumber `AfterFeatures hook`
+
+``` bash
+
+var reporter = require('cucumber-html-reporter');
+
+
+var hooks = function() {
+...
+...
+
+ this.registerHandler('AfterFeatures', function(features, callback) {
+        var options = {
+                theme: 'bootstrap',
+                jsonFile: 'test/report/cucumber_report.json',
+                output: 'test/report/cucumber_report.html',
+                reportSuiteAsScenarios: true
+            };
+
+        reporter.generate(options);
+ }
+
+...
+...
+};
+
+module.exports = hooks;
+
 ```
 
 ## Options
