@@ -66,6 +66,8 @@ Supported in the Bootstrap theme.
 
 `false`: Reports total number of passed/failed features as HEADER.
 
+## Snapshot of Bootstrap Report
+![Alt text](/test/report/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
 ## Credits
 
