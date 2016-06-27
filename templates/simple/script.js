@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('a.toggle').on('click', function(){
-        if($(this).text() === 'Screenshot -'){
+    $('a.toggle').on('click', function() {
+        if ($(this).text() === 'Screenshot -') {
             $(this).text('Screenshot +');
             $(this).siblings('a.screenshot').find('img').hide();
         } else {
