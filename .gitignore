@@ -1,2 +1,4 @@
 /.idea/
 /node_modules/
+/test/report/*.html
+/test/report/*.json
