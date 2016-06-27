@@ -1,3 +1,12 @@
+### 0.1.3 (2016-06-27)
+
+#### Bug fixes
+
+* Fixed a bug in template path
+
+* README updated
+
+
 ### 0.1.1 (2016-06-27)
 
 #### New Features
