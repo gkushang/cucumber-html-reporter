@@ -2,3 +2,4 @@
 /node_modules/
 /test/report/*.html
 /test/report/*.json
+test/report/*.html
