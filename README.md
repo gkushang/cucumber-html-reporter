@@ -13,6 +13,11 @@ Generate Cucumber HTML reports with pie charts
 2. [Foundation Theme Reports][4]
 3. [Simple Theme Reports][5]
 
+
+## Snapshot of Bootstrap Report
+![Alt text](/test/report/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
+
+
 ## Install
 
 ``` bash
@@ -66,8 +71,6 @@ Supported in the Bootstrap theme.
 
 `false`: Reports total number of passed/failed features as HEADER.
 
-## Snapshot of Bootstrap Report
-![Alt text](/test/report/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
 ## Credits
 
