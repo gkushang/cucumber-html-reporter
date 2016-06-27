@@ -4,44 +4,44 @@
     <title>Cucumber Feature Report</title>
     <style type="text/css">
      body {
-  font: 14px Consolas, Courier, monospace;
+    font: 14px Consolas, Courier, monospace;
 }
 
 h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .highlight {
-  color: #111111;
-  font-weight: bold;
+    color: #111111;
+    font-weight: bold;
 }
 
 .failed {
-  background-color: #ff9999;  
+    background-color: #ff9999;
 }
 
 .passed {
-  background-color: #99ff99;
+    background-color: #99ff99;
 }
 
 .step {
-  margin: 10px;
+    margin: 10px;
 }
 
 .step .text {
-  border-radius: 3px;
-  color: #666666;
-  padding: 5px;
-  display: block;
+    border-radius: 3px;
+    color: #666666;
+    padding: 5px;
+    display: block;
 }
 
 .container {
-  background: #f8f8f8;
-  border-radius: 5px;
-  border: 1px solid #e8e8e8;
-  padding: 10px;
-  margin: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    margin: 10px;
 }
     </style>
   </head>
@@ -436,8 +436,8 @@ h1, h2, h3, h4, p {
 
              
                    <a class="toggle" href="#">Screenshot -</a>
-                   <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot2811.png">
-                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot2811.png"/>
+                   <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot8837.png">
+                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot8837.png"/>
                    </a>
              
           </p>
@@ -492,7 +492,7 @@ h1, h2, h3, h4, p {
         <div class="step">
           <p>
             
-            <span class="text passed">
+            <span class="text pending">
             
             <span class="keyword highlight">When </span> he left one of the step as a pending</span>
              
@@ -504,9 +504,9 @@ h1, h2, h3, h4, p {
         <div class="step">
           <p>
             
-            <span class="text passed">
+            <span class="text skipped">
             
-            <span class="keyword highlight">Then </span> cucumber-html-reporter should create HTML report with pending step/snippets</span>
+            <span class="keyword highlight">Then </span> cucumber-html-reporter should report pending step in HTML report</span>
              
 
              
@@ -637,8 +637,8 @@ h1, h2, h3, h4, p {
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
      <script>
        $(document).ready(function() {
-    $('a.toggle').on('click', function(){
-        if($(this).text() === 'Screenshot -'){
+    $('a.toggle').on('click', function() {
+        if ($(this).text() === 'Screenshot -') {
             $(this).text('Screenshot +');
             $(this).siblings('a.screenshot').find('img').hide();
         } else {

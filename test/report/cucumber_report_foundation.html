@@ -6,21 +6,31 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.3.2/css/foundation.min.css">
     <style type="text/css">
       p {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 header {
-  background-color: #2ba6cb;
-  padding: 22px 0;
+    background-color: #2ba6cb;
+    padding: 22px 0;
 }
 
-header h1, 
-header h4   { color: #fff !important; }
-header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; -webkit-font-smoothing: antialiased; }
+header h1,
+header h4 {
+    color: #fff !important;
+}
 
-.right-col  { text-align: right; }
+header h4 {
+    font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 
-.highlight { color: #5EC7E5; }
+.right-col {
+    text-align: right;
+}
+
+.highlight {
+    color: #5EC7E5;
+}
 
     </style>
   </head>
@@ -33,7 +43,7 @@ header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Ver
         </div>
         <div class="large-6 columns right-col">
           <h1 class="subheader">0.1.0</h1>
-          <h4 id="buildTime" class="subheader">Sun Jun 26 2016 17:22:01 GMT-0400 (EDT)</h4>
+          <h4 id="buildTime" class="subheader">Sun Jun 26 2016 20:30:14 GMT-0400 (EDT)</h4>
         </div>
       </div>
     </header>
@@ -685,8 +695,8 @@ header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Ver
 
 		 
                  <a class="toggle" href="#">Screenshot -</a>
-                  <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot8710.png">
-                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot8710.png"/>
+                  <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot2449.png">
+                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot2449.png"/>
                    </a>
           
               </p>              
@@ -790,11 +800,11 @@ header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Ver
             
 
               <p class="subheader">
-                <span class="text"><span class="keyword highlight">Then </span> cucumber-html-reporter should create HTML report with pending step/snippets</span>
+                <span class="text"><span class="keyword highlight">Then </span> cucumber-html-reporter should report pending step in HTML report</span>
 		
                 <small>
                 
-                  <span class="success label right">Success</span>
+                  <span class="label right">Skipped</span>
                 
                 </small>
 		
@@ -1015,46 +1025,46 @@ header h4   { font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Ver
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
     <script>
       window.onload = function() {
-  
-  //  Accordion hide/show
-  var accordionTitles = document.getElementsByClassName('accordion-title');
 
-  //  Convert node list to array
-  Array.prototype.slice.call(accordionTitles).forEach(function(title){
+    //  Accordion hide/show
+    var accordionTitles = document.getElementsByClassName('accordion-title');
 
-    title.onclick = function() { 
-      var content = next(title),
-          style = window.getComputedStyle(content),
-          display = style.getPropertyValue('display');
+    //  Convert node list to array
+    Array.prototype.slice.call(accordionTitles).forEach(function(title) {
 
-      if (display === 'block') {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
-      return false; 
-    }
-  });
+        title.onclick = function() {
+            var content = next(title),
+                style = window.getComputedStyle(content),
+                display = style.getPropertyValue('display');
 
-  //  Update build time to since
-  var buildTimeElem = document.getElementById("buildTime");
-  buildTimeElem.innerHTML = 'Built ' + moment(buildTimeElem.innerHTML).fromNow();
+            if (display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+            return false;
+        }
+    });
+
+    //  Update build time to since
+    var buildTimeElem = document.getElementById("buildTime");
+    buildTimeElem.innerHTML = 'Built ' + moment(buildTimeElem.innerHTML).fromNow();
 };
 
 /* 
-   Credit to John Resig for this function 
-   taken from Pro JavaScript techniques 
-*/
+ Credit to John Resig for this function 
+ taken from Pro JavaScript techniques 
+ */
 function next(elem) {
     do {
         elem = elem.nextSibling;
     } while (elem && elem.nodeType !== 1);
-    return elem;        
+    return elem;
 }
 
 $(document).ready(function() {
-    $('a.toggle').on('click', function(){
-        if($(this).text() === 'Screenshot -'){
+    $('a.toggle').on('click', function() {
+        if ($(this).text() === 'Screenshot -') {
             $(this).text('Screenshot +');
             $(this).siblings('a.screenshot').find('img').hide();
         } else {

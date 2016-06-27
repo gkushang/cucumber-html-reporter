@@ -5,80 +5,93 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <style type="text/css">
       .panel-heading {
-  padding: 0;
+    padding: 0;
 }
+
 .panel-heading a {
-  padding: 10px 15px;
-  display: block;
-  position: relative;
-  text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
 }
+
 .panel-heading i.glyphicon-chevron-down {
-  display: none;
+    display: none;
 }
+
 .panel-heading i.glyphicon-chevron-right {
-  display: inline-block;
+    display: inline-block;
 }
+
 .panel-heading.open i.glyphicon-chevron-down {
-  display: inline-block;
+    display: inline-block;
 }
+
 .panel-heading.open i.glyphicon-chevron-right {
-  display: none;
+    display: none;
 }
+
 .generated-on {
-  text-align: right;
-  padding-bottom: 10px;
+    text-align: right;
+    padding-bottom: 10px;
 }
+
 .panel-title b {
-  padding-right: 10px;
+    padding-right: 10px;
 }
+
 .panel-heading .label-container {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
+
 .panel-heading .label-container label {
-  margin-left: 5px;
-  padding: 5px;
+    margin-left: 5px;
+    padding: 5px;
 }
+
 .navbar .label-container {
-  position: absolute;
-  right: 10px;
-  top: 14px;
+    position: absolute;
+    right: 10px;
+    top: 14px;
 }
+
 .navbar {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .navbar .label {
-  font-size: 20px;
+    font-size: 20px;
 }
+
 .navbar .project-name {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  margin-left: -100px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .chart {
-  padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 div.chart div div svg rect {
-  fill: #f5f5f5;
+    fill: #f5f5f5;
 }
 
 table.arguments {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 table.arguments td {
-  border: 1px;
-  border-style: solid;
-  padding-left: 4px;
-  padding-right: 4px;
+    border: 1px;
+    border-style: solid;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
     </style>
@@ -91,7 +104,7 @@ table.arguments td {
           <a class="navbar-brand" href="#">Cucumberjs Report</a>
           <div class="project-name visible-md visible-lg">cucumber-html-reporter</div>
           <div class="label-container">
-            <span class="label label-success">Passed: 7</span>
+            <span class="label label-success">Passed: 6</span>
             <span class="label label-danger">Failed: 0</span>
           </div>
         </div>
@@ -100,7 +113,7 @@ table.arguments td {
 
     <div class="container">
 
-      <div class="generated-on">Sun Jun 26 2016 17:22:01 GMT-0400 (EDT)</div>
+      <div class="generated-on">Sun Jun 26 2016 20:30:14 GMT-0400 (EDT)</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
@@ -936,10 +949,10 @@ table.arguments td {
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b>Feature:</b>Unhappy HTML reporting
             <span class="label-container">
-              <span class="label label-success">2</span>
+              <span class="label label-success">1</span>
               
               <span class="label label-info">2</span>
-              
+              <span class="label label-warning">1</span>
             </span>
           </a>
         </h4>
@@ -1063,8 +1076,8 @@ table.arguments td {
 
                        
                                                 <a class="toggle" href="#">Screenshot -</a>
-                                                <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot6425.png">
-                                                 <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot6425.png"/>
+                                                <a class="screenshot" href="screenshot/a_failing_scenario_captures_a_screenshot1423.png">
+                                                 <img class="screenshot" style="height:100%;width:100%" id="my_images" src="screenshot/a_failing_scenario_captures_a_screenshot1423.png"/>
                                                  </a>
                        
 
@@ -1108,9 +1121,9 @@ table.arguments td {
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see if steps are pending in the HTML report
                     <span class="label-container">
-                      <span class="label label-success" title="Passed">4</span>
+                      <span class="label label-success" title="Passed">2</span>
                       
-                      
+                      <span class="label label-warning" title="Skipped">2</span>
                       
                     </span>
                   </a>
@@ -1177,7 +1190,7 @@ table.arguments td {
                     <p class="scenario-container">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
                       
                     
                       <span class="text">
@@ -1202,12 +1215,12 @@ table.arguments td {
                     <p class="scenario-container">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
                       
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report with pending step/snippets
+                        cucumber-html-reporter should report pending step in HTML report
                          
                             
                           
@@ -1529,34 +1542,34 @@ this.Then(/^he left this step as a pending$/, function(callback) {
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Scenarios",
                                                             "failed" : 0,
-                                                            "passed" : 7,
+                                                            "passed" : 6,
                                                             "notdefined" : 2,
-                                                            "skipped" : 0
+                                                            "skipped" : 1
                                                         })
                                             });
     </script>
     <script>
       $(document).ready(function() {
-  $('.collapse').on('hide.bs.collapse', function (e) {
-    e.stopPropagation();
-    $(this).prev().removeClass('open');
-  }).on('show.bs.collapse', function (e) {
-    e.stopPropagation();
-    $(this).prev().addClass('open');
-  });
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
 
-  $('a.toggle').on('click', function(){
-    if($(this).text() === 'Screenshot -'){
-      $(this).text('Screenshot +');
-      $(this).siblings('a.screenshot').find('img').hide();
-    } else {
-      $(this).text('Screenshot -');
-      $(this).siblings('a.screenshot').find('img').show();
-    }
-  });
-  var $generated = $('.generated-on');
+    $('a.toggle').on('click', function() {
+        if ($(this).text() === 'Screenshot -') {
+            $(this).text('Screenshot +');
+            $(this).siblings('a.screenshot').find('img').hide();
+        } else {
+            $(this).text('Screenshot -');
+            $(this).siblings('a.screenshot').find('img').show();
+        }
+    });
+    var $generated = $('.generated-on');
 
-  $generated.text('Generated ' + moment($generated.text()).fromNow());
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
 
 
 });
@@ -1575,13 +1588,13 @@ this.Then(/^he left this step as a pending$/, function(callback) {
 
     if (total === 1) {
         title = total + ' ' + chartData.title.slice(0, -1)
-    }else {
+    } else {
         title = total + ' ' + chartData.title;
     }
 
     var options = {
         width: '100%',
-        height: 240 ,
+        height: 240,
         title: title,
         is3D: true,
         colors: ['#5cb85c', '#d9534f', '#5bc0de', '#f0ad4e'],
