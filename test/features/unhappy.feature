@@ -14,18 +14,18 @@ Feature: Unhappy HTML reporting
 
   @pendingStep
   Scenario: Fred wants to see if steps are pending in the HTML report
-    Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
-    When he left one of the step as a pending
-    Then cucumber-html-reporter should create HTML report with pending step/snippets
+    Given Fred runs a cucumber scenario
+    When he left this step as a pending
+    Then cucumber-html-reporter should report pending step with code-snippets in HTML report
 
   @undefinedStep
   Scenario: Fred wants to see if steps are undefined on the HTML report
-    Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
+    Given Fred runs a cucumber scenario
     When he left this step as a undefined
     Then cucumber-html-reporter should create undefined step in HTML report
 
   @skippedStep
   Scenario: Fred wants to see if steps are skipped on the HTML report
-    Given Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
-    When he left this step as a pending
-    Then cucumber-html-reporter should create HTML report with skipped step
+    Given Fred runs a cucumber scenario
+    When he throws the pending exception from this step
+    Then cucumber-html-reporter should create HTML report with skipped and pending steps

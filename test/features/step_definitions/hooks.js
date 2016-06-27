@@ -1,6 +1,7 @@
 'use strict';
 
 var reporter = require('../../../index');
+var assertHtmlReports = require('../../assert/assertHtmlReports');
 
 var hooks = function() {
     this.Before(function(scenario, callback) {
@@ -9,7 +10,7 @@ var hooks = function() {
         callback();
     });
 
-    this.registerHandler('AfterFeatures', function (features, callback) {
+    this.registerHandler('AfterFeatures', function(features, callback) {
         var theme = {
             bootstrap: 'templates/bootstrap',
             foundation: 'templates/foundation',
@@ -30,6 +31,8 @@ var hooks = function() {
         reporter.generate(getOptions({template: theme.bootstrap, name: 'bootstrap', theme: 'bootstrap'}));
         reporter.generate(getOptions({template: theme.foundation, name: 'foundation'}));
         reporter.generate(getOptions({template: theme.simple, name: 'simple'}));
+
+        assertHtmlReports();
 
         callback();
     });
