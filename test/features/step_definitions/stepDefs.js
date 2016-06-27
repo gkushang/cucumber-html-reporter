@@ -1,7 +1,7 @@
 'use strict';
 
 var stepDefs = function stepDefs() {
-   
+
     this.Then(/^this feature runs with background$/, function(callback) {
         callback();
     });
@@ -10,14 +10,14 @@ var stepDefs = function stepDefs() {
         callback();
     });
 
-    this.Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function (name, callback) {
+    this.Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function(name, callback) {
         callback();
     });
 
     this.Then(/^he has the JSON cucumber formatted file at the end of run$/, function(callback) {
         callback();
     });
-    
+
     this.Then(/^Fred runs a failing cucumber scenario$/, function(callback) {
         callback();
     });
@@ -26,7 +26,7 @@ var stepDefs = function stepDefs() {
         this.scenario.attach(new Buffer('').toString('base64'), 'image/png');
         callback();
     });
-    
+
     this.Then(/^he left one of the step as a pending$/, function(callback) {
         callback(null, 'pending');
 
@@ -35,8 +35,7 @@ var stepDefs = function stepDefs() {
     this.Then(/^cucumber-html-reporter should report pending step in HTML report$/, function(callback) {
         callback();
     });
-    
-    
+
     this.Then(/^the output should contain the skipped steps in the HTML pie chart$/, function(callback) {
         callback();
     });
@@ -50,7 +49,7 @@ var stepDefs = function stepDefs() {
         callback();
     });
 
-    this.Given(/^Fred runs a passing scenario for the following data set$/, function (table, callback) {
+    this.Given(/^Fred runs a passing scenario for the following data set$/, function(table, callback) {
         // Write code here that turns the phrase above into concrete actions
         callback();
     });
