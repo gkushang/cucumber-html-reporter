@@ -42,6 +42,7 @@ var options = {
     reporter.generate(options);
 ```
 
+
 > Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][7] and pick the theme you are interested in.
 
 > This module converts Cucumber's JSON format to HTML reports. In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
