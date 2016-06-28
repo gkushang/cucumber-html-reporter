@@ -42,23 +42,21 @@ var options = {
     reporter.generate(options);
 ```
 
-> Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][7]. 
+> Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][7] 
 
 > This module converts Cucumber's JSON format to HTML reports. In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
 
 ```
 cucumberjs test/features/ -f json:test/cucumber_report.json
-
 ```
 
 > Multiple formatter are also supported, 
 
 ```
 cucumberjs test/features/ -f pretty -f json:test/cucumber_report.json
-
 ```
 
-> Are you using cucumber with other frameworks or running [cucumber-parallel][6]? Pass relative path of JSON file path to the `options` as shown [here][7].
+> Are you using cucumber with other frameworks or running [cucumber-parallel][6]? Pass relative path of JSON file to the `options` as shown [here][7]
 
  
 ## Options
