@@ -1,3 +1,14 @@
+### 0.1.4 (2016-06-27)
+
+#### Enhancements
+
+* Using `path` instead of separators to make platform agnostic
+ 
+* Updated tests `hooks`
+
+* README updated with the instructions on how to integrate reporter to the cucumber hooks
+
+
 ### 0.1.3 (2016-06-27)
 
 #### Bug fixes
