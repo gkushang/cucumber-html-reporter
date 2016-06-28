@@ -11,27 +11,33 @@ var hooks = function() {
     });
 
     this.registerHandler('AfterFeatures', function(features, callback) {
+
         var theme = {
-            bootstrap: 'templates/bootstrap',
-            foundation: 'templates/foundation',
-            simple: 'templates/simple'
+            bootstrap: 'bootstrap',
+            foundation: 'foundation',
+            simple: 'simple'
         };
 
         function getOptions(theme) {
             return {
-                templateDir: theme.template, //this is required only for unit-test of this module, otherwise pass `theme: [value]` as an option
-                output: 'test/report/cucumber_report_' + theme.name + '.html',
+                theme: theme,
                 jsonFile: 'test/report/cucumber_report.json',
-                theme: theme.theme,
+                output: 'test/report/cucumber_report_' + theme + '.html',
                 reportSuiteAsScenarios: true
             };
-
         }
 
-        reporter.generate(getOptions({template: theme.bootstrap, name: 'bootstrap', theme: 'bootstrap'}));
-        reporter.generate(getOptions({template: theme.foundation, name: 'foundation'}));
-        reporter.generate(getOptions({template: theme.simple, name: 'simple'}));
+        //Generate Bootstrap theme report
+        reporter.generate(getOptions(theme.bootstrap));
 
+        //Generate Foundation theme report
+        reporter.generate(getOptions(theme.foundation));
+
+        //Generate Simple theme report
+        reporter.generate(getOptions(theme.simple));
+
+
+        //assert reports
         assertHtmlReports();
 
         callback();
