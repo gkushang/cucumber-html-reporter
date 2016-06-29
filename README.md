@@ -91,7 +91,7 @@ Supported in the Bootstrap theme.
 
 ## Attach Screenshots to HTML report
 
-Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the image.
+Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the screenshot image
 
 ```javascript
   
@@ -103,7 +103,7 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
 
 ## Attach Plain Text to HTML report
 
-Attach plain-texts/data to HTML report. This helps in debugging or reviewing your results in particular to your tests data.
+Attach plain-texts/data to HTML report to help debug/review the results
 
 ```javascript
  
