@@ -113,6 +113,7 @@ Attach plain-texts/data to HTML report. This helps in debugging or reviewing you
 ```javascript
 this.After(function (scenario, callback) {
   scenario.attach("test data goes here");
+  callback();
 });
 ```
 
