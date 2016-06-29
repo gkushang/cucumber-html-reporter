@@ -94,16 +94,14 @@ Supported in the Bootstrap theme.
 Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the image.
 
 ```javascript
-this.After(function (scenario, callback) {
-        if(scenario.isFailed()){
-            driver.takeScreenshot().then(function (buffer) {
-                scenario.attach(new Buffer(buffer, 'base64').toString('binary'), 'image/png');
-                 driver.quit().then(function () {
-                                callback();
-                 });
-            });
+        ...
+        ...
+        driver.takeScreenshot().then(function (buffer) {
+          return scenario.attach(new Buffer(buffer, 'base64').toString('binary'), 'image/png');
         }
-});
+        ...
+        ...
+
 ```
 
 ## Attach Plain Text to HTML report
@@ -111,10 +109,9 @@ this.After(function (scenario, callback) {
 Attach plain-texts/data to HTML report. This helps in debugging or reviewing your results in particular to your tests data.
 
 ```javascript
-this.After(function (scenario, callback) {
-  scenario.attach("test data goes here");
-  callback();
-});
+        ...
+        scenario.attach("test data goes here");
+        ...
 ```
 
 ## Credits
