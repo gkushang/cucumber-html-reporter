@@ -81,6 +81,10 @@ table.arguments {
     margin-left: 20px;
 }
 
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
 table.arguments td {
     border: 1px;
     border-style: solid;
