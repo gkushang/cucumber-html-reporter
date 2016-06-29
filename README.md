@@ -89,6 +89,32 @@ Supported in the Bootstrap theme.
 
 `false`: Reports total number of passed/failed features as HEADER.
 
+## Attach Screenshots to HTML report
+
+Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the image.
+
+```javascript
+this.After(function (scenario, callback) {
+        if(scenario.isFailed()){
+            driver.takeScreenshot().then(function (buffer) {
+                scenario.attach(new Buffer(buffer, 'base64').toString('binary'), 'image/png');
+                 driver.quit().then(function () {
+                                callback();
+                 });
+            });
+        }
+});
+```
+
+## Attach Plain Text to HTML report
+
+Attach plain-texts/data to HTML report. This helps in debugging or reviewing your results in particular to your tests data.
+
+```javascript
+this.After(function (scenario, callback) {
+  scenario.attach("test data goes here");
+});
+```
 
 ## Credits
 
