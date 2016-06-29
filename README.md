@@ -107,7 +107,7 @@ Attach plain-texts/data to HTML report to help debug/review the results
 
 ```javascript
  
-  scenario.attach("test data goes here");
+  scenario.attach('test data goes here');
  
 ```
 
