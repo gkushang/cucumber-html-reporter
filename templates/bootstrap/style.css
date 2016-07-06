@@ -91,3 +91,12 @@ table.arguments td {
     padding-left: 4px;
     padding-right: 4px;
 }
+
+.feature-description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.5;
+    color: #6f6f6f;
+    font-weight: 300;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}

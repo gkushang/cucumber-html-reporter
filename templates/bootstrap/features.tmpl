@@ -22,6 +22,7 @@
       </div>
       <div id="collapseFeature<%= featureIndex %>" class="panel-collapse collapse">
         <div class="panel-body">
+        <pre class="feature-description"><%= feature.description.replace(/\n/g, '<br />') %></pre>
           <% _.each(feature.elements, function(element, scenarioIndex) { %>
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -88,7 +89,7 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
                       <% if (step.result.error_message) { %>
                         <a href="#error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Error</a>
                         <div id="error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
-                          <%= step.result.error_message %>
+                          <%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %>
                         </div>
                       <% } %>
 
