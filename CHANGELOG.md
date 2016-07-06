@@ -1,3 +1,15 @@
+### 0.1.5 (2016-07-05)
+
+#### Enhancements
+
+* Show feature description on report
+ 
+* Updated README
+
+#### Bug fixes
+
+* Fix bug when cucumber error message has kind of html tags as a string, e.g. <object> is not defined.
+
 ### 0.1.4 (2016-06-28)
 
 #### Enhancements
