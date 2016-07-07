@@ -78,25 +78,46 @@ div.chart div div svg rect {
 }
 
 table.arguments {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .screenshot {
     padding: 2% 0 2% 0;
 }
 
-table.arguments td {
-    border: 1px;
-    border-style: solid;
-    padding-left: 4px;
-    padding-right: 4px;
+.scenarioTitle {
+    width: 80%
 }
 
 .feature-description {
     background-color: white;
     border-color: white;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #6f6f6f;
-    font-weight: 300;
+    font-weight: 400;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding:  0.1em 0.5em 1.2em 1.5em
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
 }

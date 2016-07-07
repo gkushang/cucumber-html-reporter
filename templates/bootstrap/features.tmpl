@@ -22,7 +22,7 @@
       </div>
       <div id="collapseFeature<%= featureIndex %>" class="panel-collapse collapse">
         <div class="panel-body">
-        <pre class="feature-description"><%= feature.description.replace(/\n/g, '<br />') %></pre>
+        <div class="feature-description"><%= feature.description.replace(/\n/g, '<br />') %></div>
           <% _.each(feature.elements, function(element, scenarioIndex) { %>
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -30,7 +30,7 @@
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %><%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
-                    <b><%= element.keyword %>:</b><%= element.name %>
+                     <b><%= element.keyword %>:</b><%= element.name %>
                     <span class="label-container">
                       <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
                       <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
@@ -61,9 +61,17 @@
                         <%= step.name %>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
-                              <table class="arguments">
+                              <div class="scrollBar"> <table class="arguments">
                                 <% var rows = step.arguments[i]["rows"]; %>
-                                <% for( var j = 0; j < rows.length; j++ ) { %>
+                                  <tr>
+                                  <% var cells = rows[0]["cells"]; %>
+                                  <% for( var k = 0; k < cells.length; k++ ) { %>
+                                    <th>
+                                      <%= cells[k] %>
+                                    </th>
+                                     <% } %>
+                                    </tr>
+                                <% for( var j = 1; j < rows.length; j++ ) { %>
                                   <tr>
                                   <% var cells = rows[j]["cells"]; %>
                                   <% for( var k = 0; k < cells.length; k++ ) { %>
@@ -73,7 +81,7 @@
                                   <% } %>
                                   </tr>
                                 <% } %>
-                              </table>
+                              </table> </div>
                             <% } %>
                           <% } %>
                       </span>
@@ -89,7 +97,7 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
                       <% if (step.result.error_message) { %>
                         <a href="#error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Error</a>
                         <div id="error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
-                          <%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %>
+                          <pre> <%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %> </pre>
                         </div>
                       <% } %>
 

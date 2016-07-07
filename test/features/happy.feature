@@ -14,7 +14,7 @@ Feature: Happy HTML reporting
     Then cucumber-html-reporter should create HTML report
 
   @testScenarioOutline
-  Scenario Outline: Fred wants to run scenario outline and print on HTML report
+  Scenario Outline: Fred runs scenario outline for <name> and print on HTML report
     Given Fred runs a passing cucumber scenario on behalf of "<name>"
     When he has the JSON cucumber formatted file at the end of run
     Then cucumber-html-reporter should create HTML report
@@ -34,8 +34,17 @@ Feature: Happy HTML reporting
   @testDataTable
   Scenario: Fred wants to use data table and print on HTML report
     Given Fred runs a passing scenario for the following data set
-      | id | name   |
-      | 1  | data-A |
-      | 2  | data-B |
+      | id | name   | id | name   | id | name   | id | name   | id | name   | id | name   | id | name   |
+      | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A |
+      | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B |
+      | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A |
+      | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B |
+      | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A |
+      | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B |
+      | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A |
+      | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B |
+      | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A | 1  | data-A |
+      | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B | 2  | data-B |
+
     When he has the JSON cucumber formatted file at the end of run
     Then cucumber-html-reporter should create HTML report with data-table
