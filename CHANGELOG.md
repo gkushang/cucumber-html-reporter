@@ -1,3 +1,12 @@
+### 0.1.6 (2016-07-07)
+
+#### Enhancements
+
+* Format feature descriptions on report 
+* Add overflow scroll bar for the bigger data-table
+* print error messaged in the pre
+ 
+
 ### 0.1.5 (2016-07-05)
 
 #### Enhancements
@@ -9,6 +18,7 @@
 #### Bug fixes
 
 * Fix bug when cucumber error message has kind of html tags as a string, e.g. <object> is not defined.
+
 
 ### 0.1.4 (2016-06-28)
 
