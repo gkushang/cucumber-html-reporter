@@ -113,13 +113,13 @@ Attach plain-texts/data to HTML report to help debug/review the results
  
 ```
 
-#### Attach JSON to HTML report
+#### Attach pretty JSON to HTML report
 
 Attach JSON to HTML report
 
 ```javascript
  
-  scenario.attach(JSON.stringity(myJsonObject, undefined, 4);
+  scenario.attach(JSON.stringity(myJsonObject, undefined, 4));
  
 ```
 
