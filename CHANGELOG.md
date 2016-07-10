@@ -1,3 +1,10 @@
+### 0.2.0 (2016-07-10)
+
+#### Support for Cucumber@1.2.0 version
+
+* Screenshot attachment support for Cucumber release >= @1.2.0 (https://github.com/cucumber/cucumber-js/blob/master/CHANGELOG.md#bug-fixes-1)
+ 
+
 ### 0.1.6 (2016-07-07)
 
 #### Enhancements
