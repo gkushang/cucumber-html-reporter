@@ -89,7 +89,9 @@ Supported in the Bootstrap theme.
 
 `false`: Reports total number of passed/failed features as HEADER.
 
-## Attach Screenshots to HTML report
+## Tips
+
+#### Attach Screenshots to HTML report
 
 Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the screenshot image
 
@@ -101,13 +103,23 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
   
 ```
 
-## Attach Plain Text to HTML report
+#### Attach Plain Text to HTML report
 
 Attach plain-texts/data to HTML report to help debug/review the results
 
 ```javascript
  
   scenario.attach('test data goes here');
+ 
+```
+
+#### Attach JSON to HTML report
+
+Attach JSON to HTML report
+
+```javascript
+ 
+  scenario.attach(JSON.stringity(myJsonObject, undefined, 4);
  
 ```
 

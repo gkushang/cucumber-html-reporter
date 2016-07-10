@@ -37,6 +37,14 @@ var stepDefs = function stepDefs() {
 
     this.Then(/^Fred attaches the "([^"]*)" to the Given step of passing cucumber scenario$/, function(testData, callback) {
         this.scenario.attach(testData);
+
+        var myJsonObject = {
+            name: 'cucumber-html-reporter',
+            format: 'html'
+        };
+
+        this.scenario.attach(JSON.stringify(myJsonObject, undefined, 2));
+        
         callback();
     });
 
