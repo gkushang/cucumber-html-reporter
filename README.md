@@ -96,7 +96,7 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
 ```javascript
   
   driver.takeScreenshot().then(function (buffer) {
-    return scenario.attach(new Buffer(buffer, 'base64').toString('binary'), 'image/png');
+    return scenario.attach(new Buffer(buffer, 'base64'), 'image/png');
   }
   
 ```
