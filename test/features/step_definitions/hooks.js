@@ -2,6 +2,7 @@
 
 var reporter = require('../../../index');
 var assertHtmlReports = require('../../assert/assertHtmlReports');
+var path = require('path');
 
 var hooks = function() {
     this.Before(function(scenario, callback) {
@@ -18,11 +19,13 @@ var hooks = function() {
             simple: 'simple'
         };
 
+        var outputDirectory = 'test/report/';
+        
         function getOptions(theme) {
             return {
                 theme: theme,
                 jsonFile: 'test/report/cucumber_report.json',
-                output: 'test/report/cucumber_report_' + theme + '.html',
+                output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
                 reportSuiteAsScenarios: true
             };
         }
@@ -38,7 +41,7 @@ var hooks = function() {
 
 
         //assert reports
-        assertHtmlReports();
+        assertHtmlReports(outputDirectory);
 
         callback();
     });

@@ -1,15 +1,24 @@
 'use strict';
 var chai = require('chai');
-chai.use(require('chai-fs'));
-var expect = chai.expect;
+var fs = require('fs');
+should = chai.should();
+var path = require('path');
 
-module.exports = function assertHtmlReports() {
+module.exports = function assertHtmlReports(outputDirectory) {
 
-    var bootstrapHtmlFile = 'test/report/cucumber_report_bootstrap.html';
-    var foundationHtmlFile = 'test/report/cucumber_report_foundation.html';
-    var simpleHtmlFile = 'test/report/cucumber_report_simple.html';
+    function isReportExists(report) {
+        try {
+            return fs.statSync(report).isFile();
+        } catch (e) {
+            return false
+        }
+    }
 
-    expect(bootstrapHtmlFile).to.be.a.path('Bootstrap HTML report was not created');
-    expect(foundationHtmlFile).to.be.a.path('Foundation HTML report was not created');
-    expect(simpleHtmlFile).to.be.a.path('Simple HTML report was not created');
+    var bootstrapHtmlFile = path.join(outputDirectory, 'cucumber_report_bootstrap.html');
+    var foundationHtmlFile = path.join(outputDirectory, 'cucumber_report_foundation.html');
+    var simpleHtmlFile = path.join(outputDirectory, 'cucumber_report_simple.html');
+
+    isReportExists(bootstrapHtmlFile).should.be.equal(true, 'bootstrapHtmlFile file \'' + bootstrapHtmlFile +'\' does not exist');
+    isReportExists(foundationHtmlFile).should.be.equal(true, 'foundationHtmlFile file \'' + foundationHtmlFile +'\' does not exist');
+    isReportExists(simpleHtmlFile).should.be.equal(true, 'simpleHtmlFile file \'' + simpleHtmlFile +'\' does not exist');
 };
