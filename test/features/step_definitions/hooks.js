@@ -20,7 +20,7 @@ var hooks = function() {
         };
 
         var outputDirectory = 'test/report/';
-        
+
         function getOptions(theme) {
             return {
                 theme: theme,

@@ -44,7 +44,7 @@ var stepDefs = function stepDefs() {
         };
 
         this.scenario.attach(JSON.stringify(myJsonObject, undefined, 2));
-        
+
         callback();
     });
 

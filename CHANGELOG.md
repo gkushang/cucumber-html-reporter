@@ -1,3 +1,12 @@
+### 0.2.1 (2016-07-12)
+
+#### Enhancements
+
+* Recursively create HTML report directory if does not exists
+* Remove outdated chai-fs depedency and use chai-should assertions
+* Lighter the background color or Scenario attachments
+ 
+
 ### 0.2.0 (2016-07-10)
 
 #### Support for Cucumber@1.2.0 version
