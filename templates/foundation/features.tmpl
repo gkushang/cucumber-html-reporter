@@ -3,7 +3,7 @@
   <div class="large-12 columns">
 
     <h3 class="subheader"><span class="highlight"><%= feature.keyword %>: </span><%= feature.name %></h3>
-    <p class="subheader"><%= feature.description.replace(/\n/g, '<br />') %></p>
+    <% if (feature.description) { %><p class="subheader"><%= feature.description.replace(/\n/g, '<br />') %></p><% } %>
     <br />
     <% _.each(feature.elements, function(element, scenarioIndex) { %>
       <div class="section-container accordion" data-section="accordion">

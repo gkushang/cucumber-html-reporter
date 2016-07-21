@@ -1,10 +1,5 @@
 Feature: Unhappy HTML reporting
 
-  In order to review cucumber reports
-  Fred, a cucumber user
-  Wants to have cucumber reports in HTML
-
-
   @attachScreenshot
   Scenario: Fred wants to see a Screenshot attached to the HTML report
     Given Fred runs a failing cucumber scenario

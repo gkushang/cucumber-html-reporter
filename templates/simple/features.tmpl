@@ -1,7 +1,7 @@
 <% _.each(suite.features, function(feature) { %>
 <div class="feature container">
   <h3 class="title"><span class="highlight"><%= feature.keyword %>: </span><%= feature.name %></h3>
-  <p><%= feature.description.replace(/\n/g, '<br />') %></p>
+   <% if (feature.description) { %><p><%= feature.description.replace(/\n/g, '<br />') %></p><% } %>
   <% _.each(feature.elements, function(element) { %> 
     <div class="element container">
     <h3 class="title"><span class="highlight"><%= element.keyword %>: </span><%= element.name %></h3>
