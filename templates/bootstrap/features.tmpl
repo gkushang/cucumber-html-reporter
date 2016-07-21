@@ -22,7 +22,7 @@
       </div>
       <div id="collapseFeature<%= featureIndex %>" class="panel-collapse collapse">
         <div class="panel-body">
-        <div class="feature-description"><%= feature.description.replace(/\n/g, '<br />') %></div>
+         <% if (feature.description) { %><div class="feature-description"><%= feature.description.replace(/\n/g, '<br />') %></div><% } %>
           <% _.each(feature.elements, function(element, scenarioIndex) { %>
             <div class="panel panel-default">
               <div class="panel-heading">
