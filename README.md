@@ -26,6 +26,8 @@ npm install cucumber-html-reporter --save-dev
 
 ## Usage
 
+Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
+
 Example of `bootstrap` theme:
 
 ``` bash
