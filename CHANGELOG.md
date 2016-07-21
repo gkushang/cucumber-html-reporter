@@ -1,3 +1,9 @@
+### 0.2.2 (2016-07-21)
+
+#### BugFix
+
+* Fixes https://github.com/gkushang/cucumber-html-reporter/issues/7
+
 ### 0.2.1 (2016-07-12)
 
 #### Enhancements
