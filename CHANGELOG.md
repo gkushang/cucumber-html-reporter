@@ -1,3 +1,9 @@
+### 0.2.3 (2016-07-26)
+
+#### Enhancements
+
+* Published https://github.com/gkushang/cucumber-html-reporter/pull/10 Set charset as utf-8 
+
 ### 0.2.2 (2016-07-21)
 
 #### BugFix
