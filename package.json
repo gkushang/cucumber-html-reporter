@@ -11,6 +11,10 @@
     {
       "name": "grunt-cucumberjs",
       "url": "https://www.npmjs.com/package/grunt-cucumberjs"
+    },
+     {
+      "name": "LiQiang",
+      "url": "https://github.com/li-qiang"
     }
   ],
   "scripts": {
