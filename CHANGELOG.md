@@ -1,3 +1,9 @@
+### 0.2.4 (2016-07-28)
+
+#### BugFix
+
+* https://github.com/mavdi/grunt-cucumberjs/issues/86 
+
 ### 0.2.3 (2016-07-26)
 
 #### Enhancements
