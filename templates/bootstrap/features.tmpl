@@ -27,7 +27,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %><%=scenarioIndex %>">
+                  <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                      <b><%= element.keyword %>:</b><%= element.name %>
@@ -41,7 +41,7 @@
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenario<%= featureIndex %><%= scenarioIndex %>" class="panel-collapse collapse">
+              <div id="collapseScenario<%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
                   <% _.each(element.steps, function(step, stepIndex) { %>
                     <p class="scenario-container">
@@ -95,15 +95,15 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
                       <% } %>
 
                       <% if (step.result.error_message) { %>
-                        <a href="#error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Error</a>
-                        <div id="error<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
+                        <a href="#error<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Error</a>
+                        <div id="error<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" class="collapse">
                           <pre class=info>< <%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %> </pre>
                         </div>
                       <% } %>
 
                       <% if (step.text) { %>
-                           <a href="#info<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Info</a>
-                           <div id="info<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
+                           <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Info</a>
+                           <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" class="collapse">
                              <pre class=info> <%= step.text %> </pre>
                            </div>
                       <% } %>

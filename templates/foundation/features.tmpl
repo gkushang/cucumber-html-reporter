@@ -41,8 +41,8 @@
 		<% } %>
 
         <% if (step.text) { %>
-             <a href="#info<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Info</a>
-             <div id="info<%= featureIndex %><%= scenarioIndex %><%= stepIndex %>" class="collapse">
+             <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Info</a>
+             <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" class="collapse">
                <%= step.text %>
              </div>
         <% } %>
