@@ -1,3 +1,9 @@
+### 0.2.5 (2016-07-28)
+
+#### Enhancements
+
+* trim the text to be printed on report 
+
 ### 0.2.4 (2016-07-28)
 
 #### BugFix
