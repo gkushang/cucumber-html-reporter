@@ -97,7 +97,7 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
                       <% if (step.result.error_message) { %>
                         <a href="#error<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Error</a>
                         <div id="error<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" class="collapse">
-                          <pre class=info><<%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
+                          <pre class=info><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
                         </div>
                       <% } %>
 
