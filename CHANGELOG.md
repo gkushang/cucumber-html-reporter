@@ -1,3 +1,9 @@
+### 0.2.6 (2016-07-29)
+
+#### BugFix
+
+* Fixed the issue where Error messages were not printing on the report. 
+
 ### 0.2.5 (2016-07-28)
 
 #### Enhancements
