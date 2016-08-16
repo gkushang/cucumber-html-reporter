@@ -38,7 +38,8 @@ var options = {
         theme: 'bootstrap',
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
-        reportSuiteAsScenarios: true
+        reportSuiteAsScenarios: true,
+        launchReport: true
     };
 
     reporter.generate(options);
@@ -90,6 +91,16 @@ Supported in the Bootstrap theme.
 `true`: Reports total number of passed/failed scenarios as HEADER.
 
 `false`: Reports total number of passed/failed features as HEADER.
+
+#### `launchReport`
+Type: `Boolean`
+
+Automatically launch HTML report at the end of test suite
+
+`true`: Launch HTML report in the default browser
+
+`false`: Do not launch HTML report at the end of test suite
+
 
 ## Tips
 

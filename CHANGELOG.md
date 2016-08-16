@@ -1,3 +1,29 @@
+### 0.2.7 (2016-08-16)
+
+#### Enhancements
+
+* Launch report automatically after test ends
+* Pass a flag `launchReport` to the options
+
+
+``` bash
+
+var reporter = require('cucumber-html-reporter');
+...
+...
+
+var options = {
+        theme: 'bootstrap',
+        jsonFile: 'test/report/cucumber_report.json',
+        output: 'test/report/cucumber_report.html',
+        reportSuiteAsScenarios: true,
+        launchReport: true
+    };
+
+    reporter.generate(options);
+```
+
+
 ### 0.2.6 (2016-07-29)
 
 #### BugFix
