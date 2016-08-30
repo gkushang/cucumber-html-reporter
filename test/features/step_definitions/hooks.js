@@ -20,27 +20,61 @@ var hooks = function() {
         };
 
         var outputDirectory = 'test/report/';
+        var jsonFile = 'test/report/cucumber_report.json';
+        var jsonDir = 'test/report/multi';
 
         function getOptions(theme) {
             return {
                 theme: theme,
-                jsonFile: 'test/report/cucumber_report.json',
                 output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
                 reportSuiteAsScenarios: true
             };
         }
 
-        //Generate Bootstrap theme report
-        reporter.generate(getOptions(theme.bootstrap));
+        function getJsonFileOptions(theme) {
+            var options = getOptions(theme);
+            options.jsonFile = jsonFile;
+            return options;
+        }
 
-        //Generate Foundation theme report
-        reporter.generate(getOptions(theme.foundation));
+        function getJsonDirOptions(theme) {
+            var options = getOptions(theme);
+            options.jsonDir = jsonDir;
+            return options;
+        }
 
-        //Generate Simple theme report
-        reporter.generate(getOptions(theme.simple));
+        function assertJsonFile() {
 
-        //assert reports
-        assertHtmlReports(outputDirectory);
+            //Generate Bootstrap theme report
+            reporter.generate(getJsonFileOptions(theme.bootstrap));
+
+            //Generate Foundation theme report
+            reporter.generate(getJsonFileOptions(theme.foundation));
+
+            //Generate Simple theme report
+            reporter.generate(getJsonFileOptions(theme.simple));
+
+            //assert reports
+            assertHtmlReports(outputDirectory);
+        }
+
+        function assertJsonDir() {
+            //Generate Bootstrap theme report
+            reporter.generate(getJsonDirOptions(theme.bootstrap));
+
+            //Generate Foundation theme report
+            reporter.generate(getJsonDirOptions(theme.foundation));
+
+            //Generate Simple theme report
+            reporter.generate(getJsonDirOptions(theme.simple));
+
+            //assert reports
+            assertHtmlReports(outputDirectory);
+        }
+
+        // assertJsonFile();
+
+        assertJsonDir();
 
         callback();
     });
