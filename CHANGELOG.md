@@ -1,3 +1,29 @@
+### 0.2.8 (2016-08-30)
+
+#### Enhancements
+
+* Generate consolidated report from multiple JSON files: [PR#12](https://github.com/gkushang/cucumber-html-reporter/pull/12) 
+
+    * Provide the path of `jsonDir` to generate consolidated report,
+
+
+``` bash
+
+var reporter = require('cucumber-html-reporter');
+...
+...
+
+var options = {
+        theme: 'bootstrap',
+        jsonDir: 'test/reports',
+        output: 'test/report/cucumber_report.html',
+        reportSuiteAsScenarios: true,
+        launchReport: true
+    };
+
+    reporter.generate(options);
+```
+
 ### 0.2.7 (2016-08-16)
 
 #### Enhancements
