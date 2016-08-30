@@ -87,7 +87,9 @@ Provide path of the Cucumber JSON format file
 Type: `String`
 
 If you have more than one cucumber JSON files, provide the path of JSON directory. This module will create consolidated report of all Cucumber JSON files.
-e.g. `jsonDir: 'test/reports` //where _reports_ directory contains valid `*.json` files
+
+e.g. `jsonDir: 'test/reports'` //where _reports_ directory contains valid `*.json` files
+
 
 N.B.: `jsonFile` takes precedence over `jsonDir`. We recommend to use either `jsonFile` or `jsonDir` option.
 
