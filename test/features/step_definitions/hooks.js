@@ -3,6 +3,8 @@
 var reporter = require('../../../index');
 var assertHtmlReports = require('../../assert/assertHtmlReports');
 var path = require('path');
+var fs = require('fs');
+var find = require('find');
 
 var hooks = function() {
     this.Before(function(scenario, callback) {
@@ -23,6 +25,13 @@ var hooks = function() {
         var jsonFile = 'test/report/cucumber_report.json';
         var jsonDir = 'test/report/multi';
 
+        function removeReports() {
+            var files = find.fileSync(/\.html/, outputDirectory);
+            files.map(function(file) {
+                fs.unlinkSync(file);
+            });
+        }
+
         function getOptions(theme) {
             return {
                 theme: theme,
@@ -40,6 +49,7 @@ var hooks = function() {
         function getJsonDirOptions(theme) {
             var options = getOptions(theme);
             options.jsonDir = jsonDir;
+
             return options;
         }
 
@@ -72,7 +82,9 @@ var hooks = function() {
             assertHtmlReports(outputDirectory);
         }
 
-        // assertJsonFile();
+        assertJsonFile();
+
+        removeReports();
 
         assertJsonDir();
 
