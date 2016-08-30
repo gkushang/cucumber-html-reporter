@@ -18,7 +18,7 @@
     }
   ],
   "scripts": {
-    "test": "npm run features && npm run clean",
+    "test": "npm run features ",
     "clean": "rm -r test/report/*.html test/report/*.json test/report/screenshot",
     "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json"
   },
@@ -44,7 +44,7 @@
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "commondir": "^1.0.1",
+    "find": "^0.2.7",
     "js-base64": "^2.1.9",
     "jsonfile": "^2.3.1",
     "lodash": "^4.13.1",

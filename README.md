@@ -2,6 +2,9 @@ cucumber-html-reporter
 ======================
 
 [![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![v](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)
+[![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter)
+[![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE)
+
 
 Generate Cucumber HTML reports with pie charts
 > Available HTML themes: `['bootstrap', 'foundation', 'simple']`
@@ -43,6 +46,9 @@ var options = {
     };
 
     reporter.generate(options);
+    
+    //to generate consodilated report from multi-cucumber JSON files, please use `jsonDir` option instead of `jsonFile`. More info is available in `options` section below.
+
 ```
 
 
@@ -76,6 +82,14 @@ Select the Theme for HTML report.
 Type: `String`
 
 Provide path of the Cucumber JSON format file
+
+#### `jsonDir`
+Type: `String`
+
+If you have more than one cucumber JSON files, provide the path of JSON directory. This module will create consolidated report of all Cucumber JSON files.
+e.g. `jsonDir: 'test/reports` //where _reports_ directory contains valid `*.json` files
+
+N.B.: `jsonFile` takes precedence over `jsonDir`. We recommend to use either `jsonFile` or `jsonDir` option.
 
 
 #### `output`

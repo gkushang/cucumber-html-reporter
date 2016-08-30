@@ -25,6 +25,7 @@ var hooks = function() {
             return {
                 theme: theme,
                 jsonFile: 'test/report/cucumber_report.json',
+                jsonDir: 'test/assert',
                 output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
                 reportSuiteAsScenarios: true
             };
@@ -38,7 +39,6 @@ var hooks = function() {
 
         //Generate Simple theme report
         reporter.generate(getOptions(theme.simple));
-
 
         //assert reports
         assertHtmlReports(outputDirectory);
