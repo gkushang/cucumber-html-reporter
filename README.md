@@ -118,14 +118,14 @@ Automatically launch HTML report at the end of test suite
 
 `false`: Do not launch HTML report at the end of test suite
 
-#### `reportBadJsonFile`
+#### `ignoreBadJsonFile`
 Type: `Boolean`
 
 Report any bad json files found during merging json files from directory option.
 
-`true`: report
+`true`: ignore any bad json files found and continue with remaining files to merge.
 
-`false`: Do not launch HTML report at the end of test suite
+`false`: Default option. Fail report generation if any bad files found during merge.
 
 
 ## Tips
