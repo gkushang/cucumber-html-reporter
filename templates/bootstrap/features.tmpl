@@ -61,27 +61,35 @@
                         <%= step.name %>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
-                              <div class="scrollBar"> <table class="arguments">
-                                <% var rows = step.arguments[i]["rows"]; %>
-                                  <tr>
-                                  <% var cells = rows[0]["cells"]; %>
-                                  <% for( var k = 0; k < cells.length; k++ ) { %>
-                                    <th>
-                                      <%= cells[k] %>
-                                    </th>
-                                     <% } %>
-                                    </tr>
-                                <% for( var j = 1; j < rows.length; j++ ) { %>
-                                  <tr>
-                                  <% var cells = rows[j]["cells"]; %>
-                                  <% for( var k = 0; k < cells.length; k++ ) { %>
-                                    <td>
-                                      <%= cells[k] %>
-                                    </td>
-                                  <% } %>
-                                  </tr>
-                                <% } %>
-                              </table> </div>
+                              <div class="scrollBar">
+                               <% if(step.arguments[i]["rows"]) { %>
+                                <table class="arguments">
+                                    <% var rows = step.arguments[i]["rows"]; %>
+                                      <tr>
+                                      <% var cells = rows[0]["cells"]; %>
+                                      <% for( var k = 0; k < cells.length; k++ ) { %>
+                                        <th>
+                                          <%= cells[k] %>
+                                        </th>
+                                         <% } %>
+                                        </tr>
+                                    <% for( var j = 1; j < rows.length; j++ ) { %>
+                                      <tr>
+                                      <% var cells = rows[j]["cells"]; %>
+                                      <% for( var k = 0; k < cells.length; k++ ) { %>
+                                        <td>
+                                          <%= cells[k] %>
+                                        </td>
+                                      <% } %>
+                                      </tr>
+                                    <% } %>
+                              </table>
+                              <% } %>
+                               </div>
+                               <% if(step.arguments[i]["content"]) { %>
+                               <pre class=info><%= step.arguments[i]["content"].replace(/</g, '(').replace(/>/g, ')') %></pre>
+                               <% } %>
+
                             <% } %>
                           <% } %>
                       </span>
