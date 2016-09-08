@@ -1,3 +1,17 @@
+### 0.2.9 (2016-09-08)
+
+#### Enhancements
+
+* Ignore the bad JSON files when consolidating from the JSON Directory 
+
+    * Set the option `ignoreBadJsonFile` to `true` as a boolean to ignore the Bad JSON files
+
+
+#### BugFix
+
+* Fixed the issue when report was breaking with the Cucumber's Doc String: [Issue#14](https://github.com/gkushang/cucumber-html-reporter/issues/14) 
+
+
 ### 0.2.8 (2016-08-30)
 
 #### Enhancements
