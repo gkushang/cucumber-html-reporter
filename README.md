@@ -42,8 +42,7 @@ var options = {
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
         reportSuiteAsScenarios: true,
-        launchReport: true,
-        ignoreBadJsonFile:true
+        launchReport: true
     };
 
     reporter.generate(options);
@@ -52,6 +51,7 @@ var options = {
 
 ```
 
+> Please look at the `options` section below for more options
 
 > Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][7] and pick the theme you are interested in.
 
