@@ -10,6 +10,10 @@ var stepDefs = function stepDefs() {
         callback();
     });
 
+    this.Then(/^Fred runs a passing cucumber scenario with the below content$/, function(docString, callback) {
+        callback();
+    });
+
     this.Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function(name, callback) {
         callback();
     });

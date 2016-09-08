@@ -30,6 +30,22 @@ Feature: Happy HTML reporting
     When he has the JSON cucumber formatted file at the end of run
     Then cucumber-html-reporter should create HTML report with test-data
 
+  @testDocString
+  Scenario: Fred wants see the long doc string attached in the HTML report
+    Given Fred runs a passing cucumber scenario with the below content
+
+    """
+    In order to see Doc String in the HTML report
+    As a Cucumber User,
+    I want to print below Doc String
+
+      Hey, I am a Doc string
+
+    """
+
+    When he has the JSON cucumber formatted file at the end of run
+    Then cucumber-html-reporter should create HTML report
+
 
   @testDataTable
   Scenario: Fred wants to use data table and print on HTML report
