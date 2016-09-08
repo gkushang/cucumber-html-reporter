@@ -42,11 +42,12 @@ var options = {
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
         reportSuiteAsScenarios: true,
-        launchReport: true
+        launchReport: true,
+        ignoreBadJsonFile:true
     };
 
     reporter.generate(options);
-    
+
     //to generate consodilated report from multi-cucumber JSON files, please use `jsonDir` option instead of `jsonFile`. More info is available in `options` section below.
 
 ```
@@ -60,7 +61,7 @@ var options = {
 $ cucumberjs test/features/ -f json:test/report/cucumber_report.json
 ```
 
-> Multiple formatter are also supported, 
+> Multiple formatter are also supported,
 
 ```
 $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
@@ -68,7 +69,7 @@ $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
 
 > Are you using cucumber with other frameworks or running [cucumber-parallel][6]? Pass relative path of JSON file to the `options` as shown [here][7]
 
- 
+
 ## Options
 
 #### `theme`
@@ -102,7 +103,7 @@ Provide HTML output file path and name
 
 #### `reportSuiteAsScenarios`
 Type: `Boolean`
-Supported in the Bootstrap theme. 
+Supported in the Bootstrap theme.
 
 `true`: Reports total number of passed/failed scenarios as HEADER.
 
@@ -117,6 +118,15 @@ Automatically launch HTML report at the end of test suite
 
 `false`: Do not launch HTML report at the end of test suite
 
+#### `ignoreBadJsonFile`
+Type: `Boolean`
+
+Report any bad json files found during merging json files from directory option.
+
+`true`: ignore any bad json files found and continue with remaining files to merge.
+
+`false`: Default option. Fail report generation if any bad files found during merge.
+
 
 ## Tips
 
@@ -125,11 +135,11 @@ Automatically launch HTML report at the end of test suite
 Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the screenshot image
 
 ```javascript
-  
+
   driver.takeScreenshot().then(function (buffer) {
     return scenario.attach(new Buffer(buffer, 'base64'), 'image/png');
   }
-  
+
 ```
 
 #### Attach Plain Text to HTML report
@@ -137,9 +147,9 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
 Attach plain-texts/data to HTML report to help debug/review the results
 
 ```javascript
- 
+
   scenario.attach('test data goes here');
- 
+
 ```
 
 #### Attach pretty JSON to HTML report
@@ -147,9 +157,9 @@ Attach plain-texts/data to HTML report to help debug/review the results
 Attach JSON to HTML report
 
 ```javascript
- 
+
   scenario.attach(JSON.stringity(myJsonObject, undefined, 4));
- 
+
 ```
 
 ## Credits
@@ -163,4 +173,3 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 [5]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-simple.html "Simple Theme Reports"
 [6]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
 [7]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
-
