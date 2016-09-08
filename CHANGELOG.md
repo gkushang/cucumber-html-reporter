@@ -2,7 +2,7 @@
 
 #### Enhancements
 
-* Ignore the bad JSON files when consolidating from the JSON Directory 
+* Ignore the bad JSON files when consolidating from the JSON Directory: [PR#13](https://github.com/gkushang/cucumber-html-reporter/pull/13)
 
     * Set the option `ignoreBadJsonFile` to `true` as a boolean to ignore the Bad JSON files
 
