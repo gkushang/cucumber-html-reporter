@@ -35,7 +35,7 @@
 }
 
 .panel-heading .label-container {
-    position: absolute;
+    /*position: absolute;*/
     top: 8px;
     right: 8px;
 }
@@ -124,4 +124,8 @@ th {
 
 .info {
     background-color: #fbfbfb;
+}
+
+.step-duration {
+    float: right;
 }

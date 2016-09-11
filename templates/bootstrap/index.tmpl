@@ -16,6 +16,7 @@
           <a class="navbar-brand" href="#">Cucumberjs Report</a>
           <div class="project-name visible-md visible-lg"><%= suite.name %></div>
           <div class="label-container">
+            <span class="label label-info">Time Elapsed: <%= suite.totalTime %></span>
             <span class="label label-success" title=<%= suite.reportAs %>>Passed: <%= suite.passed %></span>
             <span class="label label-danger" title=<%= suite.reportAs %>>Failed: <%= suite.failed %></span>
           </div>
