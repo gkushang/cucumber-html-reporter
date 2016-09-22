@@ -13,6 +13,16 @@ var hooks = function() {
         callback();
     });
 
+    this.Before({tags: ['@testPassing']}, function(scenario, callback) {
+        scenario.attach('this should print Before hook on test report');
+        callback();
+    });
+
+    this.After({tags: ['@testPassing']}, function(scenario, callback) {
+        scenario.attach(new Buffer('testBuffer', 'base64'), 'image/png');
+        callback();
+    });
+
     this.registerHandler('AfterFeatures', function(features, callback) {
 
         var theme = {
@@ -82,11 +92,11 @@ var hooks = function() {
             assertHtmlReports(outputDirectory);
         }
 
-        assertJsonFile();
+        assertJsonDir();
 
         removeReports();
 
-        assertJsonDir();
+        assertJsonFile();
 
         callback();
     });
