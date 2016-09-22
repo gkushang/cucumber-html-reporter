@@ -1,3 +1,12 @@
+### 0.2.10 (2016-09-22)
+
+#### Enhancements
+
+* Conditionally hide hidden steps from the report: [PR#120](https://github.com/gkushang/cucumber-html-reporter/pull/20)
+
+    * After & Before hooks are hidden on Cucumber JSON file. They will be visible on the report only if it has Info or Screenshot attached to it.
+
+
 ### 0.2.9 (2016-09-08)
 
 #### Enhancements
