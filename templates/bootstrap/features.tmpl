@@ -44,6 +44,7 @@
               <div id="collapseScenario<%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
                   <% _.each(element.steps, function(step, stepIndex) { %>
+                    <% if(!step.hidden || step.image) { %>
                     <p class="scenario-container">
                     <% if(step.result) { %>
                       <% if(step.result.status === 'passed') { %>
@@ -125,6 +126,7 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
 
                     <% } %>
                     </p>
+                    <% } %>
                   <% }); %>
                 </div>
               </div>
