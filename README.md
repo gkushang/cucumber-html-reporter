@@ -158,7 +158,7 @@ Attach JSON to HTML report
 
 ```javascript
 
-  scenario.attach(JSON.stringity(myJsonObject, undefined, 4));
+  scenario.attach(JSON.stringify(myJsonObject, undefined, 4));
 
 ```
 
