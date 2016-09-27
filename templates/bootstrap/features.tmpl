@@ -44,7 +44,7 @@
               <div id="collapseScenario<%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
                   <% _.each(element.steps, function(step, stepIndex) { %>
-                    <% if(!step.hidden || step.image || step.text) { %>
+                    <% if(!step.hidden || step.image || step.text || step.result.status === 'failed') { %>
                     <p class="scenario-container">
                     <% if(step.result) { %>
                       <% if(step.result.status === 'passed') { %>
