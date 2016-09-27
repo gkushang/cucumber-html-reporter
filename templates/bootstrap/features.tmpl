@@ -44,6 +44,7 @@
               <div id="collapseScenario<%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
                   <% _.each(element.steps, function(step, stepIndex) { %>
+                    <% if(!step.hidden || step.image || step.text || step.result.status === 'failed') { %>
                     <p class="scenario-container">
                     <% if(step.result) { %>
                       <% if(step.result.status === 'passed') { %>
@@ -100,7 +101,8 @@
                       <% if(step.result.status === 'undefined') { %>
                         <pre class=info>
 this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function(<% for (var i=1; i<(step.name.split('"').length / 2); i++) { %>arg<%= i %>, <% } %>callback) {
-  callback.pending();
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
 });
                         </pre>
                       <% } %>
@@ -128,6 +130,7 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
 
                     <% } %>
                     </p>
+                    <% } %>
                   <% }); %>
                 </div>
               </div>
