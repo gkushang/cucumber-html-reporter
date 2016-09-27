@@ -1,3 +1,10 @@
+### 0.2.12 (2016-09-27)
+
+#### Fixes
+
+* Show hidden hooks if they fail: [PR#25](https://github.com/gkushang/cucumber-html-reporter/pull/25)
+
+
 ### 0.2.11 (2016-09-26)
 
 #### Fixes
