@@ -1,3 +1,10 @@
+### 0.2.13 (2016-09-27)
+
+#### Enhancements
+
+* Show time taken by each steps to complete the execution on report: [PR#17](https://github.com/gkushang/cucumber-html-reporter/pull/17) & [PR#27](https://github.com/gkushang/cucumber-html-reporter/pull/27)
+    
+
 ### 0.2.12 (2016-09-27)
 
 #### Fixes
