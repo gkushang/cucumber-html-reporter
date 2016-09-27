@@ -125,3 +125,7 @@ th {
 .info {
     background-color: #fbfbfb;
 }
+
+.step-duration {
+    float: right;
+}

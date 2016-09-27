@@ -30,7 +30,7 @@
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
-                     <b><%= element.keyword %>:</b><%= element.name %>
+                    <b><%= element.keyword %>:</b><%= element.name %>
                     <span class="label-container">
                       <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
                       <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
@@ -60,6 +60,9 @@
                       <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
                         <%= step.name %>
+                          <span class="step-duration">  
+                           <%= calculateDuration(step.result.duration) %>
+                          </span>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
                               <div class="scrollBar">
