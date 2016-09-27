@@ -59,15 +59,9 @@
                       <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
                         <%= step.name %>
-                        <% if(step.result.duration / 60000000000 >=1 ) { %>   
-                          <span class="step-duration">                  
-                            <%= Math.trunc(step.result.duration / 60000000000) + " m " + _.round((step.result.duration % 60000000000) / 1000000000 ,2) + " s" %>
-                           </span> 
-                         <% } else if(step.result.duration / 60000000000 < 1 ) { %>
                           <span class="step-duration">  
-                           <%= _.round(step.result.duration / 1000000000,2) + " s" %>
-                          </span> 
-                        <% } %>                   
+                           <%= calculateDuration(step.result.duration) %>
+                          </span>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
                               <div class="scrollBar">

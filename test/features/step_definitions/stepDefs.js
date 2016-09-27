@@ -15,7 +15,8 @@ var stepDefs = function stepDefs() {
     });
 
     this.Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function(name, callback) {
-        callback();
+        setTimeout(callback, 3000);
+        // callback();
     });
 
     this.Then(/^he has the JSON cucumber formatted file at the end of run$/, function(callback) {
