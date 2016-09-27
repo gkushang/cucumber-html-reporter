@@ -11,11 +11,11 @@
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b><%= feature.keyword %>:</b><%= feature.name %>
             <span class="label-container">
-              <% if (feature.scenarios.passed) { %><span class="label label-success" style="float:right; margin-left: 5px;"><%= feature.scenarios.passed %></span><% } %>
-              <% if (feature.scenarios.failed) { %><span class="label label-danger" style="float:right; margin-left: 5px;"><%= feature.scenarios.failed %></span><% } %>
-              <% if (feature.scenarios.notdefined) { %><span class="label label-info" style="float:right; margin-left: 5px;"><%= feature.scenarios.notdefined %></span><% } %>
-              <% if (feature.scenarios.pending) { %><span class="label label-info" style="float:right;  margin-left: 5px;"><%= feature.scenarios.pending %></span><% } %>
-              <% if (feature.scenarios.skipped) { %><span class="label label-warning" style="float:right;  margin-left: 5px;"><%= feature.scenarios.skipped %></span><% } %>
+              <% if (feature.scenarios.passed) { %><span class="label label-success"><%= feature.scenarios.passed %></span><% } %>
+              <% if (feature.scenarios.failed) { %><span class="label label-danger"><%= feature.scenarios.failed %></span><% } %>
+              <% if (feature.scenarios.notdefined) { %><span class="label label-info"><%= feature.scenarios.notdefined %></span><% } %>
+              <% if (feature.scenarios.pending) { %><span class="label label-info"><%= feature.scenarios.pending %></span><% } %>
+              <% if (feature.scenarios.skipped) { %><span class="label label-warning"><%= feature.scenarios.skipped %></span><% } %>
             </span>
           </a>
         </h4>
@@ -29,14 +29,14 @@
                 <h4 class="panel-title">
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
-                    <i class="glyphicon glyphicon-chevron-down"></i>                    
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b><%= element.keyword %>:</b><%= element.name %>
                     <span class="label-container">
-                      <b><%= element.keyword %>:</b><%= element.name %>
-                      <% if (element.passed) { %><span class="label label-success" style="float:right;  margin-left: 5px;" title="Passed"><%= element.passed %></span><% } %>
-                      <% if (element.notdefined) { %><span class="label label-info" style="float:right; margin-left: 5px;" title="Undefined"><%= element.notdefined %></span><% } %>
-                      <% if (element.pending) { %><span class="label label-info"  style="float:right;  margin-left: 5px;" title="Penddding"><%= element.pending %></span><% } %>
-                      <% if (element.skipped) { %><span class="label label-warning" style="float:right;  margin-left: 5px;" title="Skipped"><%= element.skipped %></span><% } %>
-                      <% if (element.failed) { %><span class="label label-danger" style="float:right;  margin-left: 5px;" title="Failed"><%= element.failed %></span><% } %>
+                      <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
+                      <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
+                      <% if (element.pending) { %><span class="label label-info" title="Penddding"><%= element.pending %></span><% } %>
+                      <% if (element.skipped) { %><span class="label label-warning" title="Skipped"><%= element.skipped %></span><% } %>
+                      <% if (element.failed) { %><span class="label label-danger" title="Failed"><%= element.failed %></span><% } %>
                     </span>
                   </a>
                 </h4>
