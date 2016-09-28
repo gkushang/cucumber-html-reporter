@@ -1,3 +1,10 @@
+### 0.2.14 (2016-09-27)
+
+#### Enhancements
+
+* Option to add custom name to the project & adds footer: [PR#28](https://github.com/gkushang/cucumber-html-reporter/pull/28)
+  
+  
 ### 0.2.13 (2016-09-27)
 
 #### Enhancements
