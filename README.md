@@ -127,6 +127,11 @@ Report any bad json files found during merging json files from directory option.
 
 `false`: Default option. Fail report generation if any bad files found during merge.
 
+#### `name`
+Type: `String` (optional)
+
+Custom project name. If not passed, module reads the name from projects package.json which is preferable.
+ 
 
 ## Tips
 

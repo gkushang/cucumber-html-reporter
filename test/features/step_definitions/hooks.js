@@ -46,7 +46,8 @@ var hooks = function() {
             return {
                 theme: theme,
                 output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
-                reportSuiteAsScenarios: true
+                reportSuiteAsScenarios: true,
+                launchReport: true
             };
         }
 
@@ -69,13 +70,13 @@ var hooks = function() {
             reporter.generate(getJsonFileOptions(theme.bootstrap));
 
             //Generate Foundation theme report
-            reporter.generate(getJsonFileOptions(theme.foundation));
+            // reporter.generate(getJsonFileOptions(theme.foundation));
 
             //Generate Simple theme report
-            reporter.generate(getJsonFileOptions(theme.simple));
+            // reporter.generate(getJsonFileOptions(theme.simple));
 
             //assert reports
-            assertHtmlReports(outputDirectory);
+            // assertHtmlReports(outputDirectory);
         }
 
         function assertJsonDir() {
