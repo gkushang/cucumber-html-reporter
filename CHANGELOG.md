@@ -1,3 +1,10 @@
+### 0.2.15 (2016-09-28)
+
+#### Fix
+
+* Fix for older node versions: [ISSUE#30](https://github.com/gkushang/cucumber-html-reporter/issues/30)
+
+
 ### 0.2.14 (2016-09-27)
 
 #### Enhancements
