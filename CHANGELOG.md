@@ -1,3 +1,10 @@
+### 0.2.16 (2016-10-07)
+
+#### Enhancements
+
+* Show Scenario Description on HTML report: [ISSUE#33](https://github.com/gkushang/cucumber-html-reporter/issues/33)
+
+
 ### 0.2.15 (2016-09-28)
 
 #### Fix
