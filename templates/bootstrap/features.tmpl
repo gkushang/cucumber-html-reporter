@@ -61,9 +61,11 @@
                       <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
                         <%= step.name %>
-                          <span class="step-duration">  
-                           <%= calculateDuration(step.result.duration) %>
-                          </span>
+                          <% if (step.result && step.result.duration) { %>
+                              <span class="step-duration">
+                               <%= calculateDuration(step.result.duration) %>
+                              </span>
+                            <% } %>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
                               <div class="scrollBar">
