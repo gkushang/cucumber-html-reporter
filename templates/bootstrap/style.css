@@ -89,7 +89,7 @@ table.arguments {
     width: 80%
 }
 
-.feature-description {
+.description {
     background-color: white;
     border-color: white;
     line-height: 1.6;
@@ -98,6 +98,11 @@ table.arguments {
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 14px;
     padding:  0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom:  1em;
+    padding-left: 0.2em;
 }
 
 .scrollBar {
