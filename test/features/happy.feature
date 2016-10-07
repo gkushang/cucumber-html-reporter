@@ -9,12 +9,19 @@ Feature: Happy HTML reporting
 
   @testPassing
   Scenario: Fred wants to see passing scenarios in the HTML report
+
+    Fred runs cucumber-scenario to get HTML report
+
     Given Fred runs a passing cucumber scenario
     When he has the JSON cucumber formatted file at the end of run
     Then cucumber-html-reporter should create HTML report
 
   @testScenarioOutline
   Scenario Outline: Fred runs scenario outline for <name> and print on HTML report
+
+    John & Bob wants to run cucumber scenarios
+    - expects to have HTML reports
+
     Given Fred runs a passing cucumber scenario on behalf of "<name>"
     When he has the JSON cucumber formatted file at the end of run
     Then cucumber-html-reporter should create HTML report

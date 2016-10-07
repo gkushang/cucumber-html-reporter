@@ -22,7 +22,7 @@
       </div>
       <div id="collapseFeature<%= featureIndex %>" class="panel-collapse collapse">
         <div class="panel-body">
-         <% if (feature.description) { %><div class="feature-description"><%= feature.description.replace(/\n/g, '<br />') %></div><% } %>
+         <% if (feature.description) { %><div class="description"><%= feature.description.replace(/\n/g, '<br />') %></div><% } %>
           <% _.each(feature.elements, function(element, scenarioIndex) { %>
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -43,6 +43,7 @@
               </div>
               <div id="collapseScenario<%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
+                  <% if (element.description) { %><div class="description" id="scenario-description"><%= element.description.trim().replace(/\n/g, '<br />') %></div><% } %>
                   <% _.each(element.steps, function(step, stepIndex) { %>
                     <% if(!step.hidden || step.image || step.text || step.result.status === 'failed') { %>
                     <p class="scenario-container">
@@ -60,9 +61,11 @@
                       <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
                         <%= step.name %>
-                          <span class="step-duration">  
-                           <%= calculateDuration(step.result.duration) %>
-                          </span>
+                          <% if (step.result && step.result.duration) { %>
+                              <span class="step-duration">
+                               <%= calculateDuration(step.result.duration) %>
+                              </span>
+                            <% } %>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
                               <div class="scrollBar">

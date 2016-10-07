@@ -1,6 +1,6 @@
 {
   "name": "cucumber-html-reporter",
-  "version": "0.2.14",
+  "version": "0.2.16",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "author": {
@@ -23,7 +23,7 @@
     "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json"
   },
   "devDependencies": {
-    "cucumber": "^1.2.1"
+    "cucumber": "^1.3.1"
   },
   "repository": {
     "type": "git",
