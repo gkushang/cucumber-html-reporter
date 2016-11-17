@@ -6,11 +6,11 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
+            <% if (feature.tags) { %><div class="tags"><% _.each(feature.tags, function(tag, featureIndex) { %> <span class="tag"><%= tag.name %></span> <% }); %> </div><% } %>
           <a data-toggle="collapse" href="#collapseFeature<%= featureIndex %>">
             <i class="glyphicon glyphicon-chevron-right"></i>
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b><%= feature.keyword %>:</b><%= feature.name %>
-            <% if (feature.tags) { %><% _.each(feature.tags, function(tag, featureIndex) { %> <b><%= tag.name %></b> <% }); %> <% } %>
             <span class="label-container">
               <% if (feature.scenarios.passed) { %><span class="label label-success"><%= feature.scenarios.passed %></span><% } %>
               <% if (feature.scenarios.failed) { %><span class="label label-danger"><%= feature.scenarios.failed %></span><% } %>
@@ -28,11 +28,11 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
+                    <% if (element.tags) { %><div class="tags"><% _.each(element.tags, function(tag, scenarioIndex) { %> <span class="tag"><%= tag.name %></span> <% }); %> </div><% } %>
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b><%= element.keyword %>:</b><%= element.name %>
-                    <% if (element.tags) { %><% _.each(element.tags, function(tag, scenarioIndex) { %> <b><%= tag.name %></b> <% }); %> <% } %>
                     <span class="label-container">
                       <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
                       <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>

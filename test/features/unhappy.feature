@@ -1,3 +1,4 @@
+@unhappy @unhappyHtml @reporting
 Feature: Unhappy HTML reporting
 
   @attachScreenshot
