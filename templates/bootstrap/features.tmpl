@@ -28,7 +28,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                    <% if (element.tags) { %><div class="tags"><% _.each(element.tags, function(tag, scenarioIndex) { %> <span class="tag"><%= tag.name %></span> <% }); %> </div><% } %>
+                    <% if (element.tags) { %><div class="tags"><% _.each(_.drop(element.tags, feature.tags.length), function(tag) { %> <span class="tag"> <%= tag.name %></span> <% }); %> </div><% } %>
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
