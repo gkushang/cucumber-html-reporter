@@ -1,6 +1,6 @@
 {
   "name": "cucumber-html-reporter",
-  "version": "0.2.16",
+  "version": "0.2.17",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "author": {
@@ -11,6 +11,10 @@
     {
       "name": "grunt-cucumberjs",
       "url": "https://www.npmjs.com/package/grunt-cucumberjs"
+    },
+    {
+      "name": "Galileo1",
+      "url": "https://github.com/Galileo1"
     },
     {
       "name": "LiQiang",
@@ -47,7 +51,7 @@
     "find": "^0.2.7",
     "js-base64": "^2.1.9",
     "jsonfile": "^2.3.1",
-    "lodash": "^4.13.1",
+    "lodash": "^4.17.2",
     "node-fs": "^0.1.7",
     "open": "0.0.5"
   }

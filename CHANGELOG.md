@@ -1,3 +1,11 @@
+### 0.2.17 (2016-11-17)
+
+#### Enhancements
+
+* Display Tags on Feature & Scenarios: [PR#35](https://github.com/gkushang/cucumber-html-reporter/pull/35)
+* Filter Tags from Scenarios which is already displayed at Feature Level & add some styling to Tags [PR#37](https://github.com/gkushang/cucumber-html-reporter/pull/37)
+
+
 ### 0.2.16 (2016-10-07)
 
 #### Enhancements

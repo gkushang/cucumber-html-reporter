@@ -1,3 +1,4 @@
+@happy @happyHtml @reporting
 Feature: Happy HTML reporting
 
   In order to review cucumber reports
@@ -7,7 +8,7 @@ Feature: Happy HTML reporting
   Background:
     When this feature runs with background
 
-  @testPassing
+  @testPassing @htmlReporting @happyPath
   Scenario: Fred wants to see passing scenarios in the HTML report
 
     Fred runs cucumber-scenario to get HTML report
