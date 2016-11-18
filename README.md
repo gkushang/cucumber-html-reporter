@@ -134,10 +134,10 @@ Custom project name. If not passed, module reads the name from projects package.
  
 #### `storeScreenShots`
 Type: `Boolean`
-Default: `false`
+Default: `undefined`
 
 `true`: Stores all screenShots stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
-`false`: Does not store screenShots but attaches screenShots as a inline images to Steps on HTML report
+`false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
 
 
