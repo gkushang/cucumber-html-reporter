@@ -137,6 +137,7 @@ Type: `Boolean`
 Default: `undefined`
 
 `true`: Stores all screenShots stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
+
 `false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
 
