@@ -50,11 +50,11 @@
              <% _.map(suite.additionalInfo, function(value, key) { %>
               <% var className %>
               <% if (isLeft) { className = "pull-left"; isLeft = false; }
-               else { className= "pull-right-md"; isLeft = true } %>
-              <div class="col-xs-12 col-sm-6 col-lg-6">
-                  <p class=<%= className %>>
+               else { className= "pull-right-lg"; isLeft = true } %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=<%= className %>>
                     <strong> <%= key %>: </strong><%= value %>
-                  </p>
+                  </div>
               </div>
               <% }) %>
             </div>
