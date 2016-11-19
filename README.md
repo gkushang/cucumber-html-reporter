@@ -20,7 +20,7 @@ Generate Cucumber HTML reports with pie charts
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
-#### More snapshots are availble [here][8]
+##### More snapshots are availble [here][8]
 
 ## Install
 
