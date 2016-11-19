@@ -14,12 +14,14 @@ var hooks = function() {
     });
 
     this.Before({tags: ['@testPassing']}, function(scenario, callback) {
-        scenario.attach('this should print Before hook on test report');
+        scenario.attach('Tests INFO will print here.<br>To attach INFO to Any steps, use scenario.attach function in your step definitions as shown below.<br><br>If you pass HTML\'s to scenario.attach then reporter will format accordingly <br>' +
+            '<br>Simple String  : scenario.attach(\'sample data\')' +
+            '<br>Pretty JSON    : scenario.attach(JSON.stringify(json, null, 2))' +
+            '<br>HTML Link      : scenario.attach(\'format the link with html-a tag\'');
         callback();
     });
 
     this.After({tags: ['@testPassing']}, function(scenario, callback) {
-        scenario.attach(new Buffer('testBuffer', 'base64'), 'image/png');
         callback();
     });
 
@@ -70,13 +72,13 @@ var hooks = function() {
             reporter.generate(getJsonFileOptions(theme.bootstrap));
 
             //Generate Foundation theme report
-            // reporter.generate(getJsonFileOptions(theme.foundation));
+            reporter.generate(getJsonFileOptions(theme.foundation));
 
             //Generate Simple theme report
-            // reporter.generate(getJsonFileOptions(theme.simple));
+            reporter.generate(getJsonFileOptions(theme.simple));
 
             //assert reports
-            // assertHtmlReports(outputDirectory);
+            assertHtmlReports(outputDirectory);
         }
 
         function assertJsonDir() {
@@ -96,7 +98,7 @@ var hooks = function() {
         assertJsonDir();
 
         removeReports();
-
+        //
         assertJsonFile();
 
         callback();

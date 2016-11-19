@@ -18,7 +18,7 @@ Generate Cucumber HTML reports with pie charts
 
 
 ## Snapshot of Bootstrap Report
-![Alt text](/test/report/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
+![Alt text](/samples/html_report_screenshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
 
 ## Install
@@ -182,8 +182,8 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 
 [1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
 [2]: https://github.com/cucumber/cucumber-js "CucumberJs"
-[3]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html "Bootstrap Theme Reports"
-[4]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-foundation.html "Foundation Theme Reports"
-[5]: http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-simple.html "Simple Theme Reports"
+[3]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/samples/html_report_screenshots/cucumber-report-bootstrap.html "Bootstrap Theme Reports"
+[4]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/samples/html_report_screenshots/cucumber-report-foundation.html "Foundation Theme Reports"
+[5]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/samples/html_report_screenshots/cucumber-report-simple.html "Simple Theme Reports"
 [6]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
 [7]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
