@@ -20,7 +20,7 @@ Generate Cucumber HTML reports with pie charts
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_screenshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
-
+More snapshots are availble [here][8]
 ## Install
 
 ``` bash
@@ -187,3 +187,4 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 [5]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_simple.html "Simple Theme Reports"
 [6]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
 [7]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
+[8]: https://github.com/gkushang/cucumber-html-reporter/tree/develop/samples/html_report_screenshots
