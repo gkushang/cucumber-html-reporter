@@ -11,9 +11,7 @@ Feature: Happy HTML reporting
   @testPassing
   Scenario: Fred wants to see passing scenarios in the HTML report
 
-    Fred runs cucumber-scenario to get HTML report
-
-    Given Fred runs a passing cucumber scenario
+    Given Fred runs a passing cucumber step with 2 seconds timeout
     When he provides cucumber JSON file to reporter
     Then cucumber-html-reporter should create HTML report
 

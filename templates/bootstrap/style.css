@@ -32,7 +32,6 @@
 
 .metadata {
     overflow: auto;
-    /*white-space: nowrap;*/
     letter-spacing: 0.2px;
     border-color: white;
     line-height: 1.6;
