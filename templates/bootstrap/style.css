@@ -26,6 +26,22 @@
     }
 }
 
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    /*white-space: nowrap;*/
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom:3px;
+}
+
 .panel-heading a {
     padding: 10px 15px;
     display: block;
