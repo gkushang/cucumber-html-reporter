@@ -1,3 +1,10 @@
+### 0.3.1 (2016-11-18)
+
+### Enhancements
+
+* Adding latest Previews to the readme for all themes
+* Add more snapshots for the user's review
+
 ### 0.3.0 (2016-11-18)
 
 Deprecate the option to store screenshot to the disk by default. If you still want to Store a screenShot to the directory, you can pass an option `storeScreenShots` to the reporter.
