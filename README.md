@@ -162,7 +162,7 @@ Default: `undefined`
 Type: `JSON` (optional)
 Default: `undefined`
 
-You can pass metadata in the JSON format as `key-value` pair. Reporter will parse the JSON and will show the data under `Metadata` section on HTML report.
+Print more data to your report, such as browser info, platform, app info, environments etc. All these types of data can be passed in the JSON format as `key-value` pair. Reporter will parse the JSON and will show the data under `Metadata` section on HTML report.
 
 Pass the Key-Value pair as per your need, as shown in below example,
 
