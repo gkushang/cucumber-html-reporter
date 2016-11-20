@@ -180,7 +180,7 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
 ```
 
 * [HTML Report Preview with Metadata][3]
-* [Report Snapshot with Metadata][8]
+* [Report Snapshot with Metadata][10]
 
 
 ## Tips
