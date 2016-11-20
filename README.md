@@ -231,3 +231,4 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 [7]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
 [8]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md
 [9]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
+[10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with_metadata
