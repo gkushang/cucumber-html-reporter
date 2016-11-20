@@ -162,7 +162,7 @@ Default: `undefined`
 Type: `JSON` (optional)
 Default: `undefined`
 
-Print more data to your report, such as _browser info, platform, app info, environments_ etc. All these types of data can be passed in the JSON format as `key-value` pair. Reporter will parse the JSON and will show the data under `Metadata` section on HTML report. Checkout the below preview HTML Report with Metadata.
+Print more data to your report, such as _browser info, platform, app info, environments_ etc. Data can be passed as JSON `key-value` pair. Reporter will parse the JSON and will show the _Key-Value_ under `Metadata` section on HTML report. Checkout the below preview HTML Report with Metadata.
 
 Pass the _Key-Value_ pair as per your need, as shown in below example,
 
@@ -178,9 +178,6 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
       }
       
 ```
-
-
-The Reporter will automatically parses the Key-Value pair, _e.g. App Version: 0.3.2_, and will display under <b>Metadata</b>. Sample preview report is available below,
 
 * [HTML Report Preview with Metadata][3]
 * [Report Snapshot with Metadata][8]
