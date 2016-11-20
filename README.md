@@ -85,7 +85,7 @@ $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
 
 ## Changelog
 
-Changelog is available [here][9]
+A [link][9] to CHANGELOG
 
 ## Options
 
