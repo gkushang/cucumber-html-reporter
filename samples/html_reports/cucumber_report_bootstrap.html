@@ -8,6 +8,45 @@
     padding: 0;
 }
 
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom:3px;
+}
+
 .panel-heading a {
     padding: 10px 15px;
     display: block;
@@ -194,8 +233,8 @@ th {
           <a class="navbar-brand">Cucumberjs Report</a>
           <div class="project-name visible-md visible-lg">cucumber-html-reporter</div>
           <div class="label-container">
-            <span class="label label-success" title=scenarios>Passed: 6</span>
-            <span class="label label-danger" title=scenarios>Failed: 1</span>
+            <span class="label label-success" title=scenarios>Passed: 7</span>
+            <span class="label label-danger" title=scenarios>Failed: 0</span>
           </div>
         </div>
       </div>
@@ -203,13 +242,81 @@ th {
 
     <div class="container">
 
-      <div class="generated-on">Fri Nov 18 2016 22:44:33 GMT-0500 (EST)</div>
+      <div class="generated-on">Sat Nov 19 2016 20:45:45 GMT-0500 (EST)</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
         <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
       </div>
 
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#logOutput">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <b>Metadata</b>
+            </a>
+          </h4>
+        </div>
+        <div id="logOutput" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="row">
+              
+             
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=left>
+                    <strong> App Version: </strong>0.3.2
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Test Environment: </strong>STAGING
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=left>
+                    <strong> Browser: </strong>Chrome  54.0.2840.98
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Platform: </strong>Windows 10
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=left>
+                    <strong> Parallel: </strong>Scenarios
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Executed: </strong>Remote
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       
 
       
@@ -259,7 +366,7 @@ th {
               </div>
               <div id="collapseScenario0_0" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <div class="description" id="scenario-description">Fred runs cucumber-scenario to get HTML report</div>
+                  
                   
                     
                   
@@ -341,10 +448,10 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a passing cucumber scenario
+                        Fred runs a passing cucumber step with 2 seconds timeout
                           
                               <span class="step-duration">
-                               0s
+                               2s
                               </span>
                             
                          
@@ -1933,8 +2040,8 @@ I want to print below Doc String
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b>Feature:</b>Unhappy HTML reporting
             <span class="label-container">
+              <span class="label label-success">1</span>
               
-              <span class="label label-danger">1</span>
               <span class="label label-info">2</span>
               
               <span class="label label-warning">1</span>
@@ -1955,11 +2062,11 @@ I want to print below Doc String
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see a Screenshot attached to the HTML report
                     <span class="label-container">
-                      <span class="label label-success" title="Passed">3</span>
+                      <span class="label label-success" title="Passed">5</span>
                       
                       
-                      <span class="label label-warning" title="Skipped">1</span>
-                      <span class="label label-danger" title="Failed">1</span>
+                      
+                      
                     </span>
                   </a>
                 </h4>
@@ -2038,7 +2145,7 @@ I want to print below Doc String
                     <p class="scenario-container">
                     
                       
-                        <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                       
                     
                       <span class="text">
@@ -2056,11 +2163,6 @@ I want to print below Doc String
                     
                       
 
-                      
-                        <a href="#error1_03" data-toggle="collapse">+ Show Error</a>
-                        <div id="error1_03" class="collapse">
-                          <pre class=info>Oops, Page not found</pre>
-                        </div>
                       
 
                       
@@ -2080,13 +2182,17 @@ I want to print below Doc String
                     <p class="scenario-container">
                     
                       
-                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                       
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
                         cucumber-html-reporter should create HTML report with Screenshot
                           
+                              <span class="step-duration">
+                               0s
+                              </span>
+                            
                          
                             
                           
@@ -2509,14 +2615,14 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
         google.load("visualization", "1", {packages: ["corechart"]});
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Features",
-                                                            "failed" : 1,
-                                                            "passed" : 1
+                                                            "failed" : 0,
+                                                            "passed" : 2
                                                         })
                                             });
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Scenarios",
-                                                            "failed" : 1,
-                                                            "passed" : 6,
+                                                            "failed" : 0,
+                                                            "passed" : 7,
                                                             "notdefined" : 2,
                                                             "skipped" : 1
                                                         })
