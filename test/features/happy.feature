@@ -18,8 +18,8 @@ Feature: Happy HTML reporting
   @testScenarioOutline
   Scenario Outline: Fred runs scenario outline for <name> and print on HTML report
 
-    John & Bob wants to run cucumber scenarios
-    - expects to have HTML reports
+  John & Bob wants to run cucumber scenarios
+  - expects to have HTML reports
 
     Given Fred runs a passing cucumber scenario on behalf of "<name>"
     When he provides cucumber JSON file to reporter
