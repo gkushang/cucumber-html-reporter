@@ -22,6 +22,7 @@ Generate Cucumber HTML reports with pie charts
 
 ###### More snapshots are availble [here][8]
 
+
 ## Install
 
 ``` bash
@@ -43,10 +44,22 @@ var options = {
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
         reportSuiteAsScenarios: true,
-        launchReport: true
+        launchReport: true,
+        metadata: {
+            "App Version":"0.3.2",
+            "Test Environment": "STAGING",
+            "Browser": "Chrome  54.0.2840.98",
+            "Platform": "Windows 10",
+            "Parallel": "Scenarios",
+            "Executed": "Remote"
+        }
     };
 
     reporter.generate(options);
+    
+    
+    
+    //more info on `metadata` is available in `options` section below.
 
     //to generate consodilated report from multi-cucumber JSON files, please use `jsonDir` option instead of `jsonFile`. More info is available in `options` section below.
 
@@ -70,6 +83,9 @@ $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
 
 > Are you using cucumber with other frameworks or running [cucumber-parallel][6]? Pass relative path of JSON file to the `options` as shown [here][7]
 
+## Changelog
+
+[changelog][9]
 
 ## Options
 
@@ -137,10 +153,34 @@ Custom project name. If not passed, module reads the name from projects package.
 Type: `Boolean`
 Default: `undefined`
 
-`true`: Stores all screenShots stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
+`true`: Stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
 
 `false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
+
+#### `metadata`
+Type: `JSON` (optional)
+Default: `undefined`
+
+Print more data to your report, such as _browser info, platform, app info, environments_ etc. Data can be passed as JSON `key-value` pair. Reporter will parse the JSON and will show the _Key-Value_ under `Metadata` section on HTML report. Checkout the below preview HTML Report with Metadata.
+
+Pass the _Key-Value_ pair as per your need, as shown in below example,
+
+```json
+
+ metadata: {
+        "App Version":"0.3.2",
+        "Test Environment": "STAGING",
+        "Browser": "Chrome  54.0.2840.98",
+        "Platform": "Windows 10",
+        "Parallel": "Scenarios",
+        "Executed": "Remote"
+      }
+      
+```
+
+* [HTML Report Preview with Metadata][3]
+* [Report Snapshot with Metadata][10]
 
 
 ## Tips
@@ -177,6 +217,7 @@ Attach JSON to HTML report
 
 ```
 
+
 ## Credits
 
 Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML reporting. HTML reporting is extracted from the grunt task. Thanks to all the contributors for making HTML Reporting available to the wider audiences of [cucumber-js][2] community.
@@ -189,3 +230,7 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 [6]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
 [7]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
 [8]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md
+[9]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
+[10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
+
+

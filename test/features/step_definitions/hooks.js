@@ -49,7 +49,15 @@ var hooks = function() {
                 theme: theme,
                 output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
                 reportSuiteAsScenarios: true,
-                launchReport: true
+                launchReport: true,
+                metadata: {
+                    "App Version": "0.3.2",
+                    "Test Environment": "STAGING",
+                    "Browser": "Chrome  54.0.2840.98",
+                    "Platform": "Windows 10",
+                    "Parallel": "Scenarios",
+                    "Executed": "Remote"
+                }
             };
         }
 
@@ -98,7 +106,7 @@ var hooks = function() {
         assertJsonDir();
 
         removeReports();
-        //
+
         assertJsonFile();
 
         callback();

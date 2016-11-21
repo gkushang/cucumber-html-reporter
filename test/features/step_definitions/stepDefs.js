@@ -10,6 +10,10 @@ var stepDefs = function stepDefs() {
         callback();
     });
 
+    this.Then(/^Fred runs a passing cucumber step with 2 seconds timeout/, function(callback) {
+        setTimeout(callback, 2000);
+    });
+
     this.Then(/^Fred runs a passing cucumber scenario with the below content$/, function(docString, callback) {
         callback();
     });
