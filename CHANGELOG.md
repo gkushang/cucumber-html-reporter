@@ -1,3 +1,10 @@
+### 0.3.2 (2016-11-21)
+
+### Enhancements
+
+* Show Metadata - additional info about your test environment, browser, platform, app version, mode of execution, stage, and so on. [PR#39](https://github.com/gkushang/cucumber-html-reporter/pull/39)
+
+
 ### 0.3.1 (2016-11-18)
 
 ### Enhancements
