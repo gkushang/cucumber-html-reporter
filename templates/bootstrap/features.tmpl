@@ -17,7 +17,7 @@
               <% if (feature.scenarios.notdefined) { %><span class="label label-info"><%= feature.scenarios.notdefined %></span><% } %>
               <% if (feature.scenarios.pending) { %><span class="label label-info"><%= feature.scenarios.pending %></span><% } %>
               <% if (feature.scenarios.skipped) { %><span class="label label-warning"><%= feature.scenarios.skipped %></span><% } %>
-              <% if (feature.scenarios.ambiguous) { %><span class="label label-danger"><%= feature.scenarios.ambiguous %></span><% } %>
+              <% if (feature.scenarios.ambiguous) { %><span class="label label-primary"><%= feature.scenarios.ambiguous %></span><% } %>
             </span>
           </a>
         </h4>
@@ -40,7 +40,7 @@
                       <% if (element.pending) { %><span class="label label-info" title="Penddding"><%= element.pending %></span><% } %>
                       <% if (element.skipped) { %><span class="label label-warning" title="Skipped"><%= element.skipped %></span><% } %>
                       <% if (element.failed) { %><span class="label label-danger" title="Failed"><%= element.failed %></span><% } %>
-                      <% if (element.ambiguous) { %><span class="label label-danger" title="Ambiguous"><%= element.ambiguous %></span><% } %>
+                      <% if (element.ambiguous) { %><span class="label label-primary" title="Ambiguous"><%= element.ambiguous %></span><% } %>
                     </span>
                   </a>
                 </h4>
@@ -61,7 +61,7 @@
                       <% } else if(step.result.status === 'undefined') { %>
                         <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
                        <% } else { %>
-                        <span class="label label-danger" title="Ambiguous"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        <span class="label label-primary" title="Ambiguous"><i class="glyphicon glyphicon-question-sign"></i></span>
                       <% } %>
                     <% } %>
                       <span class="text">

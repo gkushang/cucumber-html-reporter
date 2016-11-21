@@ -4,10 +4,11 @@ function drawChart(chartData) {
         ['Passed', chartData.passed],
         ['Failed', chartData.failed],
         ['Pending', chartData.notdefined],
-        ['Skipped', chartData.skipped]
+        ['Skipped', chartData.skipped],
+        ['Ambiguous', chartData.ambiguous]
     ]);
 
-    var total = chartData.passed + chartData.failed + (chartData.notdefined || 0) + (chartData.skipped || 0);
+    var total = chartData.passed + chartData.failed + chartData.ambiguous + (chartData.notdefined || 0) + (chartData.skipped || 0);
     var title;
 
     if (total === 1) {
@@ -21,7 +22,7 @@ function drawChart(chartData) {
         height: 240,
         title: title,
         is3D: true,
-        colors: ['#5cb85c', '#d9534f', '#5bc0de', '#f0ad4e'],
+        colors: ['#5cb85c', '#d9534f', '#5bc0de', '#f0ad4e', '#3071a9'],
         fontSize: '13',
         fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
         slices: {

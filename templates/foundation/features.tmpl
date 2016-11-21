@@ -8,9 +8,12 @@
     <% _.each(feature.elements, function(element, scenarioIndex) { %>
       <div class="section-container accordion" data-section="accordion">
         <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa><%= element.keyword %>: </span><%= element.name %> 
+          <p class="title accordion-title" data-section-title><a href="#"><spa><%= element.keyword %>: </span><%= element.name %>
+          <a> 
             <% if(_.some(element.steps, function(step){ return step.result && step.result.status === 'failed'; })) {  %>
               <span class="alert label right">Failed</span>
+            <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'ambiguous' })) { %>
+              <span class="label right">Ambiguous</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'undefined'; })) {  %>
               <span class="label right">Skipped</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'pending'; })) {  %>
@@ -30,6 +33,8 @@
                 <small>
                 <% if(step.result.status === 'failed') { %>
                   <span class="alert label right">Failed</span>
+                <% } else if(step.result.status === 'ambiguous') { %>
+                  <span class="label right">Ambiguous</span>
                 <% } else if(step.result.status === 'skipped') { %>
                   <span class="label right">Skipped</span>
                 <% } else if(step.result.status === 'undefined' || step.result.status === 'pending') { %>
