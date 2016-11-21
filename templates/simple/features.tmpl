@@ -2,10 +2,10 @@
 <div class="feature container">
   <h3 class="title"><span class="highlight"><%= feature.keyword %>: </span><%= feature.name %></h3>
    <% if (feature.description) { %><p><%= feature.description.replace(/\n/g, '<br />') %></p><% } %>
-  <% _.each(feature.elements, function(element) { %> 
+  <% _.each(feature.elements, function(element) { %>
     <div class="element container">
     <h3 class="title"><span class="highlight"><%= element.keyword %>: </span><%= element.name %></h3>
-      <% _.each(element.steps, function(step) { %> 
+      <% _.each(element.steps, function(step) { %>
         <div class="step">
           <p>
             <% if(step.result) { %>
@@ -27,8 +27,8 @@
              <% } %>
           </p>
         </div>
-      <% }); %> 
+      <% }); %>
     </div>
-  <% }); %> 
+  <% }); %>
 </div>
 <% }); %> 

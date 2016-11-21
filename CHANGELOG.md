@@ -1,3 +1,39 @@
+### 0.3.2 (2016-11-21)
+
+### Enhancements
+
+* Show Metadata - additional info about your test environment, browser, platform, app version, mode of execution, stage, and so on. [PR#39](https://github.com/gkushang/cucumber-html-reporter/pull/39)
+
+
+### 0.3.1 (2016-11-18)
+
+### Enhancements
+
+* Adding latest Previews to the readme for all themes
+* Add more snapshots for the user's review
+
+### 0.3.0 (2016-11-18)
+
+Deprecate the option to store screenshot to the disk by default. If you still want to Store a screenShot to the directory, you can pass an option `storeScreenShots` to the reporter.
+
+#### Enhancements
+
+* Add support for inline png screenshots, fix package.json lookup, Fix success log: [PR#32](https://github.com/gkushang/cucumber-html-reporter/pull/32)
+* For backward compatibility, adds an option to store screenshot to a directory: [PR#38](https://github.com/gkushang/cucumber-html-reporter/pull/38)
+
+
+##### `storeScreenShots`
+Type: `Boolean`
+Default: `undefined`
+
+`true`: Stores all screenShots stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
+`false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
+
+#### Fixes
+
+* Fixes [ISSUE#29](https://github.com/gkushang/cucumber-html-reporter/issues/29)
+
+
 ### 0.2.17 (2016-11-17)
 
 #### Enhancements

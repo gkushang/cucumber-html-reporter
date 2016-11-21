@@ -9,7 +9,10 @@
       <div class="section-container accordion" data-section="accordion">
         <section>
           <p class="title accordion-title" data-section-title><a href="#"><spa><%= element.keyword %>: </span><%= element.name %>
+<<<<<<< HEAD
           <a> 
+=======
+>>>>>>> master
             <% if(_.some(element.steps, function(step){ return step.result && step.result.status === 'failed'; })) {  %>
               <span class="alert label right">Failed</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'ambiguous' })) { %>
@@ -58,7 +61,7 @@
                       <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
                    </a>
           <% } %>
-              </p>              
+              </p>
 
               <% if (step.result && step.result.error_message) { %>
                 <span class="text"><%= step.result.error_message %></span>
@@ -66,9 +69,9 @@
 
             <% }); %>
           </div>
-        </section> 
+        </section>
       </div>
-    <% }); %> 
+    <% }); %>
     <br />
     <hr />
   </div>

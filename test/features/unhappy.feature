@@ -1,10 +1,10 @@
-@unhappy @unhappyHtml @reporting
+@unhappy @reporting
 Feature: Unhappy HTML reporting
 
   @attachScreenshot
   Scenario: Fred wants to see a Screenshot attached to the HTML report
     Given Fred runs a failing cucumber scenario
-    When he has the JSON cucumber formatted file at the end of run
+    When he provides cucumber JSON file to reporter
     And a failing scenario captures a screenshot
     Then cucumber-html-reporter should create HTML report with Screenshot
 
