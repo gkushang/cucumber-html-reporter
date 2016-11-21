@@ -9,10 +9,7 @@
       <div class="section-container accordion" data-section="accordion">
         <section>
           <p class="title accordion-title" data-section-title><a href="#"><spa><%= element.keyword %>: </span><%= element.name %>
-<<<<<<< HEAD
-          <a> 
-=======
->>>>>>> master
+          <a>
             <% if(_.some(element.steps, function(step){ return step.result && step.result.status === 'failed'; })) {  %>
               <span class="alert label right">Failed</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'ambiguous' })) { %>
