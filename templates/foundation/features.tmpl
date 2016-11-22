@@ -37,8 +37,10 @@
                   <span class="label right">Ambiguous</span>
                 <% } else if(step.result.status === 'skipped') { %>
                   <span class="label right">Skipped</span>
-                <% } else if(step.result.status === 'undefined' || step.result.status === 'pending') { %>
+                <% } else if(step.result.status === 'undefined') { %>
                   <span class="label right">undefined</span>
+                <% } else if(step.result.status === 'pending') { %>
+                  <span class="label right">pending</span>
                 <% } else { %>
                   <span class="success label right">Passed</span>
                 <% } %>
