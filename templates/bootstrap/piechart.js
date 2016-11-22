@@ -3,12 +3,13 @@ function drawChart(chartData) {
         ['Task', 'Cucumber Results'],
         ['Passed', chartData.passed],
         ['Failed', chartData.failed],
-        ['Pending', chartData.notdefined],
-        ['Skipped', chartData.skipped],
-        ['Ambiguous', chartData.ambiguous]
+        ['Pending', chartData.pending],
+        ['Undefined', chartData.notdefined],
+        ['Ambiguous', chartData.ambiguous],
+        ['Skipped', chartData.skipped]        
     ]);
 
-    var total = chartData.passed + chartData.failed + chartData.ambiguous + (chartData.notdefined || 0) + (chartData.skipped || 0);
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
     var title;
 
     if (total === 1) {
@@ -22,7 +23,7 @@ function drawChart(chartData) {
         height: 240,
         title: title,
         is3D: true,
-        colors: ['#5cb85c', '#d9534f', '#5bc0de', '#f0ad4e', '#3071a9'],
+        colors: ['#5cb85c', '#d9534f', '#5bc0de', '#8c8c8c', '#3071a9', '#f0ad4e'],
         fontSize: '13',
         fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
         slices: {

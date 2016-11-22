@@ -20,8 +20,14 @@ Feature: Unhappy HTML reporting
     When he left this step as a undefined
     Then cucumber-html-reporter should create undefined step in HTML report
 
-  @skippedStep
-  Scenario: Fred wants to see if steps are skipped on the HTML report
+  # @skippedStep
+  # Scenario: Fred wants to see if steps are skipped on the HTML report
+  #   Given Fred runs a cucumber scenario
+  #   When he throws the pending exception from this step
+  #   Then cucumber-html-reporter should create HTML report with skipped and pending steps    
+
+  @ambiguousStep
+  Scenario: Fred wants to see if steps are ambiguous on the HTML report
     Given Fred runs a cucumber scenario
-    When he throws the pending exception from this step
-    Then cucumber-html-reporter should create HTML report with skipped and pending steps
+    When he left this step to be ambiguous
+    Then cucumber-html-reporter should create HTML report with ambiguous steps
