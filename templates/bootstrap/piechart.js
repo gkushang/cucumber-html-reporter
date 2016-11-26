@@ -29,7 +29,8 @@ function drawChart(chartData) {
         slices: {
             1: {offset: 0.4},
             2: {offset: 0.4},
-            3: {offset: 0.4}
+            3: {offset: 0.4},
+            4: {offset: 0.4}
         },
         titleTextStyle: {
             fontSize: '13',
