@@ -14,10 +14,11 @@
             <span class="label-container">
               <% if (feature.scenarios.passed) { %><span class="label label-success"><%= feature.scenarios.passed %></span><% } %>
               <% if (feature.scenarios.failed) { %><span class="label label-danger"><%= feature.scenarios.failed %></span><% } %>
-              <% if (feature.scenarios.notdefined) { %><span class="label label-info"><%= feature.scenarios.notdefined %></span><% } %>
+              <% if (feature.scenarios.notdefined) { %><span class="label label-default"><%= feature.scenarios.notdefined %></span><% } %>
               <% if (feature.scenarios.pending) { %><span class="label label-info"><%= feature.scenarios.pending %></span><% } %>
               <% if (feature.scenarios.skipped) { %><span class="label label-warning"><%= feature.scenarios.skipped %></span><% } %>
-            </span>
+              <% if (feature.scenarios.ambiguous) { %><span class="label label-primary"><%= feature.scenarios.ambiguous %></span><% } %>
+            </span> 
           </a>
         </h4>
       </div>
@@ -28,17 +29,19 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                    <% if (element.tags) { %><div class="tags"><% _.each(_.drop(element.tags, feature.tags.length), function(tag) { %> <span class="tag"> <%= tag.name %></span> <% }); %> </div><% } %>
+                <% var scenarioTagsOnly = feature.tags ? _.drop(element.tags, feature.tags.length) :  element.tags %>
+                    <% if (element.tags) { %><div class="tags"><% _.each(scenarioTagsOnly, function(tag) { %> <span class="tag"> <%= tag.name %></span> <% }); %> </div><% } %>
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b><%= element.keyword %>:</b><%= element.name %>
                     <span class="label-container">
                       <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
-                      <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
+                      <% if (element.notdefined) { %><span class="label label-default" title="Undefined"><%= element.notdefined %></span><% } %>
                       <% if (element.pending) { %><span class="label label-info" title="Penddding"><%= element.pending %></span><% } %>
                       <% if (element.skipped) { %><span class="label label-warning" title="Skipped"><%= element.skipped %></span><% } %>
                       <% if (element.failed) { %><span class="label label-danger" title="Failed"><%= element.failed %></span><% } %>
+                      <% if (element.ambiguous) { %><span class="label label-primary" title="Ambiguous"><%= element.ambiguous %></span><% } %>
                     </span>
                   </a>
                 </h4>
@@ -56,8 +59,12 @@
                         <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
                       <% } else if(step.result.status === 'skipped') { %>
                         <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
-                      <% } else { %>
-                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      <% } else if(step.result.status === 'ambiguous') { %>
+                        <span class="label label-primary" title="Ambiguous"><i class="glyphicon glyphicon-question-sign"></i></span>
+                       <% } else if(step.result.status === 'pending') { %>
+                        <span class="label label-info" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       <% } else { %>
+                        <span class="label label-default" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
                       <% } %>
                     <% } %>
                       <span class="text">

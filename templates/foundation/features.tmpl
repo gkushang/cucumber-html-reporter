@@ -9,14 +9,17 @@
       <div class="section-container accordion" data-section="accordion">
         <section>
           <p class="title accordion-title" data-section-title><a href="#"><spa><%= element.keyword %>: </span><%= element.name %>
+          <a>
             <% if(_.some(element.steps, function(step){ return step.result && step.result.status === 'failed'; })) {  %>
               <span class="alert label right">Failed</span>
+            <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'ambiguous' })) { %>
+              <span class="label right">Ambiguous</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'undefined'; })) {  %>
-              <span class="label right">Skipped</span>
+              <span class="label right">Undefined</span>
             <% } else if(_.some(element.steps, function(step){ return step.result && step.result.status === 'pending'; })) {  %>
-               <span class="label right">Skipped</span>
-            <% } else if(_.every(element.steps, function(step){ return step.result && step.result.status === 'success' })) { %>
-              <span class="success label right">Success</span>
+               <span class="label right">Pending</span>
+            <% } else if(_.every(element.steps, function(step){ return step.result && step.result.status === 'passed'; })) { %>
+              <span class="success label right">Passed</span>
             <% } %>
           </a>
           </p>
@@ -30,12 +33,16 @@
                 <small>
                 <% if(step.result.status === 'failed') { %>
                   <span class="alert label right">Failed</span>
+                <% } else if(step.result.status === 'ambiguous') { %>
+                  <span class="label right">Ambiguous</span>
                 <% } else if(step.result.status === 'skipped') { %>
                   <span class="label right">Skipped</span>
-                <% } else if(step.result.status === 'undefined' || step.result.status === 'pending') { %>
-                  <span class="label right">undefined</span>
+                <% } else if(step.result.status === 'undefined') { %>
+                  <span class="label right">Undefined</span>
+                <% } else if(step.result.status === 'pending') { %>
+                  <span class="label right">Pending</span>
                 <% } else { %>
-                  <span class="success label right">Success</span>
+                  <span class="success label right">Passed</span>
                 <% } %>
                 </small>
 		<% } %>

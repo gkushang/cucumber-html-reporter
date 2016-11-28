@@ -88,7 +88,8 @@
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Features",
                                                             "failed" : <%= suite.features.summary.failed %>,
-                                                            "passed" : <%= suite.features.summary.passed %>
+                                                            "passed" : <%= suite.features.summary.passed %>,
+                                                            "ambiguous" : <%= suite.features.summary.ambiguous %>
                                                         })
                                             });
         google.setOnLoadCallback(function() {drawChart({
@@ -96,7 +97,9 @@
                                                             "failed" : <%= suite.scenarios.failed %>,
                                                             "passed" : <%= suite.scenarios.passed %>,
                                                             "notdefined" : <%= suite.scenarios.notdefined %>,
-                                                            "skipped" : <%= suite.scenarios.skipped %>
+                                                            "pending" : <%= suite.scenarios.pending %>,
+                                                            "skipped" : <%= suite.scenarios.skipped %>,
+                                                            "ambiguous" : <%= suite.scenarios.ambiguous %>
                                                         })
                                             });
     </script>
