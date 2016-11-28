@@ -12,12 +12,12 @@
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b><%= feature.keyword %>:</b><%= feature.name %>
             <span class="label-container">
-              <% if (feature.scenarios.passed) { %><span class="label label-success"><%= feature.scenarios.passed %></span><% } %>
-              <% if (feature.scenarios.failed) { %><span class="label label-danger"><%= feature.scenarios.failed %></span><% } %>
-              <% if (feature.scenarios.notdefined) { %><span class="label label-default"><%= feature.scenarios.notdefined %></span><% } %>
-              <% if (feature.scenarios.pending) { %><span class="label label-info"><%= feature.scenarios.pending %></span><% } %>
-              <% if (feature.scenarios.skipped) { %><span class="label label-warning"><%= feature.scenarios.skipped %></span><% } %>
-              <% if (feature.scenarios.ambiguous) { %><span class="label label-primary"><%= feature.scenarios.ambiguous %></span><% } %>
+              <% if (feature.scenarios.passed) { %><span class="label label-success" title="Passed"><%= feature.scenarios.passed %></span><% } %>
+              <% if (feature.scenarios.failed) { %><span class="label label-danger" title="Failed"><%= feature.scenarios.failed %></span><% } %>
+              <% if (feature.scenarios.notdefined) { %><span class="label label-info" title="Undefined"><%= feature.scenarios.notdefined %></span><% } %>
+              <% if (feature.scenarios.pending) { %><span class="label label-default" title="Pending"><%= feature.scenarios.pending %></span><% } %>
+              <% if (feature.scenarios.skipped) { %><span class="label label-warning" title="Skipped"><%= feature.scenarios.skipped %></span><% } %>
+              <% if (feature.scenarios.ambiguous) { %><span class="label label-primary" title="Ambiguous"><%= feature.scenarios.ambiguous %></span><% } %>
             </span> 
           </a>
         </h4>
