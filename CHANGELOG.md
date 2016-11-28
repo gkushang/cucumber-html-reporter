@@ -1,3 +1,10 @@
+### 0.3.4 (2016-11-28)
+
+### Enhancements
+
+* Step Duration - light gray the step duration to distinguish from the black color Step description 
+
+
 ### 0.3.3 (2016-11-28)
 
 ### Enhancements
