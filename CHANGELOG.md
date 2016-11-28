@@ -1,3 +1,10 @@
+### 0.3.3 (2016-11-28)
+
+### Enhancements
+
+* Ambiguous - show ambiguous status on the pie-chart, features, scenarios and at steps level [PR#40](https://github.com/gkushang/cucumber-html-reporter/pull/40)
+
+
 ### 0.3.2 (2016-11-21)
 
 ### Enhancements
@@ -12,7 +19,7 @@
 * Adding latest Previews to the readme for all themes
 * Add more snapshots for the user's review
 
-### 0.3.0 (2016-11-18)
+### 0.3.0 (2016-11-18)__
 
 Deprecate the option to store screenshot to the disk by default. If you still want to Store a screenShot to the directory, you can pass an option `storeScreenShots` to the reporter.
 
