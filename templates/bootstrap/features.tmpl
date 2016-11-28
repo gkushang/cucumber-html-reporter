@@ -37,8 +37,8 @@
                     <b><%= element.keyword %>:</b><%= element.name %>
                     <span class="label-container">
                       <% if (element.passed) { %><span class="label label-success" title="Passed"><%= element.passed %></span><% } %>
-                      <% if (element.notdefined) { %><span class="label label-default" title="Undefined"><%= element.notdefined %></span><% } %>
-                      <% if (element.pending) { %><span class="label label-info" title="Penddding"><%= element.pending %></span><% } %>
+                      <% if (element.notdefined) { %><span class="label label-info" title="Undefined"><%= element.notdefined %></span><% } %>
+                      <% if (element.pending) { %><span class="label label-default" title="Pending"><%= element.pending %></span><% } %>
                       <% if (element.skipped) { %><span class="label label-warning" title="Skipped"><%= element.skipped %></span><% } %>
                       <% if (element.failed) { %><span class="label label-danger" title="Failed"><%= element.failed %></span><% } %>
                       <% if (element.ambiguous) { %><span class="label label-primary" title="Ambiguous"><%= element.ambiguous %></span><% } %>
@@ -62,9 +62,9 @@
                       <% } else if(step.result.status === 'ambiguous') { %>
                         <span class="label label-primary" title="Ambiguous"><i class="glyphicon glyphicon-question-sign"></i></span>
                        <% } else if(step.result.status === 'pending') { %>
-                        <span class="label label-info" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
                        <% } else { %>
-                        <span class="label label-default" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
                       <% } %>
                     <% } %>
                       <span class="text">
