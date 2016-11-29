@@ -1,3 +1,10 @@
+### 0.3.6 (2016-11-29)
+
+### Enhancements
+
+* Making labels & colors consistent on report [PR#42](https://github.com/gkushang/cucumber-html-reporter/pull/42) 
+
+
 ### 0.3.4 (2016-11-28)
 
 ### Enhancements
