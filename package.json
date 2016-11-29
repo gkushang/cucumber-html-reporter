@@ -1,6 +1,6 @@
 {
   "name": "cucumber-html-reporter",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "author": {
