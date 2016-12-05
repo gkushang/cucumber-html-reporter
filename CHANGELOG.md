@@ -1,29 +1,33 @@
-### 0.3.6 (2016-11-29)
+### 0.3.5 (2016-11-29)
 
 ### Enhancements
 
-* Making labels & colors consistent on report [PR#42](https://github.com/gkushang/cucumber-html-reporter/pull/42) 
+* Colors
+ * Making labels & colors consistent on report [PR#42](https://github.com/gkushang/cucumber-html-reporter/pull/42) 
 
 
 ### 0.3.4 (2016-11-28)
 
 ### Enhancements
 
-* Step Duration - light gray the step duration to distinguish from the black color Step description 
+* Step Duration
+ * light gray the step duration to distinguish from the GWT Step description 
 
 
 ### 0.3.3 (2016-11-28)
 
 ### Enhancements
 
-* Ambiguous - show ambiguous status on the pie-chart, features, scenarios and at steps level [PR#40](https://github.com/gkushang/cucumber-html-reporter/pull/40)
+* Ambiguous Steps
+ * show ambiguous status on the pie-chart, features, scenarios and at steps level [PR#40](https://github.com/gkushang/cucumber-html-reporter/pull/40)
 
 
 ### 0.3.2 (2016-11-21)
 
 ### Enhancements
 
-* Show Metadata - additional info about your test environment, browser, platform, app version, mode of execution, stage, and so on. [PR#39](https://github.com/gkushang/cucumber-html-reporter/pull/39)
+* Show Metadata
+ * additional info about your test environment, browser, platform, app version, mode of execution, stage, and so on. [PR#39](https://github.com/gkushang/cucumber-html-reporter/pull/39)
 
 
 ### 0.3.1 (2016-11-18)
@@ -35,11 +39,13 @@
 
 ### 0.3.0 (2016-11-18)__
 
-Deprecate the option to store screenshot to the disk by default. If you still want to Store a screenShot to the directory, you can pass an option `storeScreenShots` to the reporter.
+* Deprecate Store Screenshots
+ * Deprecate the option to store screenshot to the disk by default. If you still want to Store a screenShot to the directory, you can pass an option `storeScreenShots` to the reporter.
 
 #### Enhancements
 
-* Add support for inline png screenshots, fix package.json lookup, Fix success log: [PR#32](https://github.com/gkushang/cucumber-html-reporter/pull/32)
+* Inline Screenshots
+ * Add support for inline png screenshots, fix package.json lookup, Fix success log: [PR#32](https://github.com/gkushang/cucumber-html-reporter/pull/32)
 * For backward compatibility, adds an option to store screenshot to a directory: [PR#38](https://github.com/gkushang/cucumber-html-reporter/pull/38)
 
 
@@ -59,15 +65,18 @@ Default: `undefined`
 
 #### Enhancements
 
-* Display Tags on Feature & Scenarios: [PR#35](https://github.com/gkushang/cucumber-html-reporter/pull/35)
-* Filter Tags from Scenarios which is already displayed at Feature Level & add some styling to Tags [PR#37](https://github.com/gkushang/cucumber-html-reporter/pull/37)
+* Tags on Report
+ * Display Tags on Feature & Scenarios: [PR#35](https://github.com/gkushang/cucumber-html-reporter/pull/35)
+* Filter Repeated Tags
+ * Filter Tags from Scenarios which is already displayed at Feature Level & add some styling to Tags [PR#37](https://github.com/gkushang/cucumber-html-reporter/pull/37)
 
 
 ### 0.2.16 (2016-10-07)
 
 #### Enhancements
 
-* Show Scenario Description on HTML report: [ISSUE#33](https://github.com/gkushang/cucumber-html-reporter/issues/33)
+* Scenario Description
+ * Show Scenario Description on HTML report: [ISSUE#33](https://github.com/gkushang/cucumber-html-reporter/issues/33)
 
 
 ### 0.2.15 (2016-09-28)
