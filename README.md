@@ -83,9 +83,6 @@ $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
 
 > Are you using cucumber with other frameworks or running [cucumber-parallel][6]? Pass relative path of JSON file to the `options` as shown [here][7]
 
-## Changelog
-
-[changelog][9]
 
 ## Options
 
@@ -216,6 +213,10 @@ Attach JSON to HTML report
   scenario.attach(JSON.stringify(myJsonObject, undefined, 4));
 
 ```
+
+## Changelog
+
+[changelog][9]
 
 
 ## Credits

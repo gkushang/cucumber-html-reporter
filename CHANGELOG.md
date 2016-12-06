@@ -1,3 +1,10 @@
+### 0.3.6 (2016-12-06)
+
+### Fix
+
+* Failure in Before hook should fail the Feature/Scenario, Add slice to rest of the scenario pie charts [PR#44](https://github.com/gkushang/cucumber-html-reporter/pull/44) 
+
+
 ### 0.3.5 (2016-11-29)
 
 ### Enhancements
