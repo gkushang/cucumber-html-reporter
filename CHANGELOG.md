@@ -1,3 +1,10 @@
+### 0.3.7 (2016-12-09)
+
+### Fix
+
+* Sanitize Screenshot filename [Issue#45](https://github.com/gkushang/cucumber-html-reporter/issues/45) [PR#46](https://github.com/gkushang/cucumber-html-reporter/pull/46) 
+
+
 ### 0.3.6 (2016-12-06)
 
 ### Fix
