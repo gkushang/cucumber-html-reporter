@@ -1,6 +1,6 @@
 'use strict';
 var chai = require('chai');
-var fs = require('fs');
+var fs = require('fs-extra');
 should = chai.should();
 var path = require('path');
 
