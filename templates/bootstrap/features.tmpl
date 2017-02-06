@@ -50,7 +50,7 @@
                 <div class="panel-body">
                   <% if (element.description) { %><div class="description" id="scenario-description"><%= element.description.trim().replace(/\n/g, '<br />') %></div><% } %>
                   <% _.each(element.steps, function(step, stepIndex) { %>
-                    <% if(!step.hidden || step.image || step.text || step.result.status === 'failed') { %>
+                    <% if(!step.hidden || (step.images && step.images.length) || step.text || step.result.status === 'failed') { %>
                     <p class="scenario-container">
                     <% if(step.result) { %>
                       <% if(step.result.status === 'passed') { %>
@@ -133,11 +133,16 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
                            </div>
                       <% } %>
 
-                       <% if (step.image) { %>
-                                                <a class="toggle" href="#">Screenshot -</a>
-                                                <a class="screenshot" href="<%= step.image %>">
-                                                 <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
-                                                 </a>
+                       <% if (step.images && step.images.length) { %>
+                           <a class="toggle" href="#">Screenshot -</a>
+                           <% _.each(step.images, function(image, imageIndex) { %>
+                            <div class="screenshot-box">
+                              <a class="screenshot" href="<%= image.screenshot %>" target="_blank">
+                                  <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= image.screenshot %>"/>
+                                  <p class="screenshot-title"><%= image.browserName %></p>
+                              </a>
+                            </div>
+                           <% }); %>
                        <% } %>
 
                     <% } %>

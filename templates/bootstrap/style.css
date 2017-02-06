@@ -135,8 +135,18 @@ table.arguments {
     margin-left: 30px;
 }
 
+.screenshot-box {
+    margin-top: 5px;
+    border: 1px solid #ececec;
+    border-radius: 2px;
+}
+
 .screenshot {
     padding: 2% 0 2% 0;
+}
+
+.screenshot-title {
+    text-align: center;
 }
 
 .scenarioTitle {
