@@ -10,15 +10,13 @@ $(document).ready(function() {
     $('a.toggle').on('click', function() {
         if ($(this).text() === 'Screenshot -') {
             $(this).text('Screenshot +');
-            $(this).siblings('a.screenshot').find('img').hide();
+            $('.screenshot-box').hide();
         } else {
             $(this).text('Screenshot -');
-            $(this).siblings('a.screenshot').find('img').show();
+            $('.screenshot-box').show();
         }
     });
     var $generated = $('.generated-on');
 
     $generated.text('Generated ' + moment($generated.text()).fromNow());
-
-
 });

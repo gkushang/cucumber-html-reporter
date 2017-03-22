@@ -54,12 +54,17 @@
              </div>
         <% } %>
 
-		 <% if (step.image) { %>
-                 <a class="toggle" href="#">Screenshot -</a>
-                  <a class="screenshot" href="<%= step.image %>">
-                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
-                   </a>
-          <% } %>
+		 <% if (step.images && step.images.length) { %>
+           <a class="toggle" href="#">Screenshot -</a>
+           <% _.each(step.images, function(image, imageIndex) { %>
+            <div class="screenshot-box">
+              <a class="screenshot" href="<%= image.screenshot %>" target="_blank">
+                  <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= image.screenshot %>"/>
+                  <p class="screenshot-title"><%= image.browserName %></p>
+              </a>
+            </div>
+           <% }); %>
+         <% } %>
               </p>
 
               <% if (step.result && step.result.error_message) { %>
