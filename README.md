@@ -214,7 +214,7 @@ Attach JSON to HTML report
 
 ```
 
-## Changelog
+## Changelog 
 
 [changelog][9]
 
