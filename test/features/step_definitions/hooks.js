@@ -3,7 +3,7 @@
 var reporter = require('../../../index');
 var assertHtmlReports = require('../../assert/assertHtmlReports');
 var path = require('path');
-var fs = require('fs-extra');
+var fs = require('fs');
 var find = require('find');
 
 var hooks = function() {
