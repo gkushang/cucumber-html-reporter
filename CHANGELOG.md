@@ -1,8 +1,20 @@
+### 0.4.0 (2017-03-24)
+
+* Supports Node versions >0.12
+
+### Revert the change
+
+* Use fs-extra [PR#59](https://github.com/gkushang/cucumber-html-reporter/pull/59)
+
+
 ### 0.3.9 (2017-03-24)
+
+* Supports Node versions <0.12
 
 ### Fix
 
 * Remove support for fs-extra for backward compatibility to support Node versions <0.12
+
 
 ### 0.3.8 (2017-03-23)
 

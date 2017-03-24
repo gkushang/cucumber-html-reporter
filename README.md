@@ -29,6 +29,8 @@ Generate Cucumber HTML reports with pie charts
 npm install cucumber-html-reporter --save-dev
 ```
 
+Note: Install cucumber-html-reporter version <0.4.0 for node version <0.12 
+
 ## Usage
 
 Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
