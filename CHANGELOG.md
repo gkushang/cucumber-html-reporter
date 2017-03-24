@@ -1,3 +1,19 @@
+### 0.3.9 (2017-03-24)
+
+### Fix
+
+* Remove support for fs-extra for backward compatibility to support Node versions <0.12
+
+### 0.3.8 (2017-03-23)
+
+### Fix
+
+* Use fs-extra instead of node-fs [PR#50](https://github.com/gkushang/cucumber-html-reporter/pull/50)
+* Make chai a dev dependency [PR#51](https://github.com/gkushang/cucumber-html-reporter/pull/51)
+* Bootstrap template fixes [PR#56](https://github.com/gkushang/cucumber-html-reporter/pull/56)
+* Fix Travis CI [PR#57](https://github.com/gkushang/cucumber-html-reporter/pull/57)
+
+
 ### 0.3.7 (2016-12-09)
 
 ### Fix
