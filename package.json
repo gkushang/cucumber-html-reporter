@@ -57,10 +57,10 @@
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
     "find": "^0.2.7",
+    "fs-extra": "^2.0.0",
     "js-base64": "^2.1.9",
     "jsonfile": "^2.3.1",
     "lodash": "^4.17.2",
-    "node-fs": "^0.1.7",
     "open": "0.0.5"
   },
   "devDependencies": {
