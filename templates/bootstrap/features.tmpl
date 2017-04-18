@@ -18,7 +18,7 @@
               <% if (feature.scenarios.pending) { %><span class="label label-default" title="Pending"><%= feature.scenarios.pending %></span><% } %>
               <% if (feature.scenarios.skipped) { %><span class="label label-warning" title="Skipped"><%= feature.scenarios.skipped %></span><% } %>
               <% if (feature.scenarios.ambiguous) { %><span class="label label-primary" title="Ambiguous"><%= feature.scenarios.ambiguous %></span><% } %>
-            </span> 
+            </span>
           </a>
         </h4>
       </div>
@@ -29,7 +29,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                <% var scenarioTagsOnly = feature.tags ? _.drop(element.tags, feature.tags.length) :  element.tags %>
+                <% var scenarioTagsOnly = element.tags %>
                     <% if (element.tags) { %><div class="tags"><% _.each(scenarioTagsOnly, function(tag) { %> <span class="tag"> <%= tag.name %></span> <% }); %> </div><% } %>
                   <a data-toggle="collapse" href="#collapseScenario<%= featureIndex %>_<%=scenarioIndex %>">
                     <i class="glyphicon glyphicon-chevron-right"></i>
