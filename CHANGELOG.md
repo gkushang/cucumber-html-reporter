@@ -1,3 +1,10 @@
+### 0.4.2 (2017-04-27)
+
+##### Fix
+
+* Fix to show '0s' if timestamp is in nanoseconds
+
+
 ### 0.4.1 (2017-04-27)
 
 ##### Enhancement
