@@ -148,6 +148,11 @@ Type: `String` (optional)
 
 Custom project name. If not passed, module reads the name from projects package.json which is preferable.
  
+#### `brandTitle`
+Type: `String` (optional)
+
+Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
+ 
 #### `storeScreenShots`
 Type: `Boolean`
 Default: `undefined`
