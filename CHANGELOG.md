@@ -14,7 +14,7 @@
 
 * Supports Node versions >0.12
 
-### Revert the change
+##### Revert the change
 
 * Use fs-extra [PR#59](https://github.com/gkushang/cucumber-html-reporter/pull/59)
 
