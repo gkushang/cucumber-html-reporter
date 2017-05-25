@@ -84,6 +84,7 @@
         </div>
         <div id="allSuitesInfo" class="panel-collapse collapse">
           <div class="panel-body">
+            <%= suite.featureMarkup %>
             <% _.each(suite.suites, function(subSuite, subSuiteIndex) { %>
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -102,6 +103,7 @@
                 </div>
                 <div id="collapseSuite<%= subSuite.name %>" class="panel-collapse collapse">
                     <div class="panel-body">
+                        <%= subSuite.featureMarkup %>
                         <% _.each(subSuite.suites, function(subSubSuite, subSubSuiteIndex) { %>
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -120,6 +122,7 @@
                             </div>
                             <div id="collapseSubSuite<%= subSubSuite.name %>" class="panel-collapse collapse">
                                 <div class="panel-body">
+                                    <%= subSubSuite.featureMarkup %>
                                     <% _.each(subSubSuite.suites, function(subSubSubSuite, subSubSubSuiteIndex) { %>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -143,17 +146,14 @@
                                         </div>
                                     </div>
                                     <% }); %>
-                                    <%= subSubSuite.featureMarkup %>
                                 </div>
                             </div>
                         </div>
                         <% }); %>
-                        <%= subSuite.featureMarkup %>
                     </div>
                 </div>
             </div>
             <% }); %>
-            <%= suite.featureMarkup %>
           </div>
         </div>
       </div>
