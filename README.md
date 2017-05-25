@@ -13,9 +13,9 @@ Generate Cucumber HTML reports with pie charts
 ## Preview of HTML Reports
 
 1. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
-1. [Bootstrap Theme Reports with Pie Chart][4]
-2. [Foundation Theme Reports][5]
-3. [Simple Theme Reports][6]
+2. [Bootstrap Theme Reports with Pie Chart][4]
+3. [Foundation Theme Reports][5]
+4. [Simple Theme Reports][6]
 
 
 ## Snapshot of Bootstrap Report
