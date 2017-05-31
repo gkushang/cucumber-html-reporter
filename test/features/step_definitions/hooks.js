@@ -28,6 +28,7 @@ var hooks = function() {
     this.registerHandler('AfterFeatures', function(features, callback) {
 
         var theme = {
+            hierarchy: 'hierarchy',
             bootstrap: 'bootstrap',
             foundation: 'foundation',
             simple: 'simple'
@@ -76,6 +77,9 @@ var hooks = function() {
 
         function assertJsonFile() {
 
+            //Generate Hierarchy theme report
+            reporter.generate(getJsonFileOptions(theme.hierarchy));
+
             //Generate Bootstrap theme report
             reporter.generate(getJsonFileOptions(theme.bootstrap));
 
@@ -90,6 +94,9 @@ var hooks = function() {
         }
 
         function assertJsonDir() {
+            //Generate Hierarchy theme report
+            reporter.generate(getJsonDirOptions(theme.hierarchy));
+
             //Generate Bootstrap theme report
             reporter.generate(getJsonDirOptions(theme.bootstrap));
 
