@@ -1,3 +1,14 @@
+
+### 0.5.0 (2017-06-01)
+
+##### Enhancement
+
+* Introducing new Template `Hierarchy` from the [Proposal](https://github.com/gkushang/cucumber-html-reporter/issues/75), [PR#76](https://github.com/gkushang/cucumber-html-reporter/pull/76) & [PR#77](https://github.com/gkushang/cucumber-html-reporter/pull/77)
+    * The idea is to render features under respective folder hierarchy. Best case when your features are organized under feature-folders.
+* Enhance the Step Duration. Instead of 0s, show 1ms.
+* Backward compatible
+
+
 ### 0.4.2 (2017-04-27)
 
 ##### Fix
