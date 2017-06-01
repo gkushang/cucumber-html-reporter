@@ -35,12 +35,16 @@
     {
       "name": "spujar",
       "url": "https://github.com/spujar"
+    },
+    {
+      "name": "Craeg Strong",
+      "url": "https://github.com/cstrong"
     }
   ],
   "scripts": {
     "test": "npm run features && npm run clean",
     "clean": "rm -rf test/report/*.html test/report/*.json test/report/screenshot",
-    "features": "node node_modules/cucumber/bin/cucumber test/features/ -f json:test/report/cucumber_report.json"
+    "features": "node node_modules/cucumber/bin/cucumber test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json"
   },
   "repository": {
     "type": "git",
@@ -61,9 +65,9 @@
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
     "find": "^0.2.7",
-    "fs-extra": "^2.0.0",
+    "fs-extra": "^3.0.1",
     "js-base64": "^2.1.9",
-    "jsonfile": "^2.3.1",
+    "jsonfile": "^3.0.0",
     "lodash": "^4.17.2",
     "open": "0.0.5"
   },

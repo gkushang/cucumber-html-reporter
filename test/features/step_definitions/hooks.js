@@ -110,9 +110,9 @@ var hooks = function() {
             assertHtmlReports(outputDirectory);
         }
 
-        assertJsonDir();
+        // assertJsonDir();
 
-        removeReports();
+        // removeReports();
 
         assertJsonFile();
 

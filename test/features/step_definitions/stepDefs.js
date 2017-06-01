@@ -20,6 +20,7 @@ var stepDefs = function stepDefs() {
 
     this.Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function(name, callback) {
         setTimeout(callback, 1000);
+        callback(null, 'pending');
     });
 
     this.Then(/^he provides cucumber JSON file to reporter$/, function(callback) {
