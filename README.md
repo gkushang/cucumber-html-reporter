@@ -2,8 +2,8 @@
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) 
-
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE)   
+ 
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
 
@@ -14,7 +14,7 @@
 3. [Foundation Theme Reports][5]
 4. [Simple Theme Reports][6]
 
-_For future updates, follow the [twitter][twitter] handle_.
+_For future updates, follow the [twitter][twitter] handle_
 
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
@@ -226,6 +226,10 @@ Attach JSON to HTML report
 
 [changelog][10]
 
+## Follow 
+
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/g_kushang)
+ 
 
 ## Credits
 
