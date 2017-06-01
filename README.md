@@ -15,7 +15,7 @@
 3. [Foundation Theme Reports][5]
 4. [Simple Theme Reports][6]
 
-_Follow [@g_kushang][twitter] for future updates on the module_.
+_For future updates, follow the [twitter][twitter] handle_.
 
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
