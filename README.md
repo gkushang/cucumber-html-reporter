@@ -12,8 +12,8 @@ Generate Cucumber HTML reports with pie charts
 
 ## Preview of HTML Reports
 
-1. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
-2. [Bootstrap Theme Reports with Pie Chart][4]
+1. [Bootstrap Theme Reports with Pie Chart][4]
+2. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
 3. [Foundation Theme Reports][5]
 4. [Simple Theme Reports][6]
 
@@ -90,10 +90,12 @@ $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
 ## Options
 
 #### `theme`
-Available: `['hierarchy', 'bootstrap', 'foundation', 'simple']`
+Available: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
 Type: `String`
 
 Select the Theme for HTML report.
+
+N.B: Hierarchy theme is best suitable if your features are nested withing directories under `features`. Each directory will be rendered as a HTML Tab. It only supports up to 3-level of nested directory structure.  
 
 
 #### `jsonFile`

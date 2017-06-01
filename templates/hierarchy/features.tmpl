@@ -52,6 +52,7 @@
                   <% _.each(element.steps, function(step, stepIndex) { %>
                     <% if(!step.hidden || step.image || step.text || step.result.status === 'failed') { %>
                     <p class="scenario-container">
+                    <div class="row steps">
                     <% if(step.result) { %>
                       <% if(step.result.status === 'passed') { %>
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -69,7 +70,7 @@
                     <% } %>
                       <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
-                        <%= step.name %>
+                          <span> <%= step.name %></span>
                           <% if (step.result && step.result.duration) { %>
                               <span class="step-duration">
                                <%= calculateDuration(step.result.duration) %>
@@ -142,6 +143,7 @@ this.Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function
 
                     <% } %>
                     </p>
+                </div>
                     <% } %>
                   <% }); %>
                 </div>

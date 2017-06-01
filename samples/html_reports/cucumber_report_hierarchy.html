@@ -137,13 +137,13 @@ div.chart div div svg rect {
     fill: #f5f5f5;
 }
 
-div.content {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
 table.arguments {
     margin-left: 30px;
+    margin-top: 1em;
+}
+
+#directory {
+    background-color: #f0f0f0;
 }
 
 .screenshot {
@@ -196,6 +196,21 @@ th {
     background-color: #fbfbfb;
 }
 
+pre {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    margin-right: 3em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .step-duration {
     float: right;
     color: #BDBDBD;
@@ -228,6 +243,17 @@ th {
 .footer-link:hover {
     color: darkgray;
 }
+
+.steps {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -9px;
+}
+
+.all-features {
+    padding-top: 0.6em;
+}
+
     </style>
     <meta charset="UTF-8">
   </head>
@@ -240,7 +266,7 @@ th {
           <a class="navbar-brand">Cucumberjs Report</a>
           <div class="project-name visible-md visible-lg">cucumber-html-reporter</div>
           <div class="label-container">
-            <span class="label label-success" title="scenarios Passed: 8">Passed: 8</span>
+            <span class="label label-success" title="scenarios Passed: 14">Passed: 14</span>
             <span class="label label-danger" title="scenarios Failed: 0">Failed: 0</span>
           </div>
         </div>
@@ -249,15 +275,12 @@ th {
 
     <div class="container">
 
-      <div class="generated-on">Thu May 25 2017 18:25:25 GMT-0400 (EDT)</div>
+      <div class="generated-on">Wed May 31 2017 23:02:49 GMT-0400 (EDT)</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
         <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
       </div>
-
-    </div>
-    <div class="content">
 
       
       <div class="panel panel-default">
@@ -329,25 +352,27 @@ th {
       </div>
       
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" href="#allSuitesInfo">
-              <i class="glyphicon glyphicon-chevron-right"></i>
-              <i class="glyphicon glyphicon-chevron-down"></i>
-              <b>All Features</b>
-              <span class="label-container">
-                <span class="label label-success" title="8 Features Passed">8</span>
-                
-                
-              </span>
-            </a>
-          </h4>
-        </div>
-        <div id="allSuitesInfo" class="panel-collapse collapse">
-          <div class="panel-body">
+        <div class="all-features">
+            <div style="display: none;">No features</div>
             
-            
+            <div class="panel panel-default">
+                <div class="panel-heading" id="directory">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapseSuitehappy">
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                            <i class="glyphicon glyphicon-chevron-down"></i>
+                            <b>happy</b>
+                            <span class="label-container">
+                            <span class="label label-success" title="3 Features Passed">3</span>
+                            
+                            
+                            </span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseSuitehappy" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        
 
 <div class="row">
 
@@ -356,22 +381,22 @@ th {
       <div class="panel-heading">
         <h4 class="panel-title">
             <div class="tags"> <span class="tag">@happy</span>  <span class="tag">@reporting</span>  </div>
-          <a data-toggle="collapse" href="#collapseFeaturecucumber-html-reporter0">
+          <a data-toggle="collapse" href="#collapseFeaturehappy0">
             <i class="glyphicon glyphicon-chevron-right"></i>
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b>Feature:</b>Happy HTML reporting
             <span class="label-container">
-              <span class="label label-success" title="6 Scenarios Passed">6</span>
+              <span class="label label-success" title="4 Scenarios Passed">4</span>
               
               
-              
+              <span class="label label-default" title="2 Scenarios Pending">2</span>
               
               
             </span>
           </a>
         </h4>
       </div>
-      <div id="collapseFeaturecucumber-html-reporter0" class="panel-collapse collapse">
+      <div id="collapseFeaturehappy0" class="panel-collapse collapse">
         <div class="panel-body">
          <div class="description">  In order to review cucumber reports<br />  Fred, a cucumber user<br />  Wants to have cucumber reports in HTML</div>
           
@@ -380,7 +405,7 @@ th {
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @testPassing</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter0_0">
+                  <a data-toggle="collapse" href="#collapseScenariohappy0_0">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see passing scenarios in the HTML report
@@ -395,7 +420,7 @@ th {
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter0_0" class="panel-collapse collapse">
+              <div id="collapseScenariohappy0_0" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -403,6 +428,7 @@ th {
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -410,7 +436,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Before </span>
-                        
+                          <span> </span>
                           
                               <span class="step-duration">
                                <1ms
@@ -436,10 +462,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -447,7 +475,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        this feature runs with background
+                          <span> this feature runs with background</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -468,10 +496,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -479,10 +509,10 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a passing cucumber step with 2 seconds timeout
+                          <span> Fred runs a passing cucumber step with 2 seconds timeout</span>
                           
                               <span class="step-duration">
-                               2s 5ms
+                               2s 3ms
                               </span>
                             
                          
@@ -500,10 +530,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -511,7 +543,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -532,10 +564,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -543,7 +577,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report
+                          <span> cucumber-html-reporter should create HTML report</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -564,6 +598,7 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
@@ -577,22 +612,22 @@ th {
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @testScenarioOutline</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter0_1">
+                  <a data-toggle="collapse" href="#collapseScenariohappy0_1">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred runs scenario outline for John and print on HTML report
                     <span class="label-container">
-                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      <span class="label label-success" title="1 Steps Passed">1</span>
                       
-                      
-                      
+                      <span class="label label-default" title="1 Steps Pending">1</span>
+                      <span class="label label-warning" title="2 Steps Skipped">2</span>
                       
                       
                     </span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter0_1" class="panel-collapse collapse">
+              <div id="collapseScenariohappy0_1" class="panel-collapse collapse">
                 <div class="panel-body">
                   <div class="description" id="scenario-description">John & Bob wants to run cucumber scenarios<br />  - expects to have HTML reports</div>
                   
@@ -600,6 +635,7 @@ th {
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -607,7 +643,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        this feature runs with background
+                          <span> this feature runs with background</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -628,23 +664,21 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
-                      
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a passing cucumber scenario on behalf of "John"
+                          <span> Fred runs a passing cucumber scenario on behalf of "John"</span>
                           
-                              <span class="step-duration">
-                               1s 2ms
-                              </span>
-                            
                          
                             
                           
@@ -660,23 +694,21 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
                       
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
-                              <span class="step-duration">
-                               <1ms
-                              </span>
-                            
                          
                             
                           
@@ -692,23 +724,21 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
                       
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report
+                          <span> cucumber-html-reporter should create HTML report</span>
                           
-                              <span class="step-duration">
-                               <1ms
-                              </span>
-                            
                          
                             
                           
@@ -724,6 +754,7 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -735,22 +766,22 @@ th {
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @testScenarioOutline</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter0_2">
+                  <a data-toggle="collapse" href="#collapseScenariohappy0_2">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred runs scenario outline for Bob and print on HTML report
                     <span class="label-container">
-                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      <span class="label label-success" title="1 Steps Passed">1</span>
                       
-                      
-                      
+                      <span class="label label-default" title="1 Steps Pending">1</span>
+                      <span class="label label-warning" title="2 Steps Skipped">2</span>
                       
                       
                     </span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter0_2" class="panel-collapse collapse">
+              <div id="collapseScenariohappy0_2" class="panel-collapse collapse">
                 <div class="panel-body">
                   <div class="description" id="scenario-description">John & Bob wants to run cucumber scenarios<br />  - expects to have HTML reports</div>
                   
@@ -758,6 +789,7 @@ th {
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -765,7 +797,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        this feature runs with background
+                          <span> this feature runs with background</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -786,23 +818,21 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
-                      
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a passing cucumber scenario on behalf of "Bob"
+                          <span> Fred runs a passing cucumber scenario on behalf of "Bob"</span>
                           
-                              <span class="step-duration">
-                               1s 3ms
-                              </span>
-                            
                          
                             
                           
@@ -818,23 +848,21 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
                       
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
-                              <span class="step-duration">
-                               <1ms
-                              </span>
-                            
                          
                             
                           
@@ -850,23 +878,21 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
-                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
                       
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report
+                          <span> cucumber-html-reporter should create HTML report</span>
                           
-                              <span class="step-duration">
-                               <1ms
-                              </span>
-                            
                          
                             
                           
@@ -882,6 +908,7 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -893,7 +920,7 @@ th {
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @testAttachDebugData</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter0_3">
+                  <a data-toggle="collapse" href="#collapseScenariohappy0_3">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to print test data in the HTML reports for debugging purpose
@@ -908,7 +935,7 @@ th {
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter0_3" class="panel-collapse collapse">
+              <div id="collapseScenariohappy0_3" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -916,6 +943,7 @@ th {
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -923,7 +951,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        this feature runs with background
+                          <span> this feature runs with background</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -944,10 +972,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -955,7 +985,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario
+                          <span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -984,10 +1014,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -995,7 +1027,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1016,10 +1048,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1027,7 +1061,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report with test-data
+                          <span> cucumber-html-reporter should create HTML report with test-data</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1048,6 +1082,7 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -1059,7 +1094,7 @@ th {
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @testDocString</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter0_4">
+                  <a data-toggle="collapse" href="#collapseScenariohappy0_4">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants see the long doc string attached in the HTML report
@@ -1074,7 +1109,7 @@ th {
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter0_4" class="panel-collapse collapse">
+              <div id="collapseScenariohappy0_4" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -1082,6 +1117,7 @@ th {
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1089,7 +1125,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        this feature runs with background
+                          <span> this feature runs with background</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1110,10 +1146,12 @@ th {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1121,7 +1159,7 @@ th {
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a passing cucumber scenario with the below content
+                          <span> Fred runs a passing cucumber scenario with the below content</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1155,10 +1193,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1166,7 +1206,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1187,10 +1227,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1198,7 +1240,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report
+                          <span> cucumber-html-reporter should create HTML report</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1219,6 +1261,7 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -1230,7 +1273,7 @@ I want to print below Doc String
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @testDataTable</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter0_5">
+                  <a data-toggle="collapse" href="#collapseScenariohappy0_5">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to use data table and print on HTML report
@@ -1245,7 +1288,7 @@ I want to print below Doc String
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter0_5" class="panel-collapse collapse">
+              <div id="collapseScenariohappy0_5" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -1253,6 +1296,7 @@ I want to print below Doc String
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1260,10 +1304,10 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        this feature runs with background
+                          <span> this feature runs with background</span>
                           
                               <span class="step-duration">
-                               2ms
+                               <1ms
                               </span>
                             
                          
@@ -1281,10 +1325,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -1292,7 +1338,1743 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a passing scenario for the following data set
+                          <span> Fred runs a passing scenario for the following data set</span>
+                          
+                              <span class="step-duration">
+                               2ms
+                              </span>
+                            
+                         
+                            
+                              <div class="scrollBar">
+                               
+                                <table class="arguments">
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                              </table>
+                              
+                               </div>
+                               
+
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report with data-table</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="directory">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseSubSuiteoverjoyed">
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <i class="glyphicon glyphicon-chevron-down"></i>
+                                        <b>overjoyed</b>
+                                        <span class="label-container">
+                                        <span class="label label-success" title="2 Features Passed">2</span>
+                                        
+                                        
+                                        </span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseSubSuiteoverjoyed" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    
+
+<div class="row">
+
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            <div class="tags"> <span class="tag">@happy</span>  <span class="tag">@reporting</span>  </div>
+          <a data-toggle="collapse" href="#collapseFeatureoverjoyed0">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <b>Feature:</b>Happy HTML reporting
+            <span class="label-container">
+              <span class="label label-success" title="4 Scenarios Passed">4</span>
+              
+              
+              <span class="label label-default" title="2 Scenarios Pending">2</span>
+              
+              
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFeatureoverjoyed0" class="panel-collapse collapse">
+        <div class="panel-body">
+         <div class="description">  In order to review cucumber reports<br />  Fred, a cucumber user<br />  Wants to have cucumber reports in HTML</div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testPassing</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed0_0">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see passing scenarios in the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed0_0" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                          <span> </span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info0_01" data-toggle="collapse">+ Show Info</a>
+                           <div id="info0_01" class="collapse">
+                             <pre class=info>Tests INFO will print here.<br>To attach INFO to Any steps, use scenario.attach function in your step definitions as shown below.<br><br>If you pass HTML's to scenario.attach then reporter will format accordingly <br><br>Simple String  : scenario.attach('sample data')<br>Pretty JSON    : scenario.attach(JSON.stringify(json, null, 2))<br>HTML Link      : scenario.attach('format the link with html-a tag'</pre>
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testScenarioOutline</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed0_1">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred runs scenario outline for John and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="1 Steps Passed">1</span>
+                      
+                      <span class="label label-default" title="1 Steps Pending">1</span>
+                      <span class="label label-warning" title="2 Steps Skipped">2</span>
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed0_1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="description" id="scenario-description">John & Bob wants to run cucumber scenarios<br />  - expects to have HTML reports</div>
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing cucumber scenario on behalf of "John"</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testScenarioOutline</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed0_2">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred runs scenario outline for Bob and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="1 Steps Passed">1</span>
+                      
+                      <span class="label label-default" title="1 Steps Pending">1</span>
+                      <span class="label label-warning" title="2 Steps Skipped">2</span>
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed0_2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="description" id="scenario-description">John & Bob wants to run cucumber scenarios<br />  - expects to have HTML reports</div>
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing cucumber scenario on behalf of "Bob"</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testAttachDebugData</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed0_3">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to print test data in the HTML reports for debugging purpose
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed0_3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info0_32" data-toggle="collapse">+ Show Info</a>
+                           <div id="info0_32" class="collapse">
+                             <pre class=info>test data to be printed<br>{
+  "name": "cucumber-html-reporter",
+  "format": "html"
+}</pre>
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report with test-data</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testDocString</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed0_4">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants see the long doc string attached in the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed0_4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing cucumber scenario with the below content</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                              <div class="scrollBar">
+                               
+                               </div>
+                               
+                               <pre class=info>In order to see Doc String in the HTML report
+As a Cucumber User,
+I want to print below Doc String
+
+  Hey, I am a Doc string
+</pre>
+                               
+
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testDataTable</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed0_5">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to use data table and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed0_5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing scenario for the following data set</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -1994,10 +3776,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2005,7 +3789,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2026,10 +3810,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2037,7 +3823,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report with data-table
+                          <span> cucumber-html-reporter should create HTML report with data-table</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2058,6 +3844,7 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -2075,8 +3862,1752 @@ I want to print below Doc String
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
+            <div class="tags"> <span class="tag">@happy</span>  <span class="tag">@reporting</span>  </div>
+          <a data-toggle="collapse" href="#collapseFeatureoverjoyed1">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <b>Feature:</b>Happy HTML reporting
+            <span class="label-container">
+              <span class="label label-success" title="4 Scenarios Passed">4</span>
+              
+              
+              <span class="label label-default" title="2 Scenarios Pending">2</span>
+              
+              
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFeatureoverjoyed1" class="panel-collapse collapse">
+        <div class="panel-body">
+         <div class="description">  In order to review cucumber reports<br />  Fred, a cucumber user<br />  Wants to have cucumber reports in HTML</div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testPassing</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed1_0">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to see passing scenarios in the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed1_0" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Before </span>
+                          <span> </span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info1_01" data-toggle="collapse">+ Show Info</a>
+                           <div id="info1_01" class="collapse">
+                             <pre class=info>Tests INFO will print here.<br>To attach INFO to Any steps, use scenario.attach function in your step definitions as shown below.<br><br>If you pass HTML's to scenario.attach then reporter will format accordingly <br><br>Simple String  : scenario.attach('sample data')<br>Pretty JSON    : scenario.attach(JSON.stringify(json, null, 2))<br>HTML Link      : scenario.attach('format the link with html-a tag'</pre>
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testScenarioOutline</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed1_1">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred runs scenario outline for John and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="1 Steps Passed">1</span>
+                      
+                      <span class="label label-default" title="1 Steps Pending">1</span>
+                      <span class="label label-warning" title="2 Steps Skipped">2</span>
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed1_1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="description" id="scenario-description">John & Bob wants to run cucumber scenarios<br />  - expects to have HTML reports</div>
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing cucumber scenario on behalf of "John"</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testScenarioOutline</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed1_2">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred runs scenario outline for Bob and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="1 Steps Passed">1</span>
+                      
+                      <span class="label label-default" title="1 Steps Pending">1</span>
+                      <span class="label label-warning" title="2 Steps Skipped">2</span>
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed1_2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="description" id="scenario-description">John & Bob wants to run cucumber scenarios<br />  - expects to have HTML reports</div>
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                       
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing cucumber scenario on behalf of "Bob"</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testAttachDebugData</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed1_3">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to print test data in the HTML reports for debugging purpose
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed1_3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred attaches the "test data to be printed" to the Given step of passing cucumber scenario</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+                           <a href="#info1_32" data-toggle="collapse">+ Show Info</a>
+                           <div id="info1_32" class="collapse">
+                             <pre class=info>test data to be printed<br>{
+  "name": "cucumber-html-reporter",
+  "format": "html"
+}</pre>
+                           </div>
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report with test-data</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testDocString</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed1_4">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants see the long doc string attached in the HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed1_4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing cucumber scenario with the below content</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                              <div class="scrollBar">
+                               
+                               </div>
+                               
+                               <pre class=info>In order to see Doc String in the HTML report
+As a Cucumber User,
+I want to print below Doc String
+
+  Hey, I am a Doc string
+</pre>
+                               
+
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  
+                    <div class="tags"> <span class="tag"> @testDataTable</span>  </div>
+                  <a data-toggle="collapse" href="#collapseScenariooverjoyed1_5">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>Fred wants to use data table and print on HTML report
+                    <span class="label-container">
+                      <span class="label label-success" title="4 Steps Passed">4</span>
+                      
+                      
+                      
+                      
+                      
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenariooverjoyed1_5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> this feature runs with background</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> Fred runs a passing scenario for the following data set</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                              <div class="scrollBar">
+                               
+                                <table class="arguments">
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        <th>
+                                          id
+                                        </th>
+                                         
+                                        <th>
+                                          name
+                                        </th>
+                                         
+                                        </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                        <td>
+                                          1
+                                        </td>
+                                      
+                                        <td>
+                                          data-A
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                                      <tr>
+                                      
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                        <td>
+                                          2
+                                        </td>
+                                      
+                                        <td>
+                                          data-B
+                                        </td>
+                                      
+                                      </tr>
+                                    
+                              </table>
+                              
+                               </div>
+                               
+
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> he provides cucumber JSON file to reporter</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    <div class="row steps">
+                    
+                      
+                        <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
+                      
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> cucumber-html-reporter should create HTML report with data-table</span>
+                          
+                              <span class="step-duration">
+                               <1ms
+                              </span>
+                            
+                         
+                            
+                          
+                      </span>
+                    
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                </div>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading" id="directory">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapseSuiteunhappy">
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                            <i class="glyphicon glyphicon-chevron-down"></i>
+                            <b>unhappy</b>
+                            <span class="label-container">
+                            <span class="label label-success" title="1 Features Passed">1</span>
+                            
+                            
+                            </span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseSuiteunhappy" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        
+
+<div class="row">
+
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
             <div class="tags"> <span class="tag">@unhappy</span>  <span class="tag">@reporting</span>  </div>
-          <a data-toggle="collapse" href="#collapseFeaturecucumber-html-reporter1">
+          <a data-toggle="collapse" href="#collapseFeatureunhappy0">
             <i class="glyphicon glyphicon-chevron-right"></i>
             <i class="glyphicon glyphicon-chevron-down"></i>
             <b>Feature:</b>Unhappy HTML reporting
@@ -2091,7 +5622,7 @@ I want to print below Doc String
           </a>
         </h4>
       </div>
-      <div id="collapseFeaturecucumber-html-reporter1" class="panel-collapse collapse">
+      <div id="collapseFeatureunhappy0" class="panel-collapse collapse">
         <div class="panel-body">
          
           
@@ -2100,7 +5631,7 @@ I want to print below Doc String
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @attachScreenshot</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter1_0">
+                  <a data-toggle="collapse" href="#collapseScenariounhappy0_0">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see a Screenshot attached to the HTML report
@@ -2115,7 +5646,7 @@ I want to print below Doc String
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter1_0" class="panel-collapse collapse">
+              <div id="collapseScenariounhappy0_0" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -2123,6 +5654,7 @@ I want to print below Doc String
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2130,7 +5662,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a failing cucumber scenario
+                          <span> Fred runs a failing cucumber scenario</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2151,10 +5683,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2162,7 +5696,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he provides cucumber JSON file to reporter
+                          <span> he provides cucumber JSON file to reporter</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2183,10 +5717,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2194,10 +5730,10 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">And </span>
-                        a failing scenario captures a screenshot
+                          <span> a failing scenario captures a screenshot</span>
                           
                               <span class="step-duration">
-                               2ms
+                               1ms
                               </span>
                             
                          
@@ -2220,10 +5756,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2231,7 +5769,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report with Screenshot
+                          <span> cucumber-html-reporter should create HTML report with Screenshot</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2252,6 +5790,7 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -2263,7 +5802,7 @@ I want to print below Doc String
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @pendingStep</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter1_1">
+                  <a data-toggle="collapse" href="#collapseScenariounhappy0_1">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see if steps are pending in the HTML report
@@ -2278,7 +5817,7 @@ I want to print below Doc String
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter1_1" class="panel-collapse collapse">
+              <div id="collapseScenariounhappy0_1" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -2286,6 +5825,7 @@ I want to print below Doc String
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2293,7 +5833,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a cucumber scenario
+                          <span> Fred runs a cucumber scenario</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2314,10 +5854,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
@@ -2325,7 +5867,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he left this step as a pending
+                          <span> he left this step as a pending</span>
                           
                          
                             
@@ -2342,10 +5884,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
@@ -2353,7 +5897,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should report pending step with code-snippets in HTML report
+                          <span> cucumber-html-reporter should report pending step with code-snippets in HTML report</span>
                           
                          
                             
@@ -2370,6 +5914,7 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -2381,7 +5926,7 @@ I want to print below Doc String
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @undefinedStep</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter1_2">
+                  <a data-toggle="collapse" href="#collapseScenariounhappy0_2">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see if steps are undefined on the HTML report
@@ -2396,7 +5941,7 @@ I want to print below Doc String
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter1_2" class="panel-collapse collapse">
+              <div id="collapseScenariounhappy0_2" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -2404,6 +5949,7 @@ I want to print below Doc String
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2411,7 +5957,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a cucumber scenario
+                          <span> Fred runs a cucumber scenario</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2432,10 +5978,12 @@ I want to print below Doc String
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
@@ -2443,7 +5991,7 @@ I want to print below Doc String
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he left this step as a undefined
+                          <span> he left this step as a undefined</span>
                           
                          
                             
@@ -2467,10 +6015,12 @@ this.Then(/^he left this step as a undefined$/, function(callback) {
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
@@ -2478,7 +6028,7 @@ this.Then(/^he left this step as a undefined$/, function(callback) {
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create undefined step in HTML report
+                          <span> cucumber-html-reporter should create undefined step in HTML report</span>
                           
                          
                             
@@ -2502,6 +6052,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -2513,7 +6064,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
                 <h4 class="panel-title">
                   
                     <div class="tags"> <span class="tag"> @ambiguousStep</span>  </div>
-                  <a data-toggle="collapse" href="#collapseScenariocucumber-html-reporter1_3">
+                  <a data-toggle="collapse" href="#collapseScenariounhappy0_3">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>Fred wants to see if steps are ambiguous on the HTML report
@@ -2528,7 +6079,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
                   </a>
                 </h4>
               </div>
-              <div id="collapseScenariocucumber-html-reporter1_3" class="panel-collapse collapse">
+              <div id="collapseScenariounhappy0_3" class="panel-collapse collapse">
                 <div class="panel-body">
                   
                   
@@ -2536,6 +6087,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2543,7 +6095,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
                     
                       <span class="text">
                         <span class="keyword highlight">Given </span>
-                        Fred runs a cucumber scenario
+                          <span> Fred runs a cucumber scenario</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2564,10 +6116,12 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2575,7 +6129,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
                     
                       <span class="text">
                         <span class="keyword highlight">When </span>
-                        he left this step to be ambiguous
+                          <span> he left this step to be ambiguous</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2596,10 +6150,12 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
 
                     
                     </p>
+                </div>
                     
                   
                     
                     <p class="scenario-container">
+                    <div class="row steps">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
@@ -2607,7 +6163,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
                     
                       <span class="text">
                         <span class="keyword highlight">Then </span>
-                        cucumber-html-reporter should create HTML report with ambiguous steps
+                          <span> cucumber-html-reporter should create HTML report with ambiguous steps</span>
                           
                               <span class="step-duration">
                                <1ms
@@ -2628,6 +6184,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
 
                     
                     </p>
+                </div>
                     
                   
                 </div>
@@ -2643,11 +6200,14 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
   
 
 
-          </div>
-        </div>
-      </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
     </div>
 
+    </div>
     <div class="navbar-fixed-bottom row-fluid footer-div ">
       <div class="navbar-inner">
         <div class="footer-container">
@@ -2669,16 +6229,16 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Features",
                                                             "failed" : 0,
-                                                            "passed" : 2,
+                                                            "passed" : 4,
                                                             "ambiguous" : 0
                                                         })
                                             });
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Scenarios",
                                                             "failed" : 0,
-                                                            "passed" : 8,
+                                                            "passed" : 14,
                                                             "notdefined" : 1,
-                                                            "pending" : 1,
+                                                            "pending" : 7,
                                                             "skipped" : 0,
                                                             "ambiguous" : 0
                                                         })
