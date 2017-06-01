@@ -1,4 +1,4 @@
-#cucumber-html-reporter
+# cucumber-html-reporter
 
 ***Generate Cucumber HTML reports with pie charts***
 
