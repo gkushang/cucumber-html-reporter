@@ -14,6 +14,12 @@ Feature: Unhappy HTML reporting
     When he left this step as a pending
     Then cucumber-html-reporter should report pending step with code-snippets in HTML report
 
+  @undefinedStep
+  Scenario: Fred wants to see if steps are undefined on the HTML report
+    Given Fred runs a cucumber scenario
+    When he left this step as a undefined
+    Then cucumber-html-reporter should create undefined step in HTML report
+
   @ambiguousStep
   Scenario: Fred wants to see if steps are ambiguous on the HTML report
     Given Fred runs a cucumber scenario

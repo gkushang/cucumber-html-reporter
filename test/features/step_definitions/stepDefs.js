@@ -84,7 +84,7 @@ defineSupportCode(function({Given, Then, When}) {
 
     When(/^he left this step as a pending$/, function (callback) {
         // Write code here that turns the phrase above into concrete actions
-        callback();
+        callback(null, 'pending');
     });
 
 });
