@@ -20,17 +20,10 @@ defineSupportCode(function({Given, Then, When}) {
         callback();
     });
 
-    Given('Fred runs a passing cucumber scenario on behalf of {stringInDoubleQuotes}', function (stringInDoubleQuotes, callback) {
-        console.log('John = stringInDoubleQuotes ===  ', stringInDoubleQuotes);
+    Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function (name, callback) {
         setTimeout(callback, 1000);
-        // callback(null, 'pending');
-        callback();
+        callback(null, 'pending');
     });
-
-    // Given(/^Fred runs a passing cucumber scenario on behalf of "([^"]*)"/, function (name, callback) {
-    //     setTimeout(callback, 1000);
-    //     callback(null, 'pending');
-    // });
 
     Then(/^he provides cucumber JSON file to reporter$/, function (callback) {
         callback();

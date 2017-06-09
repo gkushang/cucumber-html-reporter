@@ -1,12 +1,12 @@
 'use strict';
 
-const reporter = require('../../../index');
-const assertHtmlReports = require('../../assert/assertHtmlReports');
-const path = require('path');
-const fs = require('fs-extra');
-const find = require('find');
+var reporter = require('../../../index');
+var assertHtmlReports = require('../../assert/assertHtmlReports');
+var path = require('path');
+var fs = require('fs-extra');
+var find = require('find');
 
-const {defineSupportCode} = require('cucumber');
+var {defineSupportCode} = require('cucumber');
 
 defineSupportCode(function({After, Before, registerHandler}) {
 
