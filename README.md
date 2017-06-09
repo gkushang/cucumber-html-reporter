@@ -30,6 +30,7 @@ npm install cucumber-html-reporter --save-dev
 
 ***Notes:*** 
 
+* Latest version supports Cucumber 2
 * Install `cucumber-html-reporter@0.5.0` if your cucumber version is  `< Cucumber@2`
 * Install `cucumber-html-reporter@0.4.0` for node version <0.12
 
