@@ -7,6 +7,8 @@
     * Duration is reported as Milliseconds
     * Attachments are now plain text without encoding
     * DRY the templates and HTML scripts
+    * Run Travis-CI with Node@7
+    * Disable the Strict mode to test pending/undefined steps scenarios
     
 * Use `cucumber-html-reporter@0.5.0` for < Cucumber@2
 
