@@ -7,9 +7,9 @@ window.onload = function() {
     Array.prototype.slice.call(accordionTitles).forEach(function(title) {
 
         title.onclick = function() {
-            var content = next(title),
-                style = window.getComputedStyle(content),
-                display = style.getPropertyValue('display');
+            var content = next(title);
+            var style = window.getComputedStyle(content);
+            var display = style.getPropertyValue('display');
 
             if (display === 'block') {
                 content.style.display = 'none';
