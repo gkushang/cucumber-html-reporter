@@ -1,4 +1,15 @@
 
+### 2.0.0 (2017-06-09)
+
+##### Support for Cucumber 2
+
+* Cucumber 2 [PR#81](https://github.com/gkushang/cucumber-html-reporter/pull/81). Resolves Issues [#73](https://github.com/gkushang/cucumber-html-reporter/issues/73),[#72](https://github.com/gkushang/cucumber-html-reporter/issues/72), [#61](https://github.com/gkushang/cucumber-html-reporter/issues/61), [#55](https://github.com/gkushang/cucumber-html-reporter/issues/55) 
+    * Duration is reported as Milliseconds
+    * Attachments are now plain text without encoding
+    * DRY the templates and HTML scripts
+    
+* Use `cucumber-html-reporter@0.5.0` for < Cucumber@2
+
 ### 0.5.0 (2017-06-01)
 
 ##### Enhancement
