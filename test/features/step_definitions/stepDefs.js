@@ -55,7 +55,7 @@ defineSupportCode(function({Given, Then, When}) {
             format: 'html'
         };
 
-        this.attach(JSON.stringify(myJsonObject, undefined, 2));
+        this.attach(JSON.stringify(myJsonObject, null, 2));
 
         callback();
     });
