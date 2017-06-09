@@ -7,7 +7,8 @@ window.onload = function() {
     Array.prototype.slice.call(accordionTitles).forEach(function(title) {
 
         title.onclick = function() {
-            var content = next(title);
+
+            var content = nextElement(title);
             var style = window.getComputedStyle(content);
             var display = style.getPropertyValue('display');
 
@@ -16,6 +17,7 @@ window.onload = function() {
             } else {
                 content.style.display = 'block';
             }
+
             return false;
         }
     });
@@ -29,9 +31,10 @@ window.onload = function() {
  Credit to John Resig for this function 
  taken from Pro JavaScript techniques 
  */
-function next(elem) {
+function nextElement(elem) {
     do {
         elem = elem.nextSibling;
     } while (elem && elem.nodeType !== 1);
+    
     return elem;
 }
