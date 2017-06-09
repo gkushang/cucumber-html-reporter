@@ -131,7 +131,7 @@ div.chart div div svg rect {
     fill: #f5f5f5;
 }
 
-table.arguments {
+.arguments {
     margin-left: 30px;
     margin-top: 1em;
 }
