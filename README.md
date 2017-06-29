@@ -2,7 +2,7 @@
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE)    
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)    
  
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
@@ -252,5 +252,6 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 [10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
 [11]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
 [twitter]: https://twitter.com/g_kushang
+
 
 
