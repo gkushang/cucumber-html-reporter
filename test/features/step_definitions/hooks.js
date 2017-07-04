@@ -6,28 +6,34 @@ var path = require('path');
 var fs = require('fs-extra');
 var find = require('find');
 
-var hooks = function() {
-    this.Before(function(scenario, callback) {
+var {defineSupportCode} = require('cucumber');
+
+defineSupportCode(function({After, Before, registerHandler}) {
+
+    Before(function (scenario, callback) {
         console.log('console logs should not break the report');
         this.scenario = scenario;
         callback();
     });
 
-    this.Before({tags: ['@testPassing']}, function(scenario, callback) {
-        scenario.attach('Tests INFO will print here.<br>To attach INFO to Any steps, use scenario.attach function in your step definitions as shown below.<br><br>If you pass HTML\'s to scenario.attach then reporter will format accordingly <br>' +
+    Before({tags: '@testPassing'}, function (scenario, callback) {
+        this.attach('Tests INFO will print here.<br>To attach INFO to Any steps, use scenario.attach function in your step definitions as shown below.<br><br>If you pass HTML\'s to scenario.attach then reporter will format accordingly <br>' +
             '<br>Simple String  : scenario.attach(\'sample data\')' +
             '<br>Pretty JSON    : scenario.attach(JSON.stringify(json, null, 2))' +
-            '<br>HTML Link      : scenario.attach(\'format the link with html-a tag\'');
+            '<br>HTML Link      : scenario.attach(\'format the link with html-a tag\'', 'application/json');
+
+        this.attach('some text');
         callback();
     });
 
-    this.After({tags: ['@testPassing']}, function(scenario, callback) {
+    After({tags: '@testPassing'}, function (scenario, callback) {
         callback();
     });
 
-    this.registerHandler('AfterFeatures', function(features, callback) {
+    registerHandler('AfterFeatures', function (features, callback) {
 
         var theme = {
+            hierarchy: 'hierarchy',
             bootstrap: 'bootstrap',
             foundation: 'foundation',
             simple: 'simple'
@@ -39,7 +45,7 @@ var hooks = function() {
 
         function removeReports() {
             var files = find.fileSync(/\.html/, outputDirectory);
-            files.map(function(file) {
+            files.map(function (file) {
                 fs.unlinkSync(file);
             });
         }
@@ -76,6 +82,9 @@ var hooks = function() {
 
         function assertJsonFile() {
 
+            //Generate Hierarchy theme report
+            reporter.generate(getJsonFileOptions(theme.hierarchy));
+
             //Generate Bootstrap theme report
             reporter.generate(getJsonFileOptions(theme.bootstrap));
 
@@ -90,7 +99,10 @@ var hooks = function() {
         }
 
         function assertJsonDir() {
-            //Generate Bootstrap theme report
+            //Generate Hierarchy theme report
+            reporter.generate(getJsonDirOptions(theme.hierarchy));
+
+            // Generate Bootstrap theme report
             reporter.generate(getJsonDirOptions(theme.bootstrap));
 
             //Generate Foundation theme report
@@ -111,6 +123,4 @@ var hooks = function() {
 
         callback();
     });
-};
-
-module.exports = hooks;
+});

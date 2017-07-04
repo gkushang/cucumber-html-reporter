@@ -1,26 +1,25 @@
-cucumber-html-reporter
-======================
+# cucumber-html-reporter
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![v](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)
-[![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter)
-[![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE)
+***Generate Cucumber HTML reports with pie charts***
 
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)    
+ 
 
-Generate Cucumber HTML reports with pie charts
-> Available HTML themes: `['bootstrap', 'foundation', 'simple']`
-
+> Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
 
 ## Preview of HTML Reports
 
-1. [Bootstrap Theme Reports with Pie Chart][3]
-2. [Foundation Theme Reports][4]
-3. [Simple Theme Reports][5]
+1. [Bootstrap Theme Reports with Pie Chart][4]
+2. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
+3. [Foundation Theme Reports][5]
+4. [Simple Theme Reports][6]
 
+> _For future updates, follow the [twitter][twitter] handle_
 
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
-###### More snapshots are availble [here][8]
+###### More snapshots are availble [here][9]
 
 
 ## Install
@@ -28,6 +27,13 @@ Generate Cucumber HTML reports with pie charts
 ``` bash
 npm install cucumber-html-reporter --save-dev
 ```
+
+***Notes:*** 
+
+* Latest version supports Cucumber 2
+* Install `cucumber-html-reporter@0.5.0` for cucumber version `< Cucumber@2`
+* Install `cucumber-html-reporter@0.4.0` for node version <0.12
+
 
 ## Usage
 
@@ -67,7 +73,7 @@ var options = {
 
 > Please look at the `options` section below for more options
 
-> Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][7] and pick the theme you are interested in.
+> Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][8] and pick the theme you are interested in.
 
 > This module converts Cucumber's JSON format to HTML reports. In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
 
@@ -81,16 +87,18 @@ $ cucumberjs test/features/ -f json:test/report/cucumber_report.json
 $ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
 ```
 
-> Are you using cucumber with other frameworks or running [cucumber-parallel][6]? Pass relative path of JSON file to the `options` as shown [here][7]
+> Are you using cucumber with other frameworks or running [cucumber-parallel][7]? Pass relative path of JSON file to the `options` as shown [here][8]
 
 
 ## Options
 
 #### `theme`
-Available: `['bootstrap', 'foundation', 'simple']`
+Available: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
 Type: `String`
 
 Select the Theme for HTML report.
+
+N.B: Hierarchy theme is best suitable if your features are organized under features-folder hierarchy. Each folder will be rendered as a HTML Tab. It supports up to 3-level of nested folder hierarchy structure.  
 
 
 #### `jsonFile`
@@ -146,11 +154,16 @@ Type: `String` (optional)
 
 Custom project name. If not passed, module reads the name from projects package.json which is preferable.
  
+#### `brandTitle`
+Type: `String` (optional)
+
+Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
+ 
 #### `storeScreenShots`
 Type: `Boolean`
 Default: `undefined`
 
-`true`: Stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
+`true`: Stores the screenShots to the default directory. It creates a directory 'screenshot' if does not exists.
 
 `false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
@@ -176,8 +189,8 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
       
 ```
 
-* [HTML Report Preview with Metadata][3]
-* [Report Snapshot with Metadata][10]
+* [HTML Report Preview with Metadata][4]
+* [Report Snapshot with Metadata][11]
 
 
 ## Tips
@@ -214,10 +227,14 @@ Attach JSON to HTML report
 
 ```
 
-## Changelog
+## Changelog 
 
-[changelog][9]
+[changelog][10]
 
+## Follow 
+
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/g_kushang)
+ 
 
 ## Credits
 
@@ -225,13 +242,16 @@ Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML rep
 
 [1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
 [2]: https://github.com/cucumber/cucumber-js "CucumberJs"
-[3]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_bootstrap.html "Bootstrap Theme Reports"
-[4]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_foundation.html "Foundation Theme Reports"
-[5]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_simple.html "Simple Theme Reports"
-[6]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
-[7]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
-[8]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md
-[9]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
-[10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
+[3]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_hierarchy.html "Hierarchy Theme Reports"
+[4]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_bootstrap.html "Bootstrap Theme Reports"
+[5]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_foundation.html "Foundation Theme Reports"
+[6]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_simple.html "Simple Theme Reports"
+[7]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
+[8]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
+[9]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md
+[10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
+[11]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
+[twitter]: https://twitter.com/g_kushang
+
 
 

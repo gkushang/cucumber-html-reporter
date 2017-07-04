@@ -13,7 +13,8 @@
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand">Cucumberjs Report</a>
+        <%var brandTitle = suite.brandTitle ? suite.brandTitle : 'Cucumberjs Report' %>
+          <a class="navbar-brand"><%= brandTitle %></a>
           <div class="project-name visible-md visible-lg"><%= suite.name %></div>
           <div class="label-container">
             <span class="label label-success" title=<%= suite.reportAs %>>Passed: <%= suite.passed %></span>
@@ -106,6 +107,7 @@
     <script>
       <%= script %>
       <%= piechart %>
+      <%= screenshot %>
     </script>
   </body>
 </html>

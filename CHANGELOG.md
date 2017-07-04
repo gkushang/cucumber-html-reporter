@@ -1,20 +1,91 @@
+
+### 2.0.0 (2017-06-09)
+
+##### Support for Cucumber 2
+
+* Cucumber 2 [PR#81](https://github.com/gkushang/cucumber-html-reporter/pull/81). Resolves Issues [#73](https://github.com/gkushang/cucumber-html-reporter/issues/73),[#72](https://github.com/gkushang/cucumber-html-reporter/issues/72), [#61](https://github.com/gkushang/cucumber-html-reporter/issues/61), [#55](https://github.com/gkushang/cucumber-html-reporter/issues/55) 
+    * Duration is reported as Milliseconds
+    * Attachments are now plain text without encoding
+    * DRY the templates and HTML scripts
+    * Run Travis-CI with Node@7
+    * Disable the Strict mode to test pending/undefined steps scenarios
+    
+* Use `cucumber-html-reporter@0.5.0` for < Cucumber@2
+
+### 0.5.0 (2017-06-01)
+
+##### Enhancement
+
+* Introducing new Template `Hierarchy` from the [Proposal](https://github.com/gkushang/cucumber-html-reporter/issues/75), [PR#76](https://github.com/gkushang/cucumber-html-reporter/pull/76) & [PR#77](https://github.com/gkushang/cucumber-html-reporter/pull/77)
+    * The idea is to render features under respective folder hierarchy. Best case when your features are organized under feature-folders.
+* Enhance the Step Duration. Instead of 0s, show 1ms.
+* Backward compatible
+
+
+### 0.4.2 (2017-04-27)
+
+##### Fix
+
+* Fix to show '0s' if timestamp is in nanoseconds
+
+
+### 0.4.1 (2017-04-27)
+
+##### Enhancement
+
+* Add `brandTitle` to display on report. Checkout README for more details.
+
+##### Fix
+
+* Step duration time in html report always shows 0s [Issue#61](https://github.com/gkushang/cucumber-html-reporter/issues/61) [PR#62](https://github.com/gkushang/cucumber-html-reporter/pull/62)
+* Should not count Before/After hooks if they are hidden [Issue#63](https://github.com/gkushang/cucumber-html-reporter/issues/63) [PR#64](https://github.com/gkushang/cucumber-html-reporter/pull/64)
+
+
+### 0.4.0 (2017-03-24)
+
+* Supports Node versions >0.12
+
+##### Revert the change
+
+* Use fs-extra [PR#59](https://github.com/gkushang/cucumber-html-reporter/pull/59)
+
+
+### 0.3.9 (2017-03-24)
+
+* Supports Node versions <0.12
+
+##### Fix
+
+* Remove support for fs-extra for backward compatibility to support Node versions <0.12
+
+
+### 0.3.8 (2017-03-23)
+
+##### Fix
+
+* Use fs-extra instead of node-fs [PR#50](https://github.com/gkushang/cucumber-html-reporter/pull/50)
+* Make chai a dev dependency [PR#51](https://github.com/gkushang/cucumber-html-reporter/pull/51)
+* Bootstrap template fixes [PR#56](https://github.com/gkushang/cucumber-html-reporter/pull/56)
+* Fix Travis CI [PR#57](https://github.com/gkushang/cucumber-html-reporter/pull/57)
+
+
 ### 0.3.7 (2016-12-09)
 
-### Fix
+##### Fix
 
 * Sanitize Screenshot filename [Issue#45](https://github.com/gkushang/cucumber-html-reporter/issues/45) [PR#46](https://github.com/gkushang/cucumber-html-reporter/pull/46) 
 
 
 ### 0.3.6 (2016-12-06)
 
-### Fix
+##### Fix
 
 * Failure in Before hook should fail the Feature/Scenario, Add slice to rest of the scenario pie charts [PR#44](https://github.com/gkushang/cucumber-html-reporter/pull/44) 
 
 
 ### 0.3.5 (2016-11-29)
 
-### Enhancements
+##### Enhancements
 
 * Colors
  * Making labels & colors consistent on report [PR#42](https://github.com/gkushang/cucumber-html-reporter/pull/42) 
@@ -22,7 +93,7 @@
 
 ### 0.3.4 (2016-11-28)
 
-### Enhancements
+##### Enhancements
 
 * Step Duration
  * light gray the step duration to distinguish from the GWT Step description 
@@ -30,7 +101,7 @@
 
 ### 0.3.3 (2016-11-28)
 
-### Enhancements
+##### Enhancements
 
 * Ambiguous Steps
  * show ambiguous status on the pie-chart, features, scenarios and at steps level [PR#40](https://github.com/gkushang/cucumber-html-reporter/pull/40)
@@ -38,7 +109,7 @@
 
 ### 0.3.2 (2016-11-21)
 
-### Enhancements
+##### Enhancements
 
 * Show Metadata
  * additional info about your test environment, browser, platform, app version, mode of execution, stage, and so on. [PR#39](https://github.com/gkushang/cucumber-html-reporter/pull/39)
@@ -46,7 +117,7 @@
 
 ### 0.3.1 (2016-11-18)
 
-### Enhancements
+##### Enhancements
 
 * Adding latest Previews to the readme for all themes
 * Add more snapshots for the user's review
@@ -56,7 +127,7 @@
 * Deprecate Store Screenshots
  * Deprecate the option to store screenshot to the disk by default. If you still want to Store a screenShot to the directory, you can pass an option `storeScreenShots` to the reporter.
 
-#### Enhancements
+##### Enhancements
 
 * Inline Screenshots
  * Add support for inline png screenshots, fix package.json lookup, Fix success log: [PR#32](https://github.com/gkushang/cucumber-html-reporter/pull/32)
@@ -70,14 +141,14 @@ Default: `undefined`
 `true`: Stores all screenShots stores the screenShots to the default directory. It creates a directory 'screehshot' if does not exists.
 `false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
-#### Fixes
+##### Fixes
 
 * Fixes [ISSUE#29](https://github.com/gkushang/cucumber-html-reporter/issues/29)
 
 
 ### 0.2.17 (2016-11-17)
 
-#### Enhancements
+##### Enhancements
 
 * Tags on Report
  * Display Tags on Feature & Scenarios: [PR#35](https://github.com/gkushang/cucumber-html-reporter/pull/35)
@@ -87,7 +158,7 @@ Default: `undefined`
 
 ### 0.2.16 (2016-10-07)
 
-#### Enhancements
+##### Enhancements
 
 * Scenario Description
  * Show Scenario Description on HTML report: [ISSUE#33](https://github.com/gkushang/cucumber-html-reporter/issues/33)
@@ -95,35 +166,35 @@ Default: `undefined`
 
 ### 0.2.15 (2016-09-28)
 
-#### Fix
+##### Fix
 
 * Fix for older node versions: [ISSUE#30](https://github.com/gkushang/cucumber-html-reporter/issues/30)
 
 
 ### 0.2.14 (2016-09-27)
 
-#### Enhancements
+##### Enhancements
 
 * Option to add custom name to the project & adds footer: [PR#28](https://github.com/gkushang/cucumber-html-reporter/pull/28)
   
   
 ### 0.2.13 (2016-09-27)
 
-#### Enhancements
+##### Enhancements
 
 * Show time taken by each steps to complete the execution on report: [PR#17](https://github.com/gkushang/cucumber-html-reporter/pull/17) & [PR#27](https://github.com/gkushang/cucumber-html-reporter/pull/27)
     
 
 ### 0.2.12 (2016-09-27)
 
-#### Fixes
+##### Fixes
 
 * Show hidden hooks if they fail: [PR#25](https://github.com/gkushang/cucumber-html-reporter/pull/25)
 
 
 ### 0.2.11 (2016-09-26)
 
-#### Fixes
+##### Fixes
 
 * Fix typo on README: [PR#22](https://github.com/gkushang/cucumber-html-reporter/pull/22)
 
@@ -132,7 +203,7 @@ Default: `undefined`
 
 ### 0.2.10 (2016-09-22)
 
-#### Enhancements
+##### Enhancements
 
 * Conditionally hide hidden steps from the report: [PR#20](https://github.com/gkushang/cucumber-html-reporter/pull/20)
 
@@ -141,21 +212,21 @@ Default: `undefined`
 
 ### 0.2.9 (2016-09-08)
 
-#### Enhancements
+##### Enhancements
 
 * Ignore the bad JSON files when consolidating from the JSON Directory: [PR#13](https://github.com/gkushang/cucumber-html-reporter/pull/13)
 
     * Set the option `ignoreBadJsonFile` to `true` as a boolean to ignore the Bad JSON files
 
 
-#### BugFix
+##### BugFix
 
 * Fixed the issue when report was breaking with the Cucumber's Doc String: [Issue#14](https://github.com/gkushang/cucumber-html-reporter/issues/14) 
 
 
 ### 0.2.8 (2016-08-30)
 
-#### Enhancements
+##### Enhancements
 
 * Generate consolidated report from multiple JSON files: [PR#12](https://github.com/gkushang/cucumber-html-reporter/pull/12) 
 
@@ -181,7 +252,7 @@ var options = {
 
 ### 0.2.7 (2016-08-16)
 
-#### Enhancements
+##### Enhancements
 
 * Launch report automatically after test ends
 * Pass a flag `launchReport` to the options
@@ -207,37 +278,37 @@ var options = {
 
 ### 0.2.6 (2016-07-29)
 
-#### BugFix
+##### BugFix
 
 * Fixed the issue where Error messages were not printing on the report. 
 
 ### 0.2.5 (2016-07-28)
 
-#### Enhancements
+##### Enhancements
 
 * trim the text to be printed on report 
 
 ### 0.2.4 (2016-07-28)
 
-#### BugFix
+##### BugFix
 
 * https://github.com/mavdi/grunt-cucumberjs/issues/86 
 
 ### 0.2.3 (2016-07-26)
 
-#### Enhancements
+##### Enhancements
 
 * Published https://github.com/gkushang/cucumber-html-reporter/pull/10 Set charset as utf-8 
 
 ### 0.2.2 (2016-07-21)
 
-#### BugFix
+##### BugFix
 
 * Fixes https://github.com/gkushang/cucumber-html-reporter/issues/7
 
 ### 0.2.1 (2016-07-12)
 
-#### Enhancements
+##### Enhancements
 
 * Recursively create HTML report directory if does not exists
 * Remove outdated chai-fs depedency and use chai-should assertions
@@ -246,14 +317,14 @@ var options = {
 
 ### 0.2.0 (2016-07-10)
 
-#### Support for Cucumber@1.2.0 version
+##### Support for Cucumber@1.2.0 version
 
 * Screenshot attachment support for Cucumber release >= @1.2.0 (https://github.com/cucumber/cucumber-js/blob/master/CHANGELOG.md#bug-fixes-1)
  
 
 ### 0.1.6 (2016-07-07)
 
-#### Enhancements
+##### Enhancements
 
 * Format feature descriptions on report 
 * Add overflow scroll bar for the bigger data-table
@@ -262,20 +333,20 @@ var options = {
 
 ### 0.1.5 (2016-07-05)
 
-#### Enhancements
+##### Enhancements
 
 * Show feature description on report
  
 * Updated README
 
-#### Bug fixes
+##### Bug fixes
 
 * Fix bug when cucumber error message has kind of html tags as a string, e.g. <object> is not defined.
 
 
 ### 0.1.4 (2016-06-28)
 
-#### Enhancements
+##### Enhancements
 
 * Using `path` instead of separators to make platform agnostic
  
@@ -286,7 +357,7 @@ var options = {
 
 ### 0.1.3 (2016-06-27)
 
-#### Bug fixes
+##### Bug fixes
 
 * Fixed a bug in template path
 
@@ -295,7 +366,7 @@ var options = {
 
 ### 0.1.1 (2016-06-27)
 
-#### New Features
+##### New Features
 
 * Tooltip for Scenarios or Features in the HEADER based on reportSuiteAsScenarios flag
 

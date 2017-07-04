@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" >
+    <style type="text/css">
+      <%= styles %>
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        <%var brandTitle = suite.brandTitle ? suite.brandTitle : 'Cucumberjs Report' %>
+          <a class="navbar-brand"><%= brandTitle %></a>
+          <div class="project-name visible-md visible-lg"><%= suite.name %></div>
+          <div class="label-container">
+            <span class="label label-success" title="<%= suite.reportAs %> Passed: <%= suite.passed %>">Passed: <%= suite.passed %></span>
+            <span class="label label-danger" title="<%= suite.reportAs %> Failed: <%= suite.failed %>">Failed: <%= suite.failed %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on"><%= suite.time %></div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      <% if (suite.metadata) { %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#metadataInfo">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <b>Metadata</b>
+            </a>
+          </h4>
+        </div>
+        <div id="metadataInfo" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="row">
+              <% var isLeft = true %>
+             <% _.map(suite.metadata, function(value, key) { %>
+              <% var className %>
+              <% if (isLeft) { className = "pull-left"; isLeft = false; }
+               else { className= "pull-right-lg"; isLeft = true } %>
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=<%= className %>>
+                    <strong> <%= key %>: </strong><%= value %>
+                  </div>
+              </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+
+        <div class="all-features">
+            <%= suite.featureMarkup %>
+            <% _.each(suite.suites, function(subSuite, subSuiteIndex) { %>
+            <div class="panel panel-default">
+                <div class="panel-heading" id="directory">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapseSuite<%= subSuite.name %>">
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                            <i class="glyphicon glyphicon-chevron-down"></i>
+                            <b><%= subSuite.name %></b>
+                            <span class="label-container">
+                            <% if (subSuite.passed) { %><span class="label label-success" title="<%= subSuite.passed %> Features Passed"><%= subSuite.passed %></span><% } %>
+                            <% if (subSuite.failed) { %><span class="label label-danger" title="<%= subSuite.failed %> Features Failed"><%= subSuite.failed %></span><% } %>
+                            <% if (subSuite.ambiguous) { %><span class="label label-primary" title="<%= subSuite.ambiguous %> Ambiguous Feature Results"><%= subSuite.ambiguous %></span><% } %>
+                            </span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseSuite<%= subSuite.name %>" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <%= subSuite.featureMarkup %>
+                        <% _.each(subSuite.suites, function(subSubSuite, subSubSuiteIndex) { %>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="directory">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseSubSuite<%= subSubSuite.name %>">
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <i class="glyphicon glyphicon-chevron-down"></i>
+                                        <b><%= subSubSuite.name %></b>
+                                        <span class="label-container">
+                                        <% if (subSubSuite.passed) { %><span class="label label-success" title="<%= subSubSuite.passed %> Features Passed"><%= subSubSuite.passed %></span><% } %>
+                                        <% if (subSubSuite.failed) { %><span class="label label-danger" title="<%= subSubSuite.failed %> Features Failed"><%= subSubSuite.failed %></span><% } %>
+                                        <% if (subSubSuite.ambiguous) { %><span class="label label-primary" title="<%= subSubSuite.ambiguous %> Ambiguous Feature Results"><%= subSubSuite.ambiguous %></span><% } %>
+                                        </span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseSubSuite<%= subSubSuite.name %>" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <%= subSubSuite.featureMarkup %>
+                                    <% _.each(subSubSuite.suites, function(subSubSubSuite, subSubSubSuiteIndex) { %>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#collapseSubSubSuite<%= subSubSubSuite.name %>">
+                                                    <i class="glyphicon glyphicon-chevron-right"></i>
+                                                    <i class="glyphicon glyphicon-chevron-down"></i>
+                                                    <b><%= subSubSubSuite.name %></b>
+                                                    <span class="label-container">
+                                                        <% if (subSubSubSuite.passed) { %><span class="label label-success" title="<%= subSubSubSuite.passed %> Features Passed"><%= subSubSubSuite.passed %></span><% } %>
+                                                        <% if (subSubSubSuite.failed) { %><span class="label label-danger" title="<%= subSubSubSuite.failed %> Features Failed"><%= subSubSubSuite.failed %></span><% } %>
+                                                        <% if (subSubSubSuite.ambiguous) { %><span class="label label-primary" title="<%= subSubSubSuite.ambiguous %> Ambiguous Feature Results"><%= subSubSubSuite.ambiguous %></span><% } %>
+                                                    </span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSubSubSuite<%= subSubSubSuite.name %>" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <%= subSubSubSuite.featureMarkup %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+
+    </div>
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+            <div class="text-muted footer-link">
+              generated by @cucumber-html-reporter
+            </div>
+             </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : <%= suite.features.summary.failed %>,
+                                                            "passed" : <%= suite.features.summary.passed %>,
+                                                            "ambiguous" : <%= suite.features.summary.ambiguous %>
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : <%= suite.scenarios.failed %>,
+                                                            "passed" : <%= suite.scenarios.passed %>,
+                                                            "notdefined" : <%= suite.scenarios.notdefined %>,
+                                                            "pending" : <%= suite.scenarios.pending %>,
+                                                            "skipped" : <%= suite.scenarios.skipped %>,
+                                                            "ambiguous" : <%= suite.scenarios.ambiguous %>
+                                                        })
+                                            });
+    </script>
+    <script>
+      <%= script %>
+      <%= piechart %>
+      <%= screenshot %>
+    </script>
+  </body>
+</html>
