@@ -169,7 +169,7 @@ Default: `undefined`
 
 #### `screenshotsDir`
 Type: `String` (optional)
-Default: `undefined`
+Default: `screenshots`
 
 Applicable if `storeScreenShots=true`. Relative path for directory where screenshots should be saved. Parent directory is current working directory or directory from `output` option
 
