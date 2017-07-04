@@ -167,6 +167,11 @@ Default: `undefined`
 
 `false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
+#### `screenshotsDir`
+Type: `String` (optional)
+Default: `undefined`
+
+Applicable if `storeScreenShots=true`. Relative path for directory where screenshots should be saved. Parent directory is current working directory or directory from `output` option
 
 #### `metadata`
 Type: `JSON` (optional)
