@@ -6,6 +6,7 @@ Feature: Unhappy HTML reporting
     Given Fred runs a failing cucumber scenario
     When he provides cucumber JSON file to reporter
     And a failing scenario captures a screenshot
+    And a failing scenario captures a json payload
     Then cucumber-html-reporter should create HTML report with Screenshot
 
   @pendingStep
