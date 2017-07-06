@@ -39,6 +39,12 @@ defineSupportCode(function({Given, Then, When}) {
         callback();
     });
 
+    Then(/^a failing scenario captures a json payload/, function (callback) {
+        var jsonData = new Buffer(JSON.stringify({ key: 'value' })).toString('base64');
+        this.attach(new Buffer(jsonData, 'base64'), 'application/json');
+        callback();
+    });
+
     Then(/^he throws the pending exception from this step$/, function (callback) {
         callback(null, 'pending');
     });
