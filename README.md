@@ -167,11 +167,23 @@ Default: `undefined`
 
 `false` or `undefined` : Does not store screenShots but attaches screenShots as a step-inline images to HTML report
 
-#### `screenshotsDir`
+#### `screenshotsDirectory`
 Type: `String` (optional)
-Default: `screenshots`
+Default: `options.output/../screenshots`
 
-Applicable if `storeScreenShots=true`. Relative path for directory where screenshots should be saved. Parent directory is current working directory or directory from `output` option
+Applicable if `storeScreenShots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots` where as the report would be at `<parentDirectory>/report/*.html`
+
+```
+{
+   ...
+   ...
+   output: /report/cucumber_report.html,
+   screenshotsDirectory: /screenshots,
+   storeScreenshots: true
+}
+```
+
+
 
 #### `metadata`
 Type: `JSON` (optional)
