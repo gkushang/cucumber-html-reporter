@@ -51,7 +51,7 @@
   ],
   "scripts": {
     "test": "npm run features && npm run clean",
-    "clean": "rm -rf test/report/*.html test/report/*.json test/report/screenshot",
+    "clean": "rm -rf test/report/*.html test/report/*.json test/report/screenshot screenshots",
     "features": "node node_modules/cucumber/bin/cucumber test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict"
   },
   "repository": {

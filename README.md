@@ -159,7 +159,7 @@ Type: `String` (optional)
 
 Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
  
-#### `storeScreenShots`
+#### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
 
@@ -171,14 +171,14 @@ Default: `undefined`
 Type: `String` (optional)
 Default: `options.output/../screenshots`
 
-Applicable if `storeScreenShots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots` where as the report would be at `<parentDirectory>/report/*.html`
+Applicable if `storeScreenshots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots/` where as the report would be at `<parentDirectory>/report/cucumber_report.html`
 
 ```
 {
    ...
    ...
-   output: /report/cucumber_report.html,
-   screenshotsDirectory: /screenshots,
+   output: '/report/cucumber_report.html',
+   screenshotsDirectory: 'screenshots/',
    storeScreenshots: true
 }
 ```
