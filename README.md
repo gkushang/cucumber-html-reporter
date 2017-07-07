@@ -159,7 +159,7 @@ Type: `String` (optional)
 
 Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
  
-#### `storeScreenShots`
+#### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
 
