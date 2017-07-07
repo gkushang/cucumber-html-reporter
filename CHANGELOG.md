@@ -7,6 +7,8 @@
 
         Based on MIME type of the attachment. Payload is expected to be base64-encoded (this is based on the existing behaviour of the Cucumber Reports plugin for Jenkins).
 
+* Add tests for Save Screenshots & refactor [PR#91](https://github.com/gkushang/cucumber-html-reporter/pull/91)
+
 
 ### 2.0.0 (2017-06-09)
 
