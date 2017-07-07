@@ -1,4 +1,13 @@
 
+### 2.0.1 (2017-07-07)
+
+* Save screenshots into custom directory [PR#88](https://github.com/gkushang/cucumber-html-reporter/pull/88)
+        
+* Added support for JSON attachments [PR#89](https://github.com/gkushang/cucumber-html-reporter/pull/89)
+
+        Based on MIME type of the attachment. Payload is expected to be base64-encoded (this is based on the existing behaviour of the Cucumber Reports plugin for Jenkins).
+
+
 ### 2.0.0 (2017-06-09)
 
 ##### Support for Cucumber 2
