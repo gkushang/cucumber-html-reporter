@@ -248,7 +248,7 @@ Attach JSON to HTML report
 
 [changelog][10]
 
-## Follow 
+## For updates on module
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/g_kushang)
  
