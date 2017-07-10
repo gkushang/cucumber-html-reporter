@@ -52,6 +52,7 @@ defineSupportCode(function({After, Before, registerHandler}) {
 
         function getOptions(theme) {
             return {
+                name: '@cucumber-html-reporter/*&!@#$%)(~`',
                 theme: theme,
                 output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
                 reportSuiteAsScenarios: true,
