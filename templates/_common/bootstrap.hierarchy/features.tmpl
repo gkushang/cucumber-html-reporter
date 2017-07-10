@@ -22,7 +22,7 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeature<%= suite.name.plain %><%= featureIndex %>" class="panel-collapse collapse">
+            <div id="collapseFeature<%= suite.name.sanitized %><%= featureIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
                     <% if (feature.description) { %><div class="description"><%= feature.description.replace(/\n/g, '<br />') %></div><% } %>
                     <% _.each(feature.elements, function(element, scenarioIndex) { %>
