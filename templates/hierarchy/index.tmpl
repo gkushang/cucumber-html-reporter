@@ -15,7 +15,7 @@
         <div class="navbar-header">
         <%var brandTitle = suite.brandTitle ? suite.brandTitle : 'Cucumberjs Report' %>
           <a class="navbar-brand"><%= brandTitle %></a>
-          <div class="project-name visible-md visible-lg"><%= suite.name %></div>
+          <div class="project-name visible-md visible-lg"><%= suite.name.plain %></div>
           <div class="label-container">
             <span class="label label-success" title="<%= suite.reportAs %> Passed: <%= suite.passed %>">Passed: <%= suite.passed %></span>
             <span class="label label-danger" title="<%= suite.reportAs %> Failed: <%= suite.failed %>">Failed: <%= suite.failed %></span>
