@@ -7,7 +7,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <% if (feature.tags) { %><div class="tags"><% _.each(feature.tags, function(tag, featureIndex) { %> <span class="tag"><%= tag.name %></span> <% }); %> </div><% } %>
-                    <a data-toggle="collapse" href="#collapseFeature<%= suite.name %><%= featureIndex %>">
+                    <a data-toggle="collapse" href="#collapseFeature<%= suite.name.sanitized %><%= featureIndex %>">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b><%= feature.keyword %>:</b><%= feature.name %>
@@ -22,7 +22,7 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeature<%= suite.name %><%= featureIndex %>" class="panel-collapse collapse">
+            <div id="collapseFeature<%= suite.name.sanitized %><%= featureIndex %>" class="panel-collapse collapse">
                 <div class="panel-body">
                     <% if (feature.description) { %><div class="description"><%= feature.description.replace(/\n/g, '<br />') %></div><% } %>
                     <% _.each(feature.elements, function(element, scenarioIndex) { %>
@@ -31,7 +31,7 @@
                             <h4 class="panel-title">
                                 <% var scenarioTagsOnly = feature.tags ? _.drop(element.tags, feature.tags.length) :  element.tags %>
                                 <% if (element.tags) { %><div class="tags"><% _.each(scenarioTagsOnly, function(tag) { %> <span class="tag"> <%= tag.name %></span> <% }); %> </div><% } %>
-                                <a data-toggle="collapse" href="#collapseScenario<%= suite.name %><%= featureIndex %>_<%=scenarioIndex %>">
+                                <a data-toggle="collapse" href="#collapseScenario<%= suite.name.sanitized %><%= featureIndex %>_<%=scenarioIndex %>">
                                     <div>
 
                                         <div style="padding-right: <%= decideScenarioTitlePadding(element) %>">
@@ -53,7 +53,7 @@
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenario<%= suite.name %><%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
+                        <div id="collapseScenario<%= suite.name.sanitized %><%= featureIndex %>_<%= scenarioIndex %>" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <% if (element.description) { %><div class="description" id="scenario-description"><%= element.description.trim().replace(/\n/g, '<br />') %></div><% } %>
                                 <% _.each(element.steps, function(step, stepIndex) { %>
