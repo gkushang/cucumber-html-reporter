@@ -52,7 +52,7 @@ defineSupportCode(function({After, Before, registerHandler}) {
 
         function getOptions(theme) {
             return {
-                name: '@cucumber-html-reporter/*&!@#$%)(~<>`',
+                name: '@cucumber-html-reporter/*&!@#$%)(~<>`', //this tests for the sanitized hyperlinks on report, otherwise this should be plain text english
                 theme: theme,
                 output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
                 reportSuiteAsScenarios: true,
