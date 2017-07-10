@@ -216,7 +216,7 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
 
 Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the screenshot image
 
-**for Cucumber V1**:
+**for Cucumber V1**
 ```javascript
 
   driver.takeScreenshot().then(function (buffer) {
