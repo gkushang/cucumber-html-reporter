@@ -77,7 +77,7 @@
                                     <% } %>
                                     <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
-                          <span> <%= step.name %></span>
+                          <span> <%- step.name %></span>
                           <% if (step.result) { %>
                               <span class="step-duration">
                                <%= calculateDuration(step.result.duration) %>
@@ -149,8 +149,8 @@
                                     <% } %>
 
                                     <% } %>
-                                </p>
-                            </div>
+                            	</div>
+                            </p>
                             <% } %>
                             <% }); %>
                         </div>
