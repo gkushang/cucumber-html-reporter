@@ -8,7 +8,7 @@
     <% _.each(feature.elements, function(element, scenarioIndex) { %>
       <div class="section-container accordion" data-section="accordion">
         <section>
-          <p class="title accordion-title" data-section-title><a href="#"><spa><%= element.keyword %>: </span><%= element.name %>
+          <p class="title accordion-title" data-section-title><a href="#"><span><%= element.keyword %>: </span><%= element.name %>
           <a>
             <% if(_.some(element.steps, function(step){ return step.result && step.result.status === 'failed'; })) {  %>
               <span class="alert label right">Failed</span>
@@ -28,7 +28,7 @@
             <% _.each(element.steps, function(step, stepIndex) { %>
 
               <p class="subheader">
-                <span class="text"><span class="keyword highlight"><%= step.keyword %></span> <%= step.name %></span>
+                <span class="text"><span class="keyword highlight"><%= step.keyword %></span> <%- step.name %></span>
 		<% if(step.result) { %>
                 <small>
                 <% if(step.result.status === 'failed') { %>
