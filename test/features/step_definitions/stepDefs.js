@@ -12,7 +12,7 @@ defineSupportCode(function({Given, Then, When}) {
         callback();
     });
 
-    Then(/^Fred runs a passing cucumber step with 2 seconds timeout/, function (callback) {
+    Then(/^Fred runs a passing <pre> cucumber step with 2 seconds timeout/, function (callback) {
         setTimeout(callback, 2000);
     });
 
