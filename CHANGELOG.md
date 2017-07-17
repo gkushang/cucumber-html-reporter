@@ -1,4 +1,8 @@
 
+### 2.0.3 (Jul-17-2017)
+
+* Escape HTML on step name & fix <p> and <div> order for block 'scenario-container' [PR#97](https://github.com/gkushang/cucumber-html-reporter/pull/97). Resolve Issue [#52](https://github.com/gkushang/cucumber-html-reporter/issues/52) 
+
 
 ### 2.0.2 (Jul-10-2017)
 
