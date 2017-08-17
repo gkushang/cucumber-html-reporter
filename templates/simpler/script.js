@@ -1,10 +1,10 @@
 function toggleScreenshot(e){
     if(this.innerText === "Screenshot -"){
         this.innerText = "Screenshot +";
-        this.nextElementSibling.querySelector(".screenshot").style.display = "none";
+        this.nextElementSibling.style.display = "none";
     } else {
         this.innerText = "Screenshot -";
-        this.nextElementSibling.querySelector(".screenshot").style.display = "block";
+        this.nextElementSibling.style.display = "block";
     }
 }
 
