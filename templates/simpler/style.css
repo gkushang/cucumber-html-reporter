@@ -1,0 +1,40 @@
+body {
+    font: 14px Consolas, Courier, monospace;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+.highlight {
+    color: #111111;
+    font-weight: bold;
+}
+
+.failed {
+    background-color: #ff9999;
+}
+
+.passed {
+    background-color: #99ff99;
+}
+
+.step {
+    margin: 10px;
+}
+
+.step .text {
+    border-radius: 3px;
+    color: #666666;
+    padding: 5px;
+    display: block;
+}
+
+.container {
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    margin: 10px;
+}

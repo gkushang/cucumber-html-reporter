@@ -1,0 +1,34 @@
+<% _.each(suite.features, function(feature) { %>
+<div class="feature container">
+  <h3 class="title"><span class="highlight"><%= feature.keyword %>: </span><%= feature.name %></h3>
+   <% if (feature.description) { %><p><%= feature.description.replace(/\n/g, '<br />') %></p><% } %>
+  <% _.each(feature.elements, function(element) { %>
+    <div class="element container">
+    <h3 class="title"><span class="highlight"><%= element.keyword %>: </span><%= element.name %></h3>
+      <% _.each(element.steps, function(step) { %>
+        <div class="step">
+          <p>
+            <% if(step.result) { %>
+            <span class="text <%= step.result.status %>">
+            <% } %>
+            <span class="keyword highlight"><%= step.keyword %></span> <%- step.name %></span>
+             <% if (step.text) { %>
+                   <div id="error">
+                     <br>
+                     <%= step.text %>
+                   </div>
+             <% } %>
+
+             <% if (step.image) { %>
+                   <a class="toggle" href="#">Screenshot -</a>
+                   <a class="screenshot" href="<%= step.image %>">
+                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
+                   </a>
+             <% } %>
+          </p>
+        </div>
+      <% }); %>
+    </div>
+  <% }); %>
+</div>
+<% }); %> 

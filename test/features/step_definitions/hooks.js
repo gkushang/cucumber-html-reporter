@@ -36,7 +36,8 @@ defineSupportCode(function({After, Before, registerHandler}) {
             hierarchy: 'hierarchy',
             bootstrap: 'bootstrap',
             foundation: 'foundation',
-            simple: 'simple'
+            simple: 'simple',
+            simpler: 'simpler'
         };
 
         var outputDirectory = 'test/report/';
@@ -97,6 +98,9 @@ defineSupportCode(function({After, Before, registerHandler}) {
             //Generate Simple theme report
             reporter.generate(getJsonFileOptions(theme.simple));
 
+            //Generate Simpler theme report
+            reporter.generate(getJsonFileOptions(theme.simpler));
+
             //assert reports
             assertHtmlReports(outputDirectory);
         }
@@ -113,6 +117,9 @@ defineSupportCode(function({After, Before, registerHandler}) {
 
             //Generate Simple theme report
             reporter.generate(getJsonDirOptions(theme.simple));
+
+            //Generate Simpler theme report
+            reporter.generate(getJsonDirOptions(theme.simpler));
 
             //assert reports
             assertHtmlReports(outputDirectory);
