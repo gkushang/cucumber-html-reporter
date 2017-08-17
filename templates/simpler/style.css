@@ -8,16 +8,16 @@ h1, h2, h3, h4, p {
 }
 
 .highlight {
-    color: #111111;
     font-weight: bold;
 }
 
 .failed {
     background-color: #ff9999;
+    color: darkred;
 }
 
 .passed {
-    background-color: #99ff99;
+    color: darkgreen;
 }
 
 .step {
@@ -26,9 +26,12 @@ h1, h2, h3, h4, p {
 
 .step .text {
     border-radius: 3px;
-    color: #666666;
     padding: 5px;
     display: block;
+}
+
+.step img.screenshot {
+    border: solid 1px #CCC;
 }
 
 .container {
