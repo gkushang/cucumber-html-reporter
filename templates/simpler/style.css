@@ -16,10 +16,6 @@ h1, h2, h3, h4, p {
     color: darkred;
 }
 
-.passed {
-    color: darkgreen;
-}
-
 .step {
     margin: 10px;
 }
@@ -30,8 +26,10 @@ h1, h2, h3, h4, p {
     display: block;
 }
 
-.step img.screenshot {
+.step .screenshot {
     border: solid 1px #CCC;
+    height: 100%;
+    width: 100%;
 }
 
 .container {
