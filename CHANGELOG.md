@@ -1,6 +1,6 @@
-### 3.0.0 (Aug-12-2017)
+### 3.0.0 (Aug-22-2017)
 
-* Support for Cucumber 3
+* Support for Cucumber 3 [PR#104](https://github.com/gkushang/cucumber-html-reporter/pull/104)
 * Use `cucumber-html-reporter@2.0.3` for < Cucumber@3
 
 ### 2.0.3 (Jul-17-2017)
