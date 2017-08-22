@@ -53,7 +53,7 @@
     "test": "npm run run:cucumber ; npm run create:reports && npm run clean",
     "clean": "rm -rf test/report/*.html test/report/*.json test/report/screenshot screenshots",
     "create:reports": "node test/createHtmlReports.js",
-    "run:cucumber": "node node_modules/cucumber/bin/cucumber test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict"
+    "run:cucumber": "node node_modules/cucumber/bin/cucumber test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true"
   },
   "repository": {
     "type": "git",
