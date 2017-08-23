@@ -16,6 +16,11 @@ h1, h2, h3, h4, p {
     font-weight: bold;
 }
 
+.step-error-message {
+    color: darkred;
+    margin: 0 0 0 10px;
+}
+
 .passed {
     color: green;
 }
@@ -37,6 +42,10 @@ h1, h2, h3, h4, p {
     border: solid 1px #CCC;
     height: 100%;
     width: 100%;
+}
+
+.step-screenshot-wrap {
+    margin-left: 10px;
 }
 
 .container {
