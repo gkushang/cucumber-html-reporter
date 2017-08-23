@@ -25,7 +25,7 @@
                    </div>
              <% } %>
              <% if (step.result.error_message) { %>
-                   <pre class="step-error-message"><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
+                   <pre class="step-error-message" id="danger"><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
              <% } %>
           </p>
         </div>
