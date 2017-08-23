@@ -8,27 +8,35 @@ h1, h2, h3, h4, p {
 }
 
 .highlight {
-    color: #111111;
     font-weight: bold;
 }
 
 .failed {
-    background-color: #ff9999;
+    color: darkred;
+    font-weight: bold;
 }
 
 .passed {
-    background-color: #99ff99;
+    color: green;
+}
+
+.skipped {
+    color: #999;
 }
 
 .step {
-    margin: 10px;
+    margin: 4px 0;
 }
 
 .step .text {
     border-radius: 3px;
-    color: #666666;
-    padding: 5px;
     display: block;
+}
+
+.step .screenshot {
+    border: solid 1px #CCC;
+    height: 100%;
+    width: 100%;
 }
 
 .container {
