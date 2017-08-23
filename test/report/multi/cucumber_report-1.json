@@ -282,11 +282,15 @@
             "embeddings": [
               {
                 "data": "dGVzdCBkYXRhIHRvIGJlIHByaW50ZWQ=",
-                "mime_type": "text/plain"
+                "media": {
+                  "type": "text/plain"
+                }
               },
               {
                 "data": "ewogICJuYW1lIjogImN1Y3VtYmVyLWh0bWwtcmVwb3J0ZXIiLAogICJmb3JtYXQiOiAiaHRtbCIKfQ==",
-                "mime_type": "text/plain"
+                "media": {
+                  "type": "text/plain"
+                }
               }
             ],
             "match": {
