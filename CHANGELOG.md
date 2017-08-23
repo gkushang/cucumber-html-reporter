@@ -1,3 +1,9 @@
+### 3.0.1 (Aug-23-2017)
+
+* Feature: update to simple theme report [PR#106](https://github.com/gkushang/cucumber-html-reporter/pull/106)
+* Fix issues: [#101](https://github.com/gkushang/cucumber-html-reporter/issues/101), [#98](https://github.com/gkushang/cucumber-html-reporter/issues/98)  
+
+
 ### 3.0.0 (Aug-22-2017)
 
 * Support for Cucumber 3 [PR#104](https://github.com/gkushang/cucumber-html-reporter/pull/104)
