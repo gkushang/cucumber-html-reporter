@@ -1,3 +1,8 @@
+### 3.0.2 (Sep-20-2017)
+
+* Add Backward compatibility for Cucumber V2 and V3. Add styling to Keywords GWT on HTML Report [PR#114](https://github.com/gkushang/cucumber-html-reporter/pull/114)
+
+
 ### 3.0.1 (Aug-23-2017)
 
 * Feature: update to simple theme report [PR#106](https://github.com/gkushang/cucumber-html-reporter/pull/106)
