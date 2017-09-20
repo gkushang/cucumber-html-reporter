@@ -244,6 +244,6 @@ pre {
     padding-top: 0.6em;
 }
 
-span.keyword.highlight {
+.keyword {
     color: #787878;
 }
