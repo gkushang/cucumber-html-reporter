@@ -1,3 +1,7 @@
+### 3.0.4 (Sep-20-2017)
+
+* Fix for Cucumber V2, mime_type 
+
 ### 3.0.3 (Sep-20-2017)
 
 * Update outdated dependencies [PR#115](https://github.com/gkushang/cucumber-html-reporter/pull/115)
