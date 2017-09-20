@@ -14,7 +14,6 @@
 3. [Foundation Theme Reports][5]
 4. [Simple Theme Reports][6]
 
-> _For future updates, follow the [twitter][twitter] handle_
 
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
@@ -260,10 +259,6 @@ Attach JSON to HTML report
 ## Changelog
 
 [changelog][10]
-
-## For updates on the module
-
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/g_kushang)
 
 
 ## Credits
