@@ -41,7 +41,7 @@ Provide Cucumber JSON report file created from your framework and this module wi
 
 Example of `bootstrap` theme:
 
-``` bash
+```js
 
 var reporter = require('cucumber-html-reporter');
 
@@ -62,8 +62,7 @@ var options = {
     };
 
     reporter.generate(options);
-
-
+    
 
     //more info on `metadata` is available in `options` section below.
 
@@ -77,13 +76,13 @@ var options = {
 
 > This module converts Cucumber's JSON format to HTML reports. In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
 
-```
+```bash
 $ cucumberjs test/features/ -f json:test/report/cucumber_report.json
 ```
 
 > Multiple formatter are also supported,
 
-```
+```bash
 $ cucumberjs test/features/ -f summary -f json:test/report/cucumber_report.json
 ```
 
@@ -173,7 +172,7 @@ Default: `options.output/../screenshots`
 
 Applicable if `storeScreenshots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots/` where as the report would be at `<parentDirectory>/report/cucumber_report.html`
 
-```
+```js
 {
    ...
    ...
@@ -193,7 +192,7 @@ Print more data to your report, such as _browser info, platform, app info, envir
 
 Pass the _Key-Value_ pair as per your need, as shown in below example,
 
-```json
+```js
 
  metadata: {
         "App Version":"0.3.2",
