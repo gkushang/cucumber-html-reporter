@@ -9,6 +9,8 @@
 
 ## Preview of HTML Reports
 
+Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
+
 1. [Bootstrap Theme Reports with Pie Chart][4]
 2. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
 3. [Foundation Theme Reports][5]
@@ -19,7 +21,6 @@
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
 ###### More snapshots are availble [here][9]
-
 
 ## Install
 
@@ -37,11 +38,12 @@ npm install cucumber-html-reporter --save-dev
 
 ## Usage
 
-Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
+Let's get you started:
 
-Example of `bootstrap` theme:
+1. Install the package through npm 
+2. Create an index.js and specify the options. Example of `bootstrap` theme:
 
-``` bash
+```js
 
 var reporter = require('cucumber-html-reporter');
 
@@ -62,28 +64,34 @@ var options = {
     };
 
     reporter.generate(options);
-
-
+    
 
     //more info on `metadata` is available in `options` section below.
 
     //to generate consodilated report from multi-cucumber JSON files, please use `jsonDir` option instead of `jsonFile`. More info is available in `options` section below.
 
 ```
+> Please look at the [Options](https://github.com/gkushang/cucumber-html-reporter#options) section below for more options
 
-> Please look at the `options` section below for more options
-
-> Run the above code in a node.js script separated from CucumberJS execution (after it) and pick the theme you are interested in.
-
-> This module converts Cucumber's JSON format to HTML reports. In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
-
+3. Run the above code in a node.js script after Cucumber execution:
+```bash
+node index.js
 ```
+
+#### For CucumberJS
+
+This module converts Cucumber's JSON format to HTML reports. 
+> The code has to be separated from CucumberJS execution (after it).
+
+In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
+
+```bash
 $ cucumberjs test/features/ -f json:test/report/cucumber_report.json
 ```
 
-> Multiple formatter are also supported,
+Multiple formatter are also supported,
 
-```
+```bash
 $ cucumberjs test/features/ -f summary -f json:test/report/cucumber_report.json
 ```
 
@@ -173,7 +181,7 @@ Default: `options.output/../screenshots`
 
 Applicable if `storeScreenshots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots/` where as the report would be at `<parentDirectory>/report/cucumber_report.html`
 
-```
+```js
 {
    ...
    ...
@@ -183,8 +191,6 @@ Applicable if `storeScreenshots=true`. Relative path for directory where screens
 }
 ```
 
-
-
 #### `metadata`
 Type: `JSON` (optional)
 Default: `undefined`
@@ -193,7 +199,7 @@ Print more data to your report, such as _browser info, platform, app info, envir
 
 Pass the _Key-Value_ pair as per your need, as shown in below example,
 
-```json
+```js
 
  metadata: {
         "App Version":"0.3.2",
