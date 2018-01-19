@@ -181,6 +181,12 @@ Default: `options.output/../screenshots`
 
 Applicable if `storeScreenshots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots/` where as the report would be at `<parentDirectory>/report/cucumber_report.html`
 
+#### `timeInNanoseconds`
+Type: `Boolean`
+Default: `false`
+
+Set this to `true` if your version of cucumber outputs the test durations in nanoseconds.
+
 ```js
 {
    ...
