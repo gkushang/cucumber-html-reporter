@@ -173,6 +173,12 @@ Default: `false`
 
 Set this to `true` if your version of cucumber outputs the test durations in nanoseconds.
 
+#### `mergeBackgroundSteps`
+Type: `Boolean`
+Default: `false`
+
+Set this to `true` if you want to merge background steps into the scenarios.
+
 #### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
