@@ -167,6 +167,12 @@ Type: `String` (optional)
 
 Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
 
+#### `timeInNanoseconds`
+Type: `Boolean`
+Default: `false`
+
+Set this to `true` if your version of cucumber outputs the test durations in nanoseconds.
+
 #### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
@@ -180,12 +186,6 @@ Type: `String` (optional)
 Default: `options.output/../screenshots`
 
 Applicable if `storeScreenshots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots/` where as the report would be at `<parentDirectory>/report/cucumber_report.html`
-
-#### `timeInNanoseconds`
-Type: `Boolean`
-Default: `false`
-
-Set this to `true` if your version of cucumber outputs the test durations in nanoseconds.
 
 ```js
 {
