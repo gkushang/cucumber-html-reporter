@@ -1,3 +1,7 @@
+### 4.0.0 (Feb-02-2018)
+
+* Fix issue: [#130](https://github.com/gkushang/cucumber-html-reporter/issues/130). Cucumber version@4 now reports the nanoseconds instead of milliseconds
+  
 ### 3.0.4 (Sep-20-2017)
 
 * Fix for Cucumber V2, mime_type 
