@@ -1,3 +1,8 @@
+### 4.0.0 (Feb-02-2018)
+
+* Support for Cucumber 4. Duration is now in Nanoseconds.
+* Fix issue: [#130](https://github.com/gkushang/cucumber-html-reporter/issues/130)
+
 ### 3.0.4 (Sep-20-2017)
 
 * Fix for Cucumber V2, mime_type 
