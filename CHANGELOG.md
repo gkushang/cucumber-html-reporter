@@ -1,3 +1,7 @@
+### 4.0.1 (Feb-06-2018)
+
+* Support to attach Video files as `text/html` to the report - [PR#132](https://github.com/gkushang/cucumber-html-reporter/pull/132)
+
 ### 4.0.0 (Feb-02-2018)
 
 * Support for Cucumber 4. Duration is now in Nanoseconds.
