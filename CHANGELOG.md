@@ -1,3 +1,7 @@
+### 4.0.2 (Feb-26-2018)
+
+* Add support for configuring callback - [PR#135](https://github.com/gkushang/cucumber-html-reporter/pull/135)
+
 ### 4.0.1 (Feb-06-2018)
 
 * Support to attach Video files as `text/html` to the report - [PR#132](https://github.com/gkushang/cucumber-html-reporter/pull/132)
