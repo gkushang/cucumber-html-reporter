@@ -2,25 +2,25 @@
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)    
- 
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)
+
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
 
 ## Preview of HTML Reports
+
+Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
 
 1. [Bootstrap Theme Reports with Pie Chart][4]
 2. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
 3. [Foundation Theme Reports][5]
 4. [Simple Theme Reports][6]
 
-> _For future updates, follow the [twitter][twitter] handle_
 
 ## Snapshot of Bootstrap Report
 ![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
 ###### More snapshots are availble [here][9]
-
 
 ## Install
 
@@ -28,20 +28,22 @@
 npm install cucumber-html-reporter --save-dev
 ```
 
-***Notes:*** 
+***Notes:***
 
-* Latest version supports Cucumber 2
+* Latest version supports Cucumber 3
+* Install `cucumber-html-reporter@2.0.3` for cucumber version `< Cucumber@3`
 * Install `cucumber-html-reporter@0.5.0` for cucumber version `< Cucumber@2`
 * Install `cucumber-html-reporter@0.4.0` for node version <0.12
 
 
 ## Usage
 
-Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
+Let's get you started:
 
-Example of `bootstrap` theme:
+1. Install the package through npm 
+2. Create an index.js and specify the options. Example of `bootstrap` theme:
 
-``` bash
+```js
 
 var reporter = require('cucumber-html-reporter');
 
@@ -63,28 +65,34 @@ var options = {
 
     reporter.generate(options);
     
-    
-    
+
     //more info on `metadata` is available in `options` section below.
 
     //to generate consodilated report from multi-cucumber JSON files, please use `jsonDir` option instead of `jsonFile`. More info is available in `options` section below.
 
 ```
+> Please look at the [Options](https://github.com/gkushang/cucumber-html-reporter#options) section below for more options
 
-> Please look at the `options` section below for more options
-
-> Plugin the above code to the cucumber's `AfterFeatures` hook as shown in [test/features/step_definitions/hooks][8] and pick the theme you are interested in.
-
-> This module converts Cucumber's JSON format to HTML reports. In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
-
+3. Run the above code in a node.js script after Cucumber execution:
+```bash
+node index.js
 ```
+
+#### For CucumberJS
+
+This module converts Cucumber's JSON format to HTML reports. 
+> The code has to be separated from CucumberJS execution (after it).
+
+In order to generate JSON formats, run the Cucumber to create the JSON format and pass the file name to the formatter as shown below,
+
+```bash
 $ cucumberjs test/features/ -f json:test/report/cucumber_report.json
 ```
 
-> Multiple formatter are also supported,
+Multiple formatter are also supported,
 
-```
-$ cucumberjs test/features/ -f pretty -f json:test/report/cucumber_report.json
+```bash
+$ cucumberjs test/features/ -f summary -f json:test/report/cucumber_report.json
 ```
 
 > Are you using cucumber with other frameworks or running [cucumber-parallel][7]? Pass relative path of JSON file to the `options` as shown [here][8]
@@ -98,7 +106,7 @@ Type: `String`
 
 Select the Theme for HTML report.
 
-N.B: Hierarchy theme is best suitable if your features are organized under features-folder hierarchy. Each folder will be rendered as a HTML Tab. It supports up to 3-level of nested folder hierarchy structure.  
+N.B: Hierarchy theme is best suitable if your features are organized under features-folder hierarchy. Each folder will be rendered as a HTML Tab. It supports up to 3-level of nested folder hierarchy structure.
 
 
 #### `jsonFile`
@@ -153,12 +161,12 @@ Report any bad json files found during merging json files from directory option.
 Type: `String` (optional)
 
 Custom project name. If not passed, module reads the name from projects package.json which is preferable.
- 
+
 #### `brandTitle`
 Type: `String` (optional)
 
 Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
- 
+
 #### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
@@ -173,7 +181,7 @@ Default: `options.output/../screenshots`
 
 Applicable if `storeScreenshots=true`. Relative path for directory where screenshots should be saved. E.g. the below options should store the screenshots to the `<parentDirectory>/screenshots/` where as the report would be at `<parentDirectory>/report/cucumber_report.html`
 
-```
+```js
 {
    ...
    ...
@@ -183,8 +191,6 @@ Applicable if `storeScreenshots=true`. Relative path for directory where screens
 }
 ```
 
-
-
 #### `metadata`
 Type: `JSON` (optional)
 Default: `undefined`
@@ -193,7 +199,7 @@ Print more data to your report, such as _browser info, platform, app info, envir
 
 Pass the _Key-Value_ pair as per your need, as shown in below example,
 
-```json
+```js
 
  metadata: {
         "App Version":"0.3.2",
@@ -203,7 +209,7 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
         "Parallel": "Scenarios",
         "Executed": "Remote"
       }
-      
+
 ```
 
 * [HTML Report Preview with Metadata][4]
@@ -225,7 +231,7 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
 
 ```
 
-**for Cucumber V2**
+**for Cucumber V2 and V3**
 ```javascript
 
   var world = this;
@@ -256,14 +262,10 @@ Attach JSON to HTML report
 
 ```
 
-## Changelog 
+## Changelog
 
 [changelog][10]
 
-## For updates on the module
-
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/g_kushang)
- 
 
 ## Credits
 

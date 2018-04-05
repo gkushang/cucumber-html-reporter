@@ -1,6 +1,6 @@
 {
   "name": "cucumber-html-reporter",
-  "version": "2.0.3",
+  "version": "4.0.2",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "author": {
@@ -47,12 +47,16 @@
     {
       "name": "spukst3r",
       "url": "https://github.com/spukst3r"
+    },
+    {
+      "name": "klimenko4",
+      "url": "https://github.com/klimenko4"
     }
   ],
   "scripts": {
-    "test": "npm run features && npm run clean",
-    "clean": "rm -rf test/report/*.html test/report/*.json test/report/screenshot screenshots",
-    "features": "node node_modules/cucumber/bin/cucumber test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict"
+    "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
+    "test": "node test/createHtmlReports.js",
+    "posttest": "rm -rf test/report/*.html test/report/*.json test/report/screenshot screenshots"
   },
   "repository": {
     "type": "git",
@@ -74,13 +78,13 @@
   "dependencies": {
     "find": "^0.2.7",
     "fs-extra": "^3.0.1",
-    "js-base64": "^2.1.9",
+    "js-base64": "^2.3.2",
     "jsonfile": "^3.0.0",
     "lodash": "^4.17.2",
     "open": "0.0.5"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "cucumber": "^2.3.0"
+    "cucumber": "^4.0.0"
   }
 }

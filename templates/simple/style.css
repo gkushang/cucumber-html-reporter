@@ -8,27 +8,44 @@ h1, h2, h3, h4, p {
 }
 
 .highlight {
-    color: #111111;
     font-weight: bold;
 }
 
 .failed {
-    background-color: #ff9999;
+    color: darkred;
+    font-weight: bold;
+}
+
+.step-error-message {
+    color: darkred;
+    margin: 0 0 0 10px;
 }
 
 .passed {
-    background-color: #99ff99;
+    color: green;
+}
+
+.skipped {
+    color: #999;
 }
 
 .step {
-    margin: 10px;
+    margin: 4px 0;
 }
 
 .step .text {
     border-radius: 3px;
-    color: #666666;
-    padding: 5px;
     display: block;
+}
+
+.step .screenshot {
+    border: solid 1px #CCC;
+    height: 100%;
+    width: 100%;
+}
+
+.step-screenshot-wrap {
+    margin-left: 10px;
 }
 
 .container {
@@ -37,4 +54,8 @@ h1, h2, h3, h4, p {
     border: 1px solid #e8e8e8;
     padding: 10px;
     margin: 10px;
+}
+
+#danger {
+    background-color: #f66666;
 }

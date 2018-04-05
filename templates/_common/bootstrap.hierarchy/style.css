@@ -237,9 +237,13 @@ pre {
 .steps {
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: -9px;
+    margin-bottom: -4px;
 }
 
 .all-features {
     padding-top: 0.6em;
+}
+
+.keyword {
+    color: #616161;
 }

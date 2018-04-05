@@ -13,17 +13,19 @@
             <% } %>
             <span class="keyword highlight"><%= step.keyword %></span> <%- step.name %></span>
              <% if (step.text) { %>
-                   <div id="error">
+                   <div class="error">
                      <br>
                      <%= step.text %>
                    </div>
              <% } %>
-
              <% if (step.image) { %>
-                   <a class="toggle" href="#">Screenshot -</a>
-                   <a class="screenshot" href="<%= step.image %>">
-                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
-                   </a>
+                   <div class="step-screenshot-wrap">
+                     <a class="toggle" href="#">Screenshot -</a>
+                     <img class="screenshot" src="<%= step.image %>"/>
+                   </div>
+             <% } %>
+             <% if (step.result.error_message) { %>
+                   <pre class="step-error-message" id="danger"><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
              <% } %>
           </p>
         </div>
