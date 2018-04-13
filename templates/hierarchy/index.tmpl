@@ -160,6 +160,9 @@
                                                             "title" : "Features",
                                                             "failed" : <%= suite.features.summary.failed %>,
                                                             "passed" : <%= suite.features.summary.passed %>,
+                                                            "notdefined" : <%= suite.features.summary.notdefined %>,
+                                                            "pending" : <%= suite.features.summary.pending %>,
+                                                            "skipped" : <%= suite.features.summary.skipped %>,
                                                             "ambiguous" : <%= suite.features.summary.ambiguous %>
                                                         })
                                             });
