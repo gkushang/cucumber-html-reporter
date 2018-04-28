@@ -1,6 +1,6 @@
 {
   "name": "cucumber-html-reporter",
-  "version": "3.0.4",
+  "version": "4.0.2",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "author": {
@@ -54,7 +54,7 @@
     }
   ],
   "scripts": {
-    "pretest": "node node_modules/cucumber/bin/cucumber test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
+    "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
     "test": "node test/createHtmlReports.js",
     "posttest": "rm -rf test/report/*.html test/report/*.json test/report/screenshot screenshots"
   },
@@ -85,6 +85,6 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "cucumber": "^3.0.2"
+    "cucumber": "^4.0.0"
   }
 }

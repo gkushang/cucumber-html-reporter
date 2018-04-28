@@ -1,3 +1,16 @@
+### 4.0.2 (Feb-26-2018)
+
+* Add support for configuring callback - [PR#135](https://github.com/gkushang/cucumber-html-reporter/pull/135)
+
+### 4.0.1 (Feb-06-2018)
+
+* Support to attach Video files as `text/html` to the report - [PR#132](https://github.com/gkushang/cucumber-html-reporter/pull/132)
+
+### 4.0.0 (Feb-02-2018)
+
+* Support for Cucumber 4. Duration is now in Nanoseconds.
+* Fix issue: [#130](https://github.com/gkushang/cucumber-html-reporter/issues/130)
+
 ### 3.0.4 (Sep-20-2017)
 
 * Fix for Cucumber V2, mime_type 
