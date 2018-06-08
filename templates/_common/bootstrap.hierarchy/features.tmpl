@@ -78,6 +78,11 @@
                                     <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
                           <span> <%- step.name %></span>
+                          <% if (step.doc_string) { %>
+                              <span>
+                               <%- step.doc_string.value %>
+                              </span>
+                            <% } %>
                           <% if (step.result) { %>
                               <span class="step-duration">
                                <%= calculateDuration(step.result.duration) %>
