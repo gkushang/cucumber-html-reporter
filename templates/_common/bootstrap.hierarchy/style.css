@@ -225,6 +225,10 @@ pre {
     background-color: transparent;
 }
 
+.show-modal:hover {
+    background-color: #f0f0f0;
+}
+
 .footer-link {
     font-size: 13px;
     float: right;

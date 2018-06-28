@@ -9,7 +9,7 @@ defineSupportCode(function({Given, Then, When}) {
     });
 
     Then(/^Fred runs a(?: passing|) cucumber scenario$/, function (callback) {
-        callback();
+        callback("fail here");
     });
 
     Then(/^Fred runs a passing <pre> cucumber step with 2 seconds timeout/, function (callback) {
