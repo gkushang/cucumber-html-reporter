@@ -167,6 +167,16 @@ Type: `String` (optional)
 
 Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
 
+#### `columnLayout`
+Available: `[1, 2]`
+Type: `Number`
+Default: 2
+
+Select the Column Layout. One column or Two columns
+
+1 = One Column layout  (col-xx-12)
+2 = Two Columns Layout (col-xx-6)
+
 #### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
