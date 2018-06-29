@@ -167,6 +167,18 @@ Type: `String` (optional)
 
 Brand Title is the brand of your report, e.g. Smoke Tests Report, Acceptance Test Report etc as per your need. If not passed, it will be displayed as "Cucumberjs Report"
 
+#### `timeInMilliseconds`
+Type: `Boolean`
+Default: `false`
+
+Set this to `true` if your version of cucumber outputs the test durations in milliseconds.
+
+#### `mergeBackgroundSteps`
+Type: `Boolean`
+Default: `false`
+
+Set this to `true` if you want to merge background steps into the scenarios.
+
 #### `storeScreenshots`
 Type: `Boolean`
 Default: `undefined`
