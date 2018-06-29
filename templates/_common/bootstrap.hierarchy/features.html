@@ -28,7 +28,7 @@
                                                           title="<%= feature.scenarios.skipped %> Scenarios Skipped"><%= feature.scenarios.skipped %></span><% } %>
               <% if (feature.scenarios.ambiguous) { %><span class="label label-primary"
                                                             title="<%= feature.scenarios.ambiguous %> Ambiguous Scenarios"><%= feature.scenarios.ambiguous %></span><% } %>
-            </span>
+                        </span>
                     </a>
                 </h4>
             </div>
@@ -120,9 +120,9 @@
                             <% } %>
                          <% if(step.arguments) { %>
                             <% for( var i = 0; i < step.arguments.length; i++ ) { %>
-                              <div class="scrollBar">
                                <% if(step.arguments[i]["rows"]) { %>
-                                <table class="arguments">
+                                <div class="scrollBar">
+                                    <table class="arguments">
                                     <% var rows = step.arguments[i]["rows"]; %>
                                       <tr>
                                       <% var cells = rows[0]["cells"]; %>
@@ -143,8 +143,8 @@
                                       </tr>
                                     <% } %>
                               </table>
-                              <% } %>
                                </div>
+                                        <% } %>
                                <% if(step.arguments[i]["content"]) { %>
                                <pre class=info><br><%= step.arguments[i]["content"].replace(/</g
                                    , '(').replace(/>/g, ')') %></pre>
