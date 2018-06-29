@@ -26,8 +26,8 @@
 
 var reporter = require('./lib/reporter');
 
-function generateReport(options) {
-    return reporter.generate(options);
+function generateReport(options, callback) {
+    return reporter.generate(options, callback);
 }
 
 module.exports = {
