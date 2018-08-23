@@ -112,7 +112,7 @@
     "fs-extra": "^3.0.1",
     "js-base64": "^2.3.2",
     "jsonfile": "^3.0.0",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.5",
     "opn": "5.3.0"
   },
   "devDependencies": {
