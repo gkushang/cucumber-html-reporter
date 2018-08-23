@@ -1,3 +1,9 @@
+### 4.0.3 (Aug-23-2018)
+
+* Cannot generate report due an error with Trim() - [PR#125](https://github.com/gkushang/cucumber-html-reporter/pull/125)
+* if to switch statement change #155 - [PR#155](https://github.com/gkushang/cucumber-html-reporter/pull/155)
+
+
 ### 4.0.2 (Feb-26-2018)
 
 * Add support for configuring callback - [PR#135](https://github.com/gkushang/cucumber-html-reporter/pull/135)
@@ -13,7 +19,7 @@
 
 ### 3.0.4 (Sep-20-2017)
 
-* Fix for Cucumber V2, mime_type 
+* Fix for Cucumber V2, mime_type
 
 ### 3.0.3 (Sep-20-2017)
 
@@ -27,7 +33,7 @@
 ### 3.0.1 (Aug-23-2017)
 
 * Feature: update to simple theme report [PR#106](https://github.com/gkushang/cucumber-html-reporter/pull/106)
-* Fix issues: [#101](https://github.com/gkushang/cucumber-html-reporter/issues/101), [#98](https://github.com/gkushang/cucumber-html-reporter/issues/98)  
+* Fix issues: [#101](https://github.com/gkushang/cucumber-html-reporter/issues/101), [#98](https://github.com/gkushang/cucumber-html-reporter/issues/98)
 
 
 ### 3.0.0 (Aug-22-2017)
