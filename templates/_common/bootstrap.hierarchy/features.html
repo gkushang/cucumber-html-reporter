@@ -113,6 +113,16 @@
                                     <span class="text">
                         <span class="keyword highlight"><%= step.keyword %></span>
                           <span> <%- step.name %></span>
+
+                          <% if(step.arguments.length) { %>
+                            <% _.each(step.arguments, function(argument) { %>
+                              <p class="argument"><pre><%= argument %></pre></p>
+                            <% }) %>
+                          <% } %>
+
+
+
+
                             <% if (step.doc_string && step.doc_string.value) { %>
                               <span>
                                <%- step.doc_string.value %>

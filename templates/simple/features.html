@@ -12,6 +12,13 @@
             <span class="text <%= step.result.status %>">
             <% } %>
             <span class="keyword highlight"><%= step.keyword %></span> <%- step.name %></span>
+
+            <% if(step.arguments.length) { %>
+              <% _.each(step.arguments, function(argument) { %>
+                <p class="argument"><pre><%= argument %></pre></p>
+              <% }) %>
+            <% } %>
+
              <% if (step.text) { %>
                    <div class="error">
                      <br>
