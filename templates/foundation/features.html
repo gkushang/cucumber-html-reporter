@@ -30,7 +30,7 @@
               <p class="subheader">
                 <span class="text"><span class="keyword highlight"><%= step.keyword %></span> <%- step.name %></span>
 
-                <% if(step.arguments.length) { %>
+                <% if(step.arguments && step.arguments.length) { %>
                   <% _.each(step.arguments, function(argument) { %>
                     <p class="argument"><pre><%= argument %></pre></p>
                   <% }) %>
