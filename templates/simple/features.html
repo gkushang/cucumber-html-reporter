@@ -12,18 +12,20 @@
             <span class="text <%= step.result.status %>">
             <% } %>
             <span class="keyword highlight"><%= step.keyword %></span> <%- step.name %></span>
-             <% if (step.text) { %>
+
+            <% _.each(step.text, function(text) { %>
                    <div class="error">
-                     <br>
-                     <%= step.text %>
+                     <%= text %>
                    </div>
-             <% } %>
-             <% if (step.image) { %>
+             <% }); %>
+
+             <% _.each(step.image, function(image) { %>
                    <div class="step-screenshot-wrap">
                      <a class="toggle" href="#">Screenshot -</a>
-                     <img class="screenshot" src="<%= step.image %>"/>
+                     <img class="screenshot" src="<%= image %>"/>
                    </div>
-             <% } %>
+             <% }); %>
+
              <% if (step.result.error_message) { %>
                    <pre class="step-error-message" id="danger"><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
              <% } %>

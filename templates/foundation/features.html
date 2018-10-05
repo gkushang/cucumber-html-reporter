@@ -47,19 +47,22 @@
                 </small>
 		<% } %>
 
-        <% if (step.text) { %>
-             <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" data-toggle="collapse">+ Show Info</a>
-             <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" class="collapse">
-               <%= step.text %>
-             </div>
-        <% } %>
 
-		 <% if (step.image) { %>
-                 <a class="toggle" href="#">Screenshot -</a>
-                  <a class="screenshot" href="<%= step.image %>">
-                      <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= step.image %>"/>
-                   </a>
-          <% } %>
+
+                  <% _.each(step.text, function(text, textIndex) { %>
+                    <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>-<%= textIndex %>" data-toggle="collapse">+ Show Info</a>
+                          <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>-<%= textIndex %>" class="collapse">
+                            <%= text %>
+                          </div>
+              <% }); %>
+
+              <% _.each(step.image, function(image) { %>
+                <a class="toggle" href="#">Screenshot -</a>
+                <a class="screenshot" href="<%= image %>">
+                    <img class="screenshot" style="height:100%;width:100%" id="my_images" src="<%= image %>"/>
+                </a>
+              <% }); %>
+
               </p>
 
               <% if (step.result && step.result.error_message) { %>
