@@ -160,12 +160,10 @@
                       </span>
                                 <% if(step.result) { %>
                                 <% if(step.result.status === 'undefined') { %>
-                                <pre class=info>
-Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function(<% for (var i=1; i<(step.name.split('"').length / 2); i++) { %>arg<%= i %>, <% } %>callback) {
+                                <pre class=info>Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function(<% for (var i=1; i<(step.name.split('"').length / 2); i++) { %>arg<%= i %>, <% } %>callback) {
   // Write code here that turns the phrase above into concrete actions
   callback(null, 'pending');
-});
-                        </pre>
+});</pre>
                                     <% } %>
 
                                     <% if (step.result.error_message) { %>
@@ -176,8 +174,7 @@ Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function(<% f
                                         <pre class="info show-modal"
                                              data-toggle="modal"
                                              style="cursor: pointer"
-                                             data-target="#error-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>">
-                                            <%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
+                                             data-target="#error-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
                                     </div>
 
                                 <div class="modal fade" id="error-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" tabindex="-1" role="dialog"
