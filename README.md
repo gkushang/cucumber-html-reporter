@@ -201,6 +201,14 @@ Applicable if `storeScreenshots=true`. Relative path for directory where screens
 }
 ```
 
+#### `noInlineScreenshots`
+Type: `Boolean`
+Default: `undefined`
+
+`true`: Applicable if `storeScreenshots=true`. Avoids inlining screenshots, uses relative path to screenshots instead (i.e. enables lazy loading of images).
+
+`false` or `undefined`: Keeps screenshots inlined.
+
 #### `metadata`
 Type: `JSON` (optional)
 Default: `undefined`
