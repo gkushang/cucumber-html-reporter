@@ -1,3 +1,9 @@
+### 4.0.3 (Feb-21-2019)
+
+* Enable non-inlined screenshots . Fix for [Issue#145](https://github.com/gkushang/cucumber-html-reporter/issues/145) - [PR#166](https://github.com/gkushang/cucumber-html-reporter/pull/166)
+
+### 4.0.4
+
 ### 4.0.3 (Aug-23-2018)
 
 * Cannot generate report due an error with Trim() - [PR#125](https://github.com/gkushang/cucumber-html-reporter/pull/125)
