@@ -1,3 +1,9 @@
+### 5.0.0 (Apr-16-2019)
+
+* Fix data tables not being read in - [PR#172](https://github.com/gkushang/cucumber-html-reporter/pull/172)
+* Update bootstrap to last 3.x stable version - [PR#170](https://github.com/gkushang/cucumber-html-reporter/pull/170)
+* Check if embeddings are base64 encoded (even `text/plain`)  - [PR#164](https://github.com/gkushang/cucumber-html-reporter/pull/164)
+
 ### 4.0.3 (Feb-21-2019)
 
 * Enable non-inlined screenshots . Fix for [Issue#145](https://github.com/gkushang/cucumber-html-reporter/issues/145) - [PR#166](https://github.com/gkushang/cucumber-html-reporter/pull/166)
