@@ -157,6 +157,33 @@
 
                             <% } %>
                           <% } %>
+                          <!-- Adding data table data-->
+                          <% if(step.rows) { %>
+                            <% var headers = step.rows[0]["cells"] %>
+                                <div class="scrollBar">
+                                    <table class="arguments">
+                                        <thead>
+                                            <tr>
+                                                <% for(var i = 0; i < headers.length; i++) { %>
+                                                    <th><%= headers[i] %></th>
+                                                <% } %>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for(var i = 1; i < step.rows.length; i++) { %> 
+                                                <% var cell = step.rows[i]["cells"]; %>
+                                                <tr>
+                                                    <% for(var c = 0; c < cell.length; c++) { %> 
+                                                        <td>
+                                                            <%= cell[c] %>
+                                                        </td>
+                                                    <% } %>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                          <% } %>     
                       </span>
                                 <% if(step.result) { %>
                                 <% if(step.result.status === 'undefined') { %>

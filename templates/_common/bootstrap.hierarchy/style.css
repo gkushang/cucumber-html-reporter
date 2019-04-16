@@ -134,6 +134,7 @@ div.chart div div svg rect {
 .arguments {
     margin-left: 30px;
     margin-top: 1em;
+    margin-bottom: 15px;
 }
 
 #directory {
