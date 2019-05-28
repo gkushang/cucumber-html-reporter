@@ -16,4 +16,4 @@ interface Options {
   },
 }
 
-export function generate(options: Options, callback: () => void): void
+export function generate(options: Options, callback?: () => void): void
