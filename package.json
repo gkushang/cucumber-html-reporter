@@ -3,6 +3,7 @@
   "version": "5.0.0",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
+  "typings": "./index.d.ts",
   "author": {
     "name": "Kushang Gajjar",
     "email": "g.kushang@gmail.com"
