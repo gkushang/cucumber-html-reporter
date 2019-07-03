@@ -11,3 +11,12 @@ $(document).ready(function() {
 
     $generated.text('Generated ' + moment($generated.text()).fromNow());
 });
+
+function toggle(className) {
+  var x = $(className);
+  if ( x.css('display') === "none") {
+    x.css('display', 'block');
+  } else {
+    x.css('display', 'none');
+  }
+}
