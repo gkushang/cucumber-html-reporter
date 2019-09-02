@@ -5,6 +5,7 @@
 * Fixed regression of 4.0.4, fixes ISSUE#160 PR#191
 * Bump lodash from 4.17.11 to 4.17.13 PR#193
 * Bump diff from 3.4.0 to 3.5.0 PR#194
+* Removed Deprecated
 
 ### 5.0.0 (Apr-16-2019)
 
