@@ -133,6 +133,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "chalk": "^2.4.2",
     "cucumber": "^5.1.0"
   }
 }
