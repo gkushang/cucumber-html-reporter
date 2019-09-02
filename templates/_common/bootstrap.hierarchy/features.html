@@ -86,7 +86,7 @@
                                 </div>
                                 <% } %>
                                 <% _.each(element.steps, function(step, stepIndex) { %>
-                                <% if(!step.hidden || step.image || step.text || step.result.status === 'failed') { %>
+                                <% if(!step.hidden || step.image || step.text || (step.result && step.result.status === 'failed')) { %>
                                 <p class="scenario-container">
                                 <div class="row steps">
                                     <% if(step.result) { %>
