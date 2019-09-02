@@ -6,7 +6,7 @@ const After = require('cucumber').After;
 const chalk = require('chalk');
 
 Before(function (scenario, callback) {
-    console.log( '\n' + chalk.white.bgBlue.bold('console logs should not break the report'));
+    console.log( '\n' + chalk.blue.bgYellow.bold('TESTING: ') + chalk.white.bgBlue.bold(' console.log() should not break the report'));
     this.scenario = scenario;
     callback();
 });
