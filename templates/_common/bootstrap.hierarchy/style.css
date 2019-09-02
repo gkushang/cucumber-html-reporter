@@ -252,11 +252,3 @@ pre {
 .keyword {
     color: #616161;
 }
-
-.feature-passed {
-    display: block;
-}
-
-.feature-failed{
-    display: block;
-}
