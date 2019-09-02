@@ -294,10 +294,6 @@ Attach JSON to HTML report
 [changelog][10]
 
 
-## Credits
-
-Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML reporting. HTML reporting is extracted from the grunt task. Thanks to all the contributors for making HTML Reporting available to the wider audiences of [cucumber-js][2] community.
-
 [1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
 [2]: https://github.com/cucumber/cucumber-js "CucumberJs"
 [3]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_hierarchy.html "Hierarchy Theme Reports"
