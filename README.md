@@ -52,6 +52,7 @@ var options = {
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
         reportSuiteAsScenarios: true,
+        scenarioTimestamp: true,
         launchReport: true,
         metadata: {
             "App Version":"0.3.2",
@@ -208,6 +209,14 @@ Default: `undefined`
 `true`: Applicable if `storeScreenshots=true`. Avoids inlining screenshots, uses relative path to screenshots instead (i.e. enables lazy loading of images).
 
 `false` or `undefined`: Keeps screenshots inlined.
+
+### `scenarioTimestamp`
+Type: `Boolean`
+Default: `undefined`
+
+`true`: Applicable if `theme: 'bootstrap'`. Shows the starting timestamp of each scenario within the title.
+
+`false` or `undefined`: Does not show starting timestamp.
 
 #### `metadata`
 Type: `JSON` (optional)

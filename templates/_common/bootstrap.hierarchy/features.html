@@ -79,12 +79,14 @@
                             </span>
                                         </div>
                                     </div>
+                                    <div><small><i><%= element.timestamp %></i></small></div>
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseScenario<%= suite.name.sanitized %><%= featureIndex %>_<%= scenarioIndex %>"
                              class="panel-collapse collapse">
                             <div class="panel-body">
+                                <div><%= element.notes %></div>
                                 <% if (element.description) { %>
                                 <div class="description" id="scenario-description"><%=
                                     element.description.trim().replace(/\n/g, '<br/>') %>
