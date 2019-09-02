@@ -104,8 +104,7 @@
   ],
   "scripts": {
     "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
-    "test": "node test/createHtmlReports.js",
-    "posttest": "rm -rf test/report/*.html test/report/*.json test/report/screenshot screenshots"
+    "test": "node test/createHtmlReports.js"
   },
   "repository": {
     "type": "git",
@@ -130,7 +129,7 @@
     "js-base64": "^2.3.2",
     "jsonfile": "^3.0.0",
     "lodash": "^4.17.11",
-    "opn": "5.3.0"
+    "open": "^6.4.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
