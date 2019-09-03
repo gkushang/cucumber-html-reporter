@@ -140,6 +140,7 @@
   "license": "MIT",
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "find": "^0.3.0",
     "fs-extra": "^8.1.0",
     "js-base64": "^2.3.2",
@@ -150,7 +151,6 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chalk": "^2.4.2",
     "cucumber": "^5.1.0"
   }
 }
