@@ -52,6 +52,7 @@ var options = {
         jsonFile: 'test/report/cucumber_report.json',
         output: 'test/report/cucumber_report.html',
         reportSuiteAsScenarios: true,
+        scenarioTimestamp: true,
         launchReport: true,
         metadata: {
             "App Version":"0.3.2",
@@ -209,6 +210,14 @@ Default: `undefined`
 
 `false` or `undefined`: Keeps screenshots inlined.
 
+### `scenarioTimestamp`
+Type: `Boolean`
+Default: `undefined`
+
+`true`: Applicable if `theme: 'bootstrap'`. Shows the starting timestamp of each scenario within the title.
+
+`false` or `undefined`: Does not show starting timestamp.
+
 #### `metadata`
 Type: `JSON` (optional)
 Default: `undefined`
@@ -284,10 +293,6 @@ Attach JSON to HTML report
 
 [changelog][10]
 
-
-## Credits
-
-Credit to the developers of [grunt-cucumberjs][1] for developing pretty HTML reporting. HTML reporting is extracted from the grunt task. Thanks to all the contributors for making HTML Reporting available to the wider audiences of [cucumber-js][2] community.
 
 [1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
 [2]: https://github.com/cucumber/cucumber-js "CucumberJs"

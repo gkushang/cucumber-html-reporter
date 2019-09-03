@@ -1,3 +1,16 @@
+### 5.0.2 (Sept-03-2019)
+
+* Quick fix the Chalk dependency - move from devDependencies to dependencies
+ 
+### 5.0.1 (Sept-02-2019)
+
+* Remove duplicate check condition PR#189 by [@ncounter](https://github.com/ncounter/)
+* Scenario timestamp and notes PR#190 by [@ncounter](https://github.com/ncounter/)
+* Fixed regression of 4.0.4, fixes ISSUE#160 PR#191 [@eiszfuchs](https://github.com/eiszfuchs/cucumber-html-reporter/tree/patch-notdefined)
+* Bump lodash from 4.17.11 to 4.17.13 PR#193 by dependabot
+* Bump diff from 3.4.0 to 3.5.0 PR#194 by dependabot
+* Removed Deprecated, Update dependencies
+
 ### 5.0.0 (Apr-16-2019)
 
 * Fix data tables not being read in - [PR#172](https://github.com/gkushang/cucumber-html-reporter/pull/172)
