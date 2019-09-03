@@ -1,3 +1,7 @@
+### 5.0.2 (Sept-03-2019)
+
+* Quick fix the Chalk dependency - move from devDependencies to dependencies
+ 
 ### 5.0.1 (Sept-02-2019)
 
 * Remove duplicate check condition PR#189 by [@ncounter](https://github.com/ncounter/)
