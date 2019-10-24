@@ -17,8 +17,8 @@
           <a class="navbar-brand"><%= brandTitle %></a>
           <div class="project-name visible-md visible-lg"><%= suite.name.plain %></div>
           <div class="label-container">
-            <span class="label label-success" title=<%= suite.reportAs %>>Passed: <%= suite.passed %></span>
-            <span class="label label-danger" title=<%= suite.reportAs %>>Failed: <%= suite.failed %></span>
+            <span class="label label-success" onclick="toggle('.feature-passed')" title=<%= suite.reportAs %>>Passed: <%= suite.passed %></span>
+            <span class="label label-danger" onclick="toggle('.feature-failed')" title=<%= suite.reportAs %>>Failed: <%= suite.failed %></span>
           </div>
         </div>
       </div>

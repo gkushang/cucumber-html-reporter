@@ -1,7 +1,12 @@
 <% _.each(suite.features, function(feature, featureIndex) { %>
 <% if (featureIndex === 0 || featureIndex % 2 === 0) { %>
 <div class="row" xmlns="http://www.w3.org/1999/html">
-    <% } %>
+<% } %>
+<% if (feature.scenarios.failed) { %>
+<div class="feature-failed">
+<% } else { %>
+<div class="feature-passed">
+<% } %>
     <div class="col-lg-<%= columnLayoutWidth %> col-md-<%= columnLayoutWidth %>">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -339,4 +344,5 @@
     <% if ((featureIndex != 0 && ((featureIndex + 1) % 2 == 0)) || (featureIndex === (suite.features.length -1))) { %>
 </div>
 <% } %>
+</div>
 <% }); %>
