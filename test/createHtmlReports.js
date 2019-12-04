@@ -12,8 +12,7 @@ var theme = {
 };
 
 var outputDirectory = 'test/report/';
-var jsonFile = 'test/report/cucumber_report.json';
-var jsonDir = 'test/report/multi';
+var jsonPath = path.join(process.cwd(),'test/report/multi');
 
 function removeReports() {
     var files = find.fileSync(/\.html/, outputDirectory);
@@ -24,6 +23,8 @@ function removeReports() {
 
 function getOptions(theme) {
     return {
+        jsonFile: jsonPath,
+        jsonDir: jsonPath,
         name: '@cucumber-html-reporter/*&!@#$%)(~<>`', //this tests for the sanitized hyperlinks on report, otherwise this should be plain text english
         theme: theme,
         output: path.join(outputDirectory, 'cucumber_report_' + theme + '.html'),
@@ -44,14 +45,11 @@ function getOptions(theme) {
 
 function getJsonFileOptions(theme) {
     var options = getOptions(theme);
-    options.jsonFile = jsonFile;
     return options;
 }
 
 function getJsonDirOptions(theme) {
     var options = getOptions(theme);
-    options.jsonDir = jsonDir;
-
     return options;
 }
 
