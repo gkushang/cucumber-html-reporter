@@ -11,7 +11,7 @@ var theme = {
     simple: 'simple'
 };
 
-var outputDirectory = 'test/report/';
+var outputDirectory = 'test/report';
 var jsonFile = 'test/report/cucumber_report.json';
 var jsonDir = 'test/report/multi';
 
@@ -51,7 +51,6 @@ function getJsonFileOptions(theme) {
 function getJsonDirOptions(theme) {
     var options = getOptions(theme);
     options.jsonDir = jsonDir;
-
     return options;
 }
 
