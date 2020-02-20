@@ -1,11 +1,14 @@
-$('a.toggle').on('click', function() {
+$('a.toggle').on('click', function(e) {
+    e.preventDefault();
 
-    if ($(this).text() === 'Screenshot -') {
-        // $(this).text('Screenshot +');
-        $(this).next('a.screenshot').find('img').hide();
-    } else if($(this).text() === 'Screenshot +') {
-        // $(this).text('Screenshot -');
-        $(this).next('a.screenshot').find('img').show();
+    if (!$(this).hasClass('collapse')) {
+        if ($(this).text() === 'Screenshot -') {
+            // $(this).text('Screenshot +');
+            $(this).next('a.screenshot').find('img').hide();
+        } else if($(this).text() === 'Screenshot +') {
+            // $(this).text('Screenshot -');
+            $(this).next('a.screenshot').find('img').show();
+        }
     }
 
     if ($(this).text().includes(' -')) {
