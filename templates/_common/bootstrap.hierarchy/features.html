@@ -247,8 +247,7 @@
 
                                     <% if (step.text) { %>
                                     <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
-                                       class="toggle"
-                                       data-toggle="collapse" class="show-info">Show Info +</a>
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
                                     <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
                                          class="collapse"
                                          data-toggle="modal"
@@ -288,17 +287,25 @@
                                 <% } %>
 
                                     <% if (step.image) { %>
-                                <a class="toggle" href="javascript: void(0);">Screenshot +</a>
-
-                                <a class="screenshot"
+                                <a href="#ss<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
+                                    data-toggle="collapse" class="toggle">Screenshot +</a>
+                                <div id="ss<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
+                                    class="screenshot collapse">
+                                    <pre class="info show-modal"
+                                        data-toggle="modal"
+                                        style="cursor: pointer"
+                                        data-target="#ss-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>">
+                                        
+                                        <img class="screenshot" style="height:100%;width:100%;display:block;"
+                                        id="ss-image-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" src="<%= step.image %>"/>
+                                </div>
+                                <div class="screenshot collapse"
                                    style="cursor: pointer"
 
                                    data-toggle="modal"
                                    data-target="#ss-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>">
 
-                                    <img class="screenshot" style="height:100%;width:100%;display:none;"
-                                         id="my-images" src="<%= step.image %>"/>
-                                </a>
+                                </div>
 
                                 <div class="modal fade" id="ss-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" tabindex="-1" role="dialog"
                                      aria-labelledby="stacktraceModalLabel" aria-hidden="true">
