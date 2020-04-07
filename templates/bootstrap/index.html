@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cucumber Feature Report</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+<head>
+    <% var brandTitle = suite.brandTitle || 'Cucumberjs Report' %>
+    <title><%= suite.name.plain %> – <%= brandTitle %></title>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css"
+          integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" rel="stylesheet"/>
     <style type="text/css">
       <%= styles %>
     </style>
     <meta charset="UTF-8">
-  </head>
-  <body>
+</head>
+<body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-        <%var brandTitle = suite.brandTitle ? suite.brandTitle : 'Cucumberjs Report' %>
-          <a class="navbar-brand"><%= brandTitle %></a>
-          <div class="project-name visible-md visible-lg"><%= suite.name.plain %></div>
-          <div class="label-container">
-            <span class="label label-success" onclick="toggle('.feature-passed')" title=<%= suite.reportAs %>>Passed: <%= suite.passed %></span>
-            <span class="label label-danger" onclick="toggle('.feature-failed')" title=<%= suite.reportAs %>>Failed: <%= suite.failed %></span>
-          </div>
-        </div>
-      </div>
+<div class="navbar navbar-light bg-light navbar-static-top" role="navigation">
+    <a class="navbar-brand"><%= brandTitle %> <span class="text-muted"><%= suite.name.plain %></span></a>
+    <span class="navbar-text">
+          <span class="badge badge-success" onclick="toggle('.feature-passed')">Passed: <%= suite.passed %></span>
+        <span class="badge badge-danger" onclick="toggle('.feature-failed')">Failed: <%= suite.failed %></span>
+    </span>
+</div>
+
+<div class="container">
+    <div class="text-muted generated-on float-right"><%= suite.time %></div>
+
+    <div class="row">
+        <div class="chart col" id="piechart_features"></div>
+        <div class="chart col" id="piechart_scenarios"></div>
     </div>
 
+    <div class="row mb-3">
+        <% if (suite.metadata) { %>
+        <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title p-0 m-0">
+                    <a data-toggle="collapse" href="#logOutput">
+                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-down"></i>
+                        <b>Metadata</b>
+                    </a>
+                </h4>
+                <div class="collapse" id="logOutput">
+                    <div class="d-flex flex-row flex-wrap">
+                        <% _.map(suite.metadata, function(value, key) { %>
+                            <div style="flex: 1 0 45%;">
+                                <strong> <%= key %>: </strong><%= value %>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <% } %>
+        <div class="col-4 d-flex flex-row py-2" style="justify-content: space-evenly">
+                    <button class="btn btn-outline-primary js-btn-expand-all" role="button"><i class="fas fa-expand-arrows-alt"></i> Expand all </button>
+                    <button class="btn btn-outline-secondary js-btn-collapse-all" role="button"><i class="fas fa-compress-arrows-alt"></i> Collapse all </button>
+        </div>
+
+    </div>
+
+    <%= features %>
+
+</div>
+
+<footer class="footer mt-5">
     <div class="container">
-
-      <div class="generated-on"><%= suite.time %></div>
-
-      <div class="row">
-        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
-        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
-      </div>
-
-      <% if (suite.metadata) { %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" href="#logOutput">
-              <i class="glyphicon glyphicon-chevron-right"></i>
-              <i class="glyphicon glyphicon-chevron-down"></i>
-              <b>Metadata</b>
-            </a>
-          </h4>
-        </div>
-        <div id="logOutput" class="panel-collapse collapse">
-          <div class="panel-body">
-            <div class="row">
-              <% var isLeft = true %>
-             <% _.map(suite.metadata, function(value, key) { %>
-              <% var className %>
-              <% if (isLeft) { className = "pull-left"; isLeft = false; }
-               else { className= "pull-right-lg"; isLeft = true } %>
-              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <div class=<%= className %>>
-                    <strong> <%= key %>: </strong><%= value %>
-                  </div>
-              </div>
-              <% }) %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <% } %>
-
-      <%= features %>
-
-    </div>
-
-    <div class="navbar-fixed-bottom row-fluid footer-div ">
-      <div class="navbar-inner">
-        <div class="footer-container">
-          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+        <a href="https://www.npmjs.com/package/cucumber-html-reporter" rel="noopener noreferrer" target="_blank">
             <div class="text-muted footer-link">
-              generated by @cucumber-html-reporter
+                generated by @cucumber-html-reporter
             </div>
-             </a>
-        </div>
-      </div>
+        </a>
     </div>
+</footer>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha256-oKpAiD7qu3bXrWRVxnXLV1h7FlNV+p5YJBIr8LOCFYw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">

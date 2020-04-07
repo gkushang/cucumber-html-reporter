@@ -1,92 +1,67 @@
 <% _.each(suite.features, function(feature, featureIndex) { %>
-<% var uid = guid() %>
-<% if (featureIndex === 0 || featureIndex % 2 === 0) { %>
-<div class="row" xmlns="http://www.w3.org/1999/html">
-<% } %>
-<% if (feature.scenarios.failed) { %>
-<div class="feature-failed">
-<% } else { %>
-<div class="feature-passed">
-<% } %>
-    <div class="col-lg-<%= columnLayoutWidth %> col-md-<%= columnLayoutWidth %>">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <% if (feature.tags) { %>
-                    <div class="tags"><% _.each(feature.tags, function(tag, featureIndex) { %> <span class="tag"><%= tag.name %></span>
-                        <% }); %>
+    <% var uid = guid() %>
+    <% if (featureIndex === 0 || featureIndex % 2 === 0) { %>
+    <div class="row my-1" xmlns="http://www.w3.org/1999/html">
+    <% } %>
+    <div class="col-6 feature feature-<%= feature.scenarios.failed ? 'failed' : 'passed' %>">
+        <div class="card">
+            <div class="card-body py-2">
+                <small class="text-muted"><%= feature.tags.map(a => a.name).join('&nbsp;') %></small>
+                <h4 class="card-title m-0">
+                <a data-toggle="collapse" href="#collapseFeature<%= suite.name.sanitized %><%= uid %>">
+                    <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-down"></i>
+                    <b><%= feature.keyword %>:</b> <%= feature.name %>
+                    <div class="float-right">
+          <% if (feature.scenarios.passed) { %><span class="badge badge-success"
+                                                     title="<%= feature.scenarios.passed %> Scenarios Passed"><%= feature.scenarios.passed %></span><% } %>
+          <% if (feature.scenarios.failed) { %><span class="badge badge-danger"
+                                                     title="<%= feature.scenarios.failed %> Scenarios Failed"><%= feature.scenarios.failed %></span><% } %>
+          <% if (feature.scenarios.notdefined) { %><span class="badge badge-info"
+                                                         title="<%= feature.scenarios.notdefined %> Scenarios Undefined"><%= feature.scenarios.notdefined %></span><% } %>
+          <% if (feature.scenarios.pending) { %><span class="badge badge-secondary"
+                                                      title="<%= feature.scenarios.pending %> Scenarios Pending"><%= feature.scenarios.pending %></span><% } %>
+          <% if (feature.scenarios.skipped) { %><span class="badge badge-warning"
+                                                      title="<%= feature.scenarios.skipped %> Scenarios Skipped"><%= feature.scenarios.skipped %></span><% } %>
+          <% if (feature.scenarios.ambiguous) { %><span class="badge badge-primary"
+                                                        title="<%= feature.scenarios.ambiguous %> Ambiguous Scenarios"><%= feature.scenarios.ambiguous %></span><% } %>
                     </div>
-                    <% } %>
-                    <a data-toggle="collapse" href="#collapseFeature<%= suite.name.sanitized %><%= uid %>">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                        <i class="glyphicon glyphicon-chevron-down"></i>
-                        <b><%= feature.keyword %>:</b><%= feature.name %>
-                        <span class="label-container">
-              <% if (feature.scenarios.passed) { %><span class="label label-success"
-                                                         title="<%= feature.scenarios.passed %> Scenarios Passed"><%= feature.scenarios.passed %></span><% } %>
-              <% if (feature.scenarios.failed) { %><span class="label label-danger"
-                                                         title="<%= feature.scenarios.failed %> Scenarios Failed"><%= feature.scenarios.failed %></span><% } %>
-              <% if (feature.scenarios.notdefined) { %><span class="label label-info"
-                                                             title="<%= feature.scenarios.notdefined %> Scenarios Undefined"><%= feature.scenarios.notdefined %></span><% } %>
-              <% if (feature.scenarios.pending) { %><span class="label label-default"
-                                                          title="<%= feature.scenarios.pending %> Scenarios Pending"><%= feature.scenarios.pending %></span><% } %>
-              <% if (feature.scenarios.skipped) { %><span class="label label-warning"
-                                                          title="<%= feature.scenarios.skipped %> Scenarios Skipped"><%= feature.scenarios.skipped %></span><% } %>
-              <% if (feature.scenarios.ambiguous) { %><span class="label label-primary"
-                                                            title="<%= feature.scenarios.ambiguous %> Ambiguous Scenarios"><%= feature.scenarios.ambiguous %></span><% } %>
-                        </span>
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseFeature<%= suite.name.sanitized %><%= uid %>" class="panel-collapse collapse">
-                <div class="panel-body">
+                </a>
+            </h4>
+              </div>
+            <ul id="collapseFeature<%= suite.name.sanitized %><%= uid %>" class="list-group list-group-flush feature-collapse collapse">
                     <% if (feature.description) { %>
-                    <div class="description"><%= feature.description.replace(/\n/g, '<br/>') %></div>
+                    <li class="list-group-item description"><%= feature.description.replace(/\n/g, '<br/>') %></li>
                     <% } %>
                     <% _.each(feature.elements, function(element, scenarioIndex) { %>
                     <% var scenarioId = guid(); %>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <% var scenarioTagsOnly = feature.tags ? _.drop(element.tags, feature.tags.length) :
-                                element.tags %>
-                                <% if (element.tags) { %>
-                                <div class="tags"><% _.each(scenarioTagsOnly, function(tag) { %> <span class="tag"> <%= tag.name %></span>
-                                    <% }); %>
-                                </div>
-                                <% } %>
+                    <li class="list-group-item">
+                        <% var scenarioTagsOnly = feature.tags ? _.drop(element.tags, feature.tags.length) : element.tags %>
+                        <small class="text-muted"><%= scenarioTagsOnly.map(a => a.name).join('&nbsp;') %></small>
+                        <h4 class="card-title m-0">
                                 <a data-toggle="collapse" href="#collapseScenario<%= suite.name.sanitized %><%= scenarioId %>">
-                                    <div>
-
-                                        <div style="padding-right: <%= decideScenarioTitlePadding(element) %>">
-                                            <i class="glyphicon glyphicon-chevron-right"></i>
-                                            <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b><%= element.keyword %>:</b><%= element.name %>
-                                        </div>
-                                        <div>
-                            <span class="label-container">
-                              <% if (element.passed) { %><span class="label label-success"
+                                    <i class="fas fa-chevron-right"></i>
+                                    <i class="fas fa-chevron-down"></i>
+                                    <b><%= element.keyword %>:</b> <%= element.name %>
+                                    <div class="float-right">
+                              <% if (element.passed) { %><span class="badge badge-success"
                                                                title="<%= element.passed %> Steps Passed"><%= element.passed %></span><% } %>
-                              <% if (element.notdefined) { %><span class="label label-info"
+                              <% if (element.notdefined) { %><span class="badge badge-info"
                                                                    title="<%= element.notdefined %> Steps Undefined"><%= element.notdefined %></span><% } %>
-                              <% if (element.pending) { %><span class="label label-default"
+                              <% if (element.pending) { %><span class="badge badge-secondary"
                                                                 title="<%= element.pending %> Steps Pending"><%= element.pending %></span><% } %>
-                              <% if (element.skipped) { %><span class="label label-warning"
+                              <% if (element.skipped) { %><span class="badge badge-warning"
                                                                 title="<%= element.skipped %> Steps Skipped"><%= element.skipped %></span><% } %>
-                              <% if (element.failed) { %><span class="label label-danger"
+                              <% if (element.failed) { %><span class="badge badge-danger"
                                                                title="<%= element.failed %> Steps Failed"><%= element.failed %></span><% } %>
-                              <% if (element.ambiguous) { %><span class="label label-primary"
+                              <% if (element.ambiguous) { %><span class="badge badge-primary"
                                                                   title="<%= element.ambiguous %> Ambiguous Steps"><%= element.ambiguous %></span><% } %>
-                            </span>
-                                        </div>
-                                    </div>
                                     <div><small><i><%= element.timestamp %></i></small></div>
+                                    </div>
                                 </a>
                             </h4>
-                        </div>
                         <div id="collapseScenario<%= suite.name.sanitized %><%= scenarioId %>"
-                             class="panel-collapse collapse">
-                            <div class="panel-body">
+                             class="scenario-collapse collapse">
                                 <div><%= element.notes %></div>
                                 <% if (element.description) { %>
                                 <div class="description" id="scenario-description"><%=
@@ -95,115 +70,102 @@
                                 <% } %>
                                 <% _.each(element.steps, function(step, stepIndex) { %>
                                 <% if(!step.hidden || step.image || step.text || (step.result && step.result.status === 'failed')) { %>
-                                <p class="scenario-container">
-                                <div class="row steps">
+                                <div>
                                     <% if(step.result) { %>
-                                    <% if(step.result.status === 'passed') { %>
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    <% } else if(step.result.status === 'failed') { %>
-                                    <span class="label label-danger" title="Failed"><i
-                                            class="glyphicon glyphicon-remove"></i></span>
-                                    <% } else if(step.result.status === 'skipped') { %>
-                                    <span class="label label-warning" title="Skipped"><i
-                                            class="glyphicon glyphicon-minus"></i></span>
-                                    <% } else if(step.result.status === 'ambiguous') { %>
-                                    <span class="label label-primary" title="Ambiguous"><i
-                                            class="glyphicon glyphicon-question-sign"></i></span>
-                                    <% } else if(step.result.status === 'pending') { %>
-                                    <span class="label label-default" title="Pending"><i
-                                            class="glyphicon glyphicon-exclamation-sign"></i></span>
-                                    <% } else { %>
-                                    <span class="label label-info" title="Undefined"><i
-                                            class="glyphicon glyphicon-flash"></i></span>
-                                    <% } %>
-                                    <% } %>
-                                    <span class="text">
-                        <span class="keyword highlight"><%= step.keyword %></span>
-                          <span> <%- step.name %></span>
-                            <% if (step.doc_string && step.doc_string.value) { %>
-                              <span>
-                               <%- step.doc_string.value %>
-                              </span>
-                            <% } %>
-                          <% if (step.result) { %>
-                              <span class="step-duration">
-                               <%= calculateDuration(step.result.duration) %>
-                              </span>
-                            <% } %>
-                         <% if(step.arguments) { %>
-                            <% for( var i = 0; i < step.arguments.length; i++ ) { %>
-                               <% if(step.arguments[i]["rows"]) { %>
-                                <div class="scrollBar">
-                                    <table class="arguments">
-                                    <% var rows = step.arguments[i]["rows"]; %>
-                                      <tr>
-                                      <% var cells = rows[0]["cells"]; %>
-                                      <% for( var k = 0; k < cells.length; k++ ) { %>
-                                        <th>
-                                          <%= cells[k] %>
-                                        </th>
-                                         <% } %>
-                                        </tr>
-                                    <% for( var j = 1; j < rows.length; j++ ) { %>
-                                      <tr>
-                                      <% var cells = rows[j]["cells"]; %>
-                                      <% for( var k = 0; k < cells.length; k++ ) { %>
-                                        <td>
-                                          <%= cells[k] %>
-                                        </td>
-                                      <% } %>
-                                      </tr>
-                                    <% } %>
-                              </table>
-                               </div>
+                                        <% if(step.result.status === 'passed') { %>
+                                        <span class="text-success" title="Success"><i
+                                                class="fas fa-check-square"></i></span>
+                                        <% } else if(step.result.status === 'failed') { %>
+                                        <span class="text-danger" title="Failed"><i
+                                                class="fas fa-times-square"></i></span>
+                                        <% } else if(step.result.status === 'skipped') { %>
+                                        <span class="text-warning" title="Skipped"><i
+                                                class="fas fa-minus-square"></i></span>
+                                        <% } else if(step.result.status === 'ambiguous') { %>
+                                        <span class="text-primary" title="Ambiguous"><i
+                                                class="fas fa-question-circle"></i></span>
+                                        <% } else if(step.result.status === 'pending') { %>
+                                        <span class="text-default" title="Pending"><i
+                                                class="fas fa-exclamation-circle"></i></span>
+                                        <% } else { %>
+                                        <span class="text-info" title="Undefined"><i
+                                                class="fas fa-flask"></i></span>
                                         <% } %>
-                               <% if(step.arguments[i]["content"]) { %>
-                               <pre class=info><br><%= step.arguments[i]["content"].replace(/</g
-                                   , '(').replace(/>/g, ')') %></pre>
-                               <% } %>
-
-                            <% } %>
-                          <% } %>
-                          <!-- Adding data table data-->
-                          <% if(step.rows) { %>
-                            <% var headers = step.rows[0]["cells"] %>
-                                <div class="scrollBar">
-                                    <table class="arguments">
-                                        <thead>
-                                            <tr>
-                                                <% for(var i = 0; i < headers.length; i++) { %>
-                                                    <th><%= headers[i] %></th>
-                                                <% } %>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <% for(var i = 1; i < step.rows.length; i++) { %>
-                                                <% var cell = step.rows[i]["cells"]; %>
-                                                <tr>
-                                                    <% for(var c = 0; c < cell.length; c++) { %>
-                                                        <td>
-                                                            <%= cell[c] %>
-                                                        </td>
-                                                    <% } %>
-                                                </tr>
-                                            <% } %>
-                                        </tbody>
-                                    </table>
-                                </div>
-                          <% } %>
-                      </span>
-                                <% if(step.result) { %>
-                                <% if(step.result.status === 'undefined') { %>
-                                <pre class=info>
-<br>Then(/^<%= step.name.replace(/"[^"]*"/g, '"\(\[\^\"\]\*\)"') %>$/, function(<% for (var i=1; i<(step.name.split('"').length / 2); i++) { %>arg<%= i %>, <% } %>callback) {
-  // Write code here that turns the phrase above into concrete actions
-  callback(null, 'pending');
-});
-                        </pre>
                                     <% } %>
+                                    <span class="text-black-50"><%= step.keyword %></span>
+                                    <span> <%- step.name %></span>
+                                      <% if (step.doc_string && step.doc_string.value) { %>
+                                          <span>
+                                           <%- step.doc_string.value %>
+                                          </span>
+                                      <% } %>
+                                      <% if (step.result) { %>
+                                              <span class="text-muted float-right">
+                                                   <%= calculateDuration(step.result.duration) %>
+                                              </span>
+                                        <% } %>
+                                      <% if(step.arguments) { %>
+                                    <% for( var i = 0; i < step.arguments.length; i++ ) { %>
+                                       <% if(step.arguments[i]["rows"]) { %>
+                                        <div class="scrollBar">
+                                            <table class="arguments">
+                                            <% var rows = step.arguments[i]["rows"]; %>
+                                              <tr>
+                                              <% var cells = rows[0]["cells"]; %>
+                                              <% for( var k = 0; k < cells.length; k++ ) { %>
+                                                <th>
+                                                  <%= cells[k] %>
+                                                </th>
+                                                 <% } %>
+                                                </tr>
+                                            <% for( var j = 1; j < rows.length; j++ ) { %>
+                                              <tr>
+                                              <% var cells = rows[j]["cells"]; %>
+                                              <% for( var k = 0; k < cells.length; k++ ) { %>
+                                                <td>
+                                                  <%= cells[k] %>
+                                                </td>
+                                              <% } %>
+                                              </tr>
+                                            <% } %>
+                                          </table>
+                                       </div>
+                                        <% } %>
+                                       <% if(step.arguments[i]["content"]) { %>
+                                       <pre class="info"><br><%= step.arguments[i]["content"].replace(new RegExp('<', 'g'), '(').replace(new RegExp('>', 'g'), ')') %></pre>
+                                       <% } %>
 
-                                    <% if (step.result.error_message) { %>
+                                    <% } %>
+                                  <% } %>
+                                      <% if(step.rows) { %>
+                                    <% var headers = step.rows[0]["cells"] %>
+                                        <div class="scrollBar">
+                                            <table class="arguments">
+                                                <thead>
+                                                    <tr>
+                                                        <% for(var i = 0; i < headers.length; i++) { %>
+                                                            <th><%= headers[i] %></th>
+                                                        <% } %>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% for(var i = 1; i < step.rows.length; i++) { %>
+                                                        <% var cell = step.rows[i]["cells"]; %>
+                                                        <tr>
+                                                            <% for(var c = 0; c < cell.length; c++) { %>
+                                                                <td>
+                                                                    <%= cell[c] %>
+                                                                </td>
+                                                            <% } %>
+                                                        </tr>
+                                                    <% } %>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                  <% } %>
+                                <% if(step.result) { %>
+
+                                <% if (step.result.error_message) { %>
                                     <a href="#error<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
                                        data-toggle="collapse" class="toggle">Show Error +</a>
                                     <div id="error<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
@@ -216,12 +178,12 @@
                                     </div>
 
                                 <div class="modal fade" id="error-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" tabindex="-1" role="dialog"
-                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                     aria-badgeledby="stacktraceModalbadge" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                        aria-badge="Close"><span aria-hidden="true">&times;</span>
                                                 </button>
                                                 <h4 class="modal-title" id="error-modal-title">
                                                     Error
@@ -243,9 +205,9 @@
                                 </div>
 
 
-                                    <% } %>
+                        <% } %>
 
-                                    <% if (step.text) { %>
+                                <% if (step.text) { %>
                                     <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
                                        data-toggle="collapse" class="show-info toggle">Show Info +</a>
                                     <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
@@ -257,12 +219,12 @@
                                     </div>
 
                                 <div class="modal fade" id="info-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" tabindex="-1" role="dialog"
-                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                     aria-badgeledby="stacktraceModalbadge" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                        aria-badge="Close"><span aria-hidden="true">&times;</span>
                                                 </button>
                                                 <h4 class="modal-title" id="info-modal-title">
                                                     Info
@@ -286,7 +248,7 @@
 
                                 <% } %>
 
-                                    <% if (step.image) { %>
+                                <% if (step.image) { %>
                                 <a href="#ss<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
                                     data-toggle="collapse" class="toggle">Screenshot +</a>
                                 <div id="ss<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
@@ -295,7 +257,7 @@
                                         data-toggle="modal"
                                         style="cursor: pointer"
                                         data-target="#ss-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>">
-                                        
+
                                         <img class="screenshot" style="height:100%;width:100%;display:block;"
                                         id="ss-image-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" src="<%= step.image %>"/>
                                 </div>
@@ -308,12 +270,12 @@
                                 </div>
 
                                 <div class="modal fade" id="ss-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" tabindex="-1" role="dialog"
-                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                     aria-badgeledby="stacktraceModalbadge" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                        aria-badge="Close"><span aria-hidden="true">&times;</span>
                                                 </button>
                                                 <h4 class="modal-title" id="ss-modal-title">
                                                     Screenshot
@@ -336,21 +298,17 @@
 
                                 <% } %>
 
-                                    <% } %>
-                                </div>
-                                </p>
                                 <% } %>
-                                <% }); %>
-                            </div>
+                                </div>
+                            <% } %>
+                            <% }); %>
                         </div>
-                    </div>
+                    </li>
                     <% }); %>
-                </div>
-            </div>
+            </ul>
         </div>
     </div>
     <% if ((featureIndex != 0 && ((featureIndex + 1) % 2 == 0)) || (featureIndex === (suite.features.length -1))) { %>
-</div>
-<% } %>
-</div>
+    </div>
+    <% } %>
 <% }); %>

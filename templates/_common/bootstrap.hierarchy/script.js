@@ -10,6 +10,16 @@ $(document).ready(function() {
     var $generated = $('.generated-on');
 
     $generated.text('Generated ' + moment($generated.text()).fromNow());
+
+    var $featureAndScenarioCollapses = $('.feature-collapse, .scenario-collapse');
+
+    $('.js-btn-expand-all').on('click', function() {
+       $featureAndScenarioCollapses.collapse('show');
+    });
+
+    $('.js-btn-collapse-all').on('click', function() {
+        $featureAndScenarioCollapses.collapse('hide');
+    });
 });
 
 function toggle(className) {
