@@ -306,6 +306,3 @@ Attach JSON to HTML report
 [10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
 [11]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
 [twitter]: https://twitter.com/g_kushang
-
-
-
