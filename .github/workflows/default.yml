@@ -3,7 +3,7 @@ name: Default Workflow
 on:
   push:
     branches-ignore:
-      - master
+      - develop
 
 jobs:
   build:
