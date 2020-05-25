@@ -15,7 +15,7 @@ interface Options {
   scenarioTimestamp?: boolean,
   metadata?: {
     [key: string]: string
-  },
+  }
 }
 
 export function generate(options: Options, callback?: () => void): void
