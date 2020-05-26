@@ -8,7 +8,12 @@
     "name": "Flavien Cathala",
     "email": "flavien.cathala@gmail.com"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Roland Vachter",
+      "url": "https://github.com/roland-vachter"
+    }
+  ],
   "scripts": {
     "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
     "clean": "rm -rf screenshots",
