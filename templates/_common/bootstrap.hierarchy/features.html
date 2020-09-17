@@ -247,14 +247,7 @@
 
                                     <% if (step.text) { %>
                                     <a href="#info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
-                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
-                                    <div id="info<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>"
-                                         class="collapse"
-                                         data-toggle="modal"
-                                         style="cursor: pointer"
-                                         data-target="#info-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>">
-                                        <pre class="info show-modal"><%= step.text %></pre>
-                                    </div>
+                                       data-toggle="modal" data-target="#info-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" class="show-info toggle">Show Info +</a>
 
                                 <div class="modal fade" id="info-modal-<%= featureIndex %>_<%= scenarioIndex %><%= stepIndex %>" tabindex="-1" role="dialog"
                                      aria-labelledby="stacktraceModalLabel" aria-hidden="true">
