@@ -128,7 +128,21 @@
     {
       "name": "ErikGrigoriev",
       "url": "https://github.com/ErikGrigoriev"
+    },
+    {
+      "name": "roland-vachter",
+      "url": "https://github.com/roland-vachter"
+    },
+    {
+      "name": "sv3k",
+      "url": "https://github.com/sv3k"
+    },
+    {
+      "name": "Fabienmrqs ",
+      "url": "https://github.com/Fabienmrqs"
     }
+
+
   ],
   "scripts": {
     "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
