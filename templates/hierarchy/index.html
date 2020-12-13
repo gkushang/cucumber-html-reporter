@@ -78,6 +78,7 @@
                             <% if (subSuite.passed) { %><span class="label label-success" title="<%= subSuite.passed %> Features Passed"><%= subSuite.passed %></span><% } %>
                             <% if (subSuite.failed) { %><span class="label label-danger" title="<%= subSuite.failed %> Features Failed"><%= subSuite.failed %></span><% } %>
                             <% if (subSuite.ambiguous) { %><span class="label label-primary" title="<%= subSuite.ambiguous %> Ambiguous Feature Results"><%= subSuite.ambiguous %></span><% } %>
+                            <% if (subSuite.skipped) { %><span class="label label-warning" title="<%= subSuite.skipped %> Features Skipped"><%= subSuite.skipped %></span><% } %>
                             </span>
                         </a>
                     </h4>
@@ -98,6 +99,7 @@
                                         <% if (subSubSuite.passed) { %><span class="label label-success" title="<%= subSubSuite.passed %> Features Passed"><%= subSubSuite.passed %></span><% } %>
                                         <% if (subSubSuite.failed) { %><span class="label label-danger" title="<%= subSubSuite.failed %> Features Failed"><%= subSubSuite.failed %></span><% } %>
                                         <% if (subSubSuite.ambiguous) { %><span class="label label-primary" title="<%= subSubSuite.ambiguous %> Ambiguous Feature Results"><%= subSubSuite.ambiguous %></span><% } %>
+                                        <% if (subSubSuite.skipped) { %><span class="label label-warning" title="<%= subSubSuite.skipped %> Features Skipped"><%= subSubSuite.skipped %></span><% } %>
                                         </span>
                                     </a>
                                 </h4>
@@ -118,6 +120,7 @@
                                                         <% if (subSubSubSuite.passed) { %><span class="label label-success" title="<%= subSubSubSuite.passed %> Features Passed"><%= subSubSubSuite.passed %></span><% } %>
                                                         <% if (subSubSubSuite.failed) { %><span class="label label-danger" title="<%= subSubSubSuite.failed %> Features Failed"><%= subSubSubSuite.failed %></span><% } %>
                                                         <% if (subSubSubSuite.ambiguous) { %><span class="label label-primary" title="<%= subSubSubSuite.ambiguous %> Ambiguous Feature Results"><%= subSubSubSuite.ambiguous %></span><% } %>
+                                                        <% if (subSubSubSuite.skipped) { %><span class="label label-warning" title="<%= subSubSubSuite.skipped %> Features Skipped"><%= subSubSubSuite.skipped %></span><% } %>
                                                     </span>
                                                 </a>
                                             </h4>
