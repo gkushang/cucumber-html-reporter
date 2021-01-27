@@ -41,6 +41,23 @@
     padding-bottom: 3px;
 }
 
+.container {
+    margin-bottom: 35px;
+}
+
+.container .row .feature-container .col-lg-12,
+.container .row .feature-container .col-md-12 {
+    padding: 0;
+}
+
+.panel {
+    margin-bottom: 8px;
+}
+
+.panel-body {
+    padding: 8px 10px;
+}
+
 .panel-heading a {
     padding: 10px 15px;
     display: block;

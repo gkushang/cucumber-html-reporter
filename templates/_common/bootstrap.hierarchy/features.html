@@ -14,9 +14,9 @@
         <% var suid = guid() %>
         <% var set = featureOrSet %>
         <% if (set.featuresOrSets.failed) { %>
-        <div class="feature-failed">
+        <div class="feature-container feature-failed">
         <% } else { %>
-        <div class="feature-passed">
+        <div class="feature-container feature-passed">
         <% } %>
             <div class="col-lg-<%= columnLayoutWidth %> col-md-<%= columnLayoutWidth %>">
                 <div class="panel panel-default">
@@ -63,9 +63,9 @@
 <% function showFeature(feature, featureIndex) { %>
     <% var uid = guid() %>
     <% if (feature.scenarios.failed) { %>
-    <div class="feature-failed">
+    <div class="feature-container feature-failed">
     <% } else { %>
-    <div class="feature-passed">
+    <div class="feature-container feature-passed">
     <% } %>
         <div class="col-lg-<%= columnLayoutWidth %> col-md-<%= columnLayoutWidth %>">
             <div class="panel panel-default">
