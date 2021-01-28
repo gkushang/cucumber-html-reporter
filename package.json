@@ -1,133 +1,17 @@
 {
-  "name": "cucumber-html-reporter",
-  "version": "5.2.0",
+  "name": "@liquidshare/cucumber-html-reporter",
+  "version": "1.0.2",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "typings": "./index.d.ts",
   "author": {
-    "name": "Kushang Gajjar",
-    "email": "g.kushang@gmail.com"
+    "name": "Flavien Cathala",
+    "email": "flavien.cathala@gmail.com"
   },
   "contributors": [
     {
-      "name": "Galileo1",
-      "url": "https://github.com/Galileo1"
-    },
-    {
-      "name": "LiQiang",
-      "url": "https://github.com/li-qiang"
-    },
-    {
-      "name": "Igor Muchychka",
-      "url": "https://github.com/mucsi96"
-    },
-    {
-      "name": "Miguel Ángel Domínguez",
-      "url": "https://github.com/eridem"
-    },
-    {
-      "name": "Thyagarajulu Atthipatla",
-      "url": "https://github.com/thyagab"
-    },
-    {
-      "name": "Alexandros D",
-      "url": "https://github.com/AlexandrosD"
-    },
-    {
-      "name": "spujar",
-      "url": "https://github.com/spujar"
-    },
-    {
-      "name": "Craeg Strong",
-      "url": "https://github.com/cstrong"
-    },
-    {
-      "name": "anrodkin",
-      "url": "https://github.com/anrodkin"
-    },
-    {
-      "name": "spukst3r",
-      "url": "https://github.com/spukst3r"
-    },
-    {
-      "name": "klimenko4",
-      "url": "https://github.com/klimenko4"
-    },
-    {
-      "name": "telaoumatenyanis",
-      "url": "https://github.com/telaoumatenyanis"
-    },
-    {
-      "name": "jingfuxiang",
-      "url": "https://github.com/jingfuxiang"
-    },
-    {
-      "name": "StefanPi-gfk",
-      "url": "https://github.com/StefanPi-gfk"
-    },
-    {
-      "name": "binalabs",
-      "url": "https://github.com/binalabs"
-    },
-    {
-      "name": "rakeshkumar5b4",
-      "url": "https://github.com/rakeshkumar5b4"
-    },
-    {
-      "name": "xywang68",
-      "url": "https://github.com/xywang68"
-    },
-    {
-      "name": "aurell14",
-      "url": "https://github.com/aurell14"
-    },
-    {
-      "name": "mkginfo",
-      "url": "https://github.com/mkginfo"
-    },
-    {
-      "name": "tiborv",
-      "url": "https://github.com/tiborv"
-    },
-    {
-      "name": "mgor",
-      "url": "https://github.com/mgor"
-    },
-    {
-      "name": "mattvass",
-      "url": "https://github.com/mattvass"
-    },
-    {
-      "name": "LoicL66",
-      "url": "https://github.com/LoicL66"
-    },
-    {
-      "name": "srbarrios",
-      "url": "https://github.com/srbarrios"
-    },
-    {
-      "name": "glitchassassin",
-      "url": "https://github.com/glitchassassin"
-    },
-    {
-      "name": "ncounter",
-      "url": "https://github.com/ncounter"
-    },
-    {
-      "name": "eiszfuchs",
-      "url": "https://github.com/eiszfuchs"
-    },
-    {
-      "name": "davestaab",
-      "url": "https://github.com/davestaab"
-    },
-    {
-      "name": "hujunhaorobert",
-      "url": "https://github.com/hujunhaorobert"
-    },
-    {
-      "name": "ErikGrigoriev",
-      "url": "https://github.com/ErikGrigoriev"
+      "name": "Roland Vachter",
+      "url": "https://github.com/roland-vachter"
     }
   ],
   "scripts": {
@@ -137,11 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gkushang/cucumber-html-reporter.git"
+    "url": "git+https://github.com/LiquidShareOSS/cucumber-html-reporter.git"
   },
   "bugs": {
-    "url": "https://github.com/gkushang/cucumber-html-reporter/issues",
-    "email": "g.kushang@gmail.com"
+    "url": "https://github.com/LiquidShareOSS/cucumber-html-reporter/issues"
   },
   "keywords": [
     "cucumber",
@@ -151,7 +34,7 @@
     "json to html"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
+  "homepage": "https://github.com/LiquidShareOSS/cucumber-html-reporter#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "find": "^0.3.0",

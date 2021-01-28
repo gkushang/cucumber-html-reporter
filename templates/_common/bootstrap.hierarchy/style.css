@@ -41,25 +41,16 @@
     padding-bottom: 3px;
 }
 
-.container {
-    margin-bottom: 35px;
-}
-
-.container .row .feature-container .col-lg-12,
-.container .row .feature-container .col-md-12 {
-    padding: 0;
-}
-
 .panel {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .panel-body {
-    padding: 8px 10px;
+    padding: 5px 10px;
 }
 
 .panel-heading a {
-    padding: 10px 15px;
+    padding: 5px 10px;
     display: block;
     position: relative;
     text-decoration: none;
@@ -92,7 +83,7 @@
 
 .panel-heading .label-container {
     position: absolute;
-    top: 8px;
+    top: 2px;
     right: 8px;
 }
 
