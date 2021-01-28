@@ -2,14 +2,14 @@
     <% if (featureOrSetIndex === 0 || featureOrSetIndex % 2 === 0) { %>
     <div class="row" xmlns="http://www.w3.org/1999/html">
     <% } %>
-        <% showFeatureOrSet(featureOrSet, featureOrSetIndex) %>
+        <% showFeatureOrSet(featureOrSet, featureOrSetIndex, 0) %>
     <% if ((featureOrSetIndex != 0 && ((featureOrSetIndex + 1) % 2 == 0)) || (featureOrSetIndex === (suite.features.length -1))) { %>
     </div>
     <% } %>
 <% }); %>
 
 
-<% function showFeatureOrSet(featureOrSet, featureOrSetIndex) { %>
+<% function showFeatureOrSet(featureOrSet, featureOrSetIndex, level) { %>
     <% if (featureOrSet.featuresOrSets) { %>
         <% var suid = guid() %>
         <% var set = featureOrSet %>
@@ -18,7 +18,7 @@
         <% } else { %>
         <div class="feature-container feature-passed">
         <% } %>
-            <div class="col-lg-<%= columnLayoutWidth %> col-md-<%= columnLayoutWidth %>">
+            <div class="col-lg-<%= level === 0 ? columnLayoutWidth : 12 %> col-md-<%= level === 0 ? columnLayoutWidth : 0 %>">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -28,17 +28,17 @@
                                 <b><%= set.keyword %>:</b><%= set.name %>
                                 <span class="label-container">
                         <% if (set.featuresOrSets.passed) { %><span class="label label-success"
-                                                                    title="<%= set.featuresOrSets.passed %> Scenarios Passed"><%= set.featuresOrSets.passed %></span><% } %>
+                                                                    title="<%= set.featuresOrSets.passed %> Items Passed"><%= set.featuresOrSets.passed %></span><% } %>
                         <% if (set.featuresOrSets.failed) { %><span class="label label-danger"
-                                                                    title="<%= set.featuresOrSets.failed %> Scenarios Failed"><%= set.featuresOrSets.failed %></span><% } %>
+                                                                    title="<%= set.featuresOrSets.failed %> Items Failed"><%= set.featuresOrSets.failed %></span><% } %>
                         <% if (set.featuresOrSets.notdefined) { %><span class="label label-info"
-                                                                        title="<%= set.featuresOrSets.notdefined %> Scenarios Undefined"><%= set.featuresOrSets.notdefined %></span><% } %>
+                                                                        title="<%= set.featuresOrSets.notdefined %> Items Undefined"><%= set.featuresOrSets.notdefined %></span><% } %>
                         <% if (set.featuresOrSets.pending) { %><span class="label label-default"
-                                                                    title="<%= set.featuresOrSets.pending %> Scenarios Pending"><%= set.featuresOrSets.pending %></span><% } %>
+                                                                    title="<%= set.featuresOrSets.pending %> Items Pending"><%= set.featuresOrSets.pending %></span><% } %>
                         <% if (set.featuresOrSets.skipped) { %><span class="label label-warning"
-                                                                    title="<%= set.featuresOrSets.skipped %> Scenarios Skipped"><%= set.featuresOrSets.skipped %></span><% } %>
+                                                                    title="<%= set.featuresOrSets.skipped %> Items Skipped"><%= set.featuresOrSets.skipped %></span><% } %>
                         <% if (set.featuresOrSets.ambiguous) { %><span class="label label-primary"
-                                                                    title="<%= set.featuresOrSets.ambiguous %> Ambiguous Scenarios"><%= set.featuresOrSets.ambiguous %></span><% } %>
+                                                                    title="<%= set.featuresOrSets.ambiguous %> Ambiguous Items"><%= set.featuresOrSets.ambiguous %></span><% } %>
                                 </span>
                             </a>
                         </h4>
@@ -47,7 +47,7 @@
                         <div class="panel-body">
                             <%
                                 _.each(set.elements, function(element, elementIndex) {
-                                    showFeatureOrSet(element, elementIndex)
+                                    showFeatureOrSet(element, elementIndex, level + 1)
                                 })
                             %>
                         </div>
@@ -56,18 +56,18 @@
             </div>
         </div>
     <% } else { %>
-        <% showFeature(featureOrSet, featureOrSetIndex) %>
+        <% showFeature(featureOrSet, featureOrSetIndex, level) %>
     <% } %>
 <% } %>
 
-<% function showFeature(feature, featureIndex) { %>
+<% function showFeature(feature, featureIndex, level) { %>
     <% var uid = guid() %>
     <% if (feature.scenarios.failed) { %>
     <div class="feature-container feature-failed">
     <% } else { %>
     <div class="feature-container feature-passed">
     <% } %>
-        <div class="col-lg-<%= columnLayoutWidth %> col-md-<%= columnLayoutWidth %>">
+        <div class="col-lg-<%= level === 0 ? columnLayoutWidth : 12 %> col-md-<%= level === 0 ? columnLayoutWidth : 0 %>">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">

@@ -5,7 +5,7 @@ var path = require('path');
 
 var should = chai.should();
 
-module.exports = function assertHtmlReports(outputDirectory) {
+module.exports = function assertHtmlReports(outputDirectory, checkContent) {
 
     function isReportExists(report) {
         try {
@@ -29,4 +29,9 @@ module.exports = function assertHtmlReports(outputDirectory) {
     isReportExists(foundationHtmlFile).should.be.equal(true, 'foundationHtmlFile file \'' + foundationHtmlFile + '\' does not exist');
     isReportExists(simpleHtmlFile).should.be.equal(true, 'simpleHtmlFile file \'' + simpleHtmlFile + '\' does not exist');
     isDirectoryExists(path.join(outputDirectory, '..', '..','screenshots')).should.be.equal(true, 'screenshots directory does not exists, at "parentDirectory/screenshots"');
+
+    if (checkContent) {
+        const bootstrapContent = fs.readFileSync(bootstrapHtmlFile, { encoding: 'utf-8' }).replace(/\n/g, '').replace(/\r/g, '');
+        bootstrapContent.should.match(/class\=\"panel-title\"(.*)\<b\>Set\:\<\/b\>Parentset(.*)class\=\"panel-title\"(.*)\<b\>Set\:\<\/b\>Innerset(.*)class\=\"panel-title\"(.*)\<b\>Feature\:\<\/b\>Feature in set/);
+    }
 };

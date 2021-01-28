@@ -69,7 +69,7 @@ function assertJsonFile() {
     reporter.generate(getJsonFileOptions(theme.simple));
 
     //assert reports
-    assertHtmlReports(outputDirectory);
+    assertHtmlReports(outputDirectory, true);
 }
 
 function assertJsonDir() {
