@@ -23,6 +23,7 @@ module.exports = function assertHtmlReports(outputDirectory) {
     var bootstrapHtmlFile = path.join(outputDirectory, 'cucumber_report_bootstrap.html');
     var foundationHtmlFile = path.join(outputDirectory, 'cucumber_report_foundation.html');
     var simpleHtmlFile = path.join(outputDirectory, 'cucumber_report_simple.html');
+    //comment in remote
 
     isReportExists(hierarchyHtmlFile).should.be.equal(true, 'hierarchyHtmlFile file \'' + hierarchyHtmlFile + '\' does not exist');
     isReportExists(bootstrapHtmlFile).should.be.equal(true, 'bootstrapHtmlFile file \'' + bootstrapHtmlFile + '\' does not exist');
