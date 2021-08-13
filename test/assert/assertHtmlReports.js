@@ -18,7 +18,7 @@ module.exports = function assertHtmlReports(outputDirectory) {
     function isDirectoryExists(dir) {
         return fs.existsSync(dir);
     }
-
+    //statement 1 - added by Jay
     var hierarchyHtmlFile = path.join(outputDirectory, 'cucumber_report_hierarchy.html');
     var bootstrapHtmlFile = path.join(outputDirectory, 'cucumber_report_bootstrap.html');
     var foundationHtmlFile = path.join(outputDirectory, 'cucumber_report_foundation.html');
@@ -30,4 +30,6 @@ module.exports = function assertHtmlReports(outputDirectory) {
     isReportExists(foundationHtmlFile).should.be.equal(true, 'foundationHtmlFile file \'' + foundationHtmlFile + '\' does not exist');
     isReportExists(simpleHtmlFile).should.be.equal(true, 'simpleHtmlFile file \'' + simpleHtmlFile + '\' does not exist');
     isDirectoryExists(path.join(outputDirectory, '..', '..','screenshots')).should.be.equal(true, 'screenshots directory does not exists, at "parentDirectory/screenshots"');
+    //statement 3 - added by jay
+    //statement 2 added by jay
 };
