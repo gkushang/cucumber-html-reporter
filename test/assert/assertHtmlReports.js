@@ -4,6 +4,8 @@ var fs = require('fs-extra');
 var path = require('path');
 
 var should = chai.should();
+//staatement 1
+//statement 2
 
 module.exports = function assertHtmlReports(outputDirectory) {
 
