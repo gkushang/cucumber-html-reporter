@@ -8,7 +8,7 @@ var should = chai.should();
 //statement 2
 
 module.exports = function assertHtmlReports(outputDirectory) {
-
+// Bob's commit
     function isReportExists(report) {
         try {
             return fs.statSync(report).isFile();
