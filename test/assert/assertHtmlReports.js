@@ -6,7 +6,7 @@ var path = require('path');
 var should = chai.should();
 
 module.exports = function assertHtmlReports(outputDirectory) {
-
+// Bob's commit
     function isReportExists(report) {
         try {
             return fs.statSync(report).isFile();
