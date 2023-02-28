@@ -2,9 +2,58 @@
 <html>
   <head>
     <title>Cucumber Feature Report</title>
+    <link rel="icon" href="https://www.lambdatest.com/favicon.ico" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
     <style type="text/css">
       <%= styles %>
+
+/** Issue in google-charts tooltip - https://github.com/google/google-visualization-issues/issues/2162 */
+.google-visualization-tooltip { pointer-events:none; }
+      
+.count-wrapper{
+  display: flex;
+  gap: 15px;
+}
+.card{
+  border: 1px solid #f5f5f5;
+  padding: 15px;
+  color: #fff;
+  border-radius: 5px;
+  flex: 1;
+}
+.generated-on{
+  margin-right: 10px;
+}
+.card h4{
+  font-size: 15px;
+}
+.red-box{
+  background: #d9534e;
+}
+.blue-box{
+  background: #0074ff;
+}
+.yellow-box{
+  background: #f0ad4e;
+}
+.saffron-box{
+  background: #ff9933;
+}
+.green-box{
+  background: #5cb85b;
+}
+.gray-box{
+  background: #999;
+}
+.amb-box{
+  background: #218bcf;
+}
+.undefined-box{
+  background: #22c2e2;
+}
+.mb-20px{
+  margin-bottom: 20px;
+}
     </style>
     <meta charset="UTF-8">
   </head>
@@ -17,8 +66,9 @@
           <a class="navbar-brand"><%= brandTitle %></a>
           <div class="project-name visible-md visible-lg"><%= suite.name.plain %></div>
           <div class="label-container">
-            <span class="label label-success" onclick="toggle('.feature-passed')" title=<%= suite.reportAs %>>Passed: <%= suite.passed %></span>
-            <span class="label label-danger" onclick="toggle('.feature-failed')" title=<%= suite.reportAs %>>Failed: <%= suite.failed %></span>
+                <div class="generated-on">
+                  <%= suite.time %>
+                </div>
           </div>
         </div>
       </div>
@@ -26,8 +76,103 @@
 
     <div class="container">
 
-      <div class="generated-on"><%= suite.time %></div>
-
+      <div class="count-wrapper mb-20px">
+        <div class="card blue-box">
+          <div class="feature-title">
+            <h4>All Scenarios</h2>
+          </div>
+          <div class="feature-value">
+            <h5>
+              <%= suite.scenarios.getTotal() %>
+            </h5>
+          </div>
+        </div>
+        <div class="card green-box">
+          <div class="feature-title">
+            <h4>Passed Scenarios</h2>
+          </div>
+          <div class="feature-value">
+            <h5>
+              <%= suite.scenarios.passed %>
+            </h5>
+          </div>
+        </div>
+        <div class="card red-box">
+          <div class="feature-title">
+            <h4>Failed Scenarios</h2>
+          </div>
+          <div class="feature-value">
+            <h5>
+              <%= suite.scenarios.failed %>
+            </h5>
+          </div>
+        </div>
+        <% if (suite.scenarios.rerun) { %>
+          <div class="card saffron-box">
+            <div class="feature-title">
+              <h4>Re-run Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.rerun %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.scenarios.skipped) { %>
+          <div class="card yellow-box">
+            <div class="feature-title">
+              <h4>Skipped Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.skipped %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.scenarios.pending) { %>
+          <div class="card gray-box">
+            <div class="feature-title">
+              <h4>Pending Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.pending %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.scenarios.notdefined) { %>
+          <div class="card undefined-box">
+            <div class="feature-title">
+              <h4>Undefined Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.notdefined %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.scenarios.ambiguous) { %>
+          <div class="card amb-box">
+            <div class="feature-title">
+              <h4>Ambiguous Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.ambiguous %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+      </div>
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
         <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
@@ -35,7 +180,7 @@
 
       <% if (suite.metadata) { %>
       <div class="panel panel-default">
-        <div class="panel-heading">
+        <div class="panel-heading open">
           <h4 class="panel-title">
             <a data-toggle="collapse" href="#logOutput">
               <i class="glyphicon glyphicon-chevron-right"></i>
@@ -44,7 +189,7 @@
             </a>
           </h4>
         </div>
-        <div id="logOutput" class="panel-collapse collapse">
+        <div id="logOutput" class="panel-collapse collapse in">
           <div class="panel-body">
             <div class="row">
               <% var isLeft = true %>
@@ -68,17 +213,6 @@
 
     </div>
 
-    <div class="navbar-fixed-bottom row-fluid footer-div ">
-      <div class="navbar-inner">
-        <div class="footer-container">
-          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
-            <div class="text-muted footer-link">
-              generated by @cucumber-html-reporter
-            </div>
-             </a>
-        </div>
-      </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
@@ -100,6 +234,7 @@
                                                             "title" : "Scenarios",
                                                             "failed" : <%= suite.scenarios.failed %>,
                                                             "passed" : <%= suite.scenarios.passed %>,
+                                                            "rerun" : <%= suite.scenarios.rerun %>,
                                                             "notdefined" : <%= suite.scenarios.notdefined %>,
                                                             "pending" : <%= suite.scenarios.pending %>,
                                                             "skipped" : <%= suite.scenarios.skipped %>,

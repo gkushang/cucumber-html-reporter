@@ -1934,7 +1934,7 @@ I want to print below Doc String
                                       
                                       </tr>
                                     
-                              </table>
+                                </table>
                               
                                </div>
                                
@@ -2647,7 +2647,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
             $(this).siblings('a.screenshot').find('img').show();
         }
     });
-    var $generated = $('.generated-on');
+    let $generated = $('.generated-on');
 
     $generated.text('Generated ' + moment($generated.text()).fromNow());
 
@@ -2655,7 +2655,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
 });
 
       function drawChart(chartData) {
-    var data = google.visualization.arrayToDataTable([
+    let data = google.visualization.arrayToDataTable([
         ['Task', 'Cucumber Results'],
         ['Passed', chartData.passed],
         ['Failed', chartData.failed],
@@ -2663,8 +2663,8 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
         ['Skipped', chartData.skipped]
     ]);
 
-    var total = chartData.passed + chartData.failed + (chartData.notdefined || 0) + (chartData.skipped || 0);
-    var title;
+    let total = chartData.passed + chartData.failed + (chartData.notdefined || 0) + (chartData.skipped || 0);
+    let title;
 
     if (total === 1) {
         title = total + ' ' + chartData.title.slice(0, -1)
@@ -2672,7 +2672,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
         title = total + ' ' + chartData.title;
     }
 
-    var options = {
+    let options = {
         width: '100%',
         height: 240,
         title: title,
@@ -2691,7 +2691,7 @@ this.Then(/^cucumber-html-reporter should create undefined step in HTML report$/
         }
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
+    let chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
     chart.draw(data, options);
 }
     </script>

@@ -64,7 +64,9 @@
                                             <b><%= element.keyword %>:</b><%= element.name %>
                                         </div>
                                         <div>
-                            <span class="label-container">
+                            <span class="label-container <% if (element.retried) { %>label-retries<% } %>">
+                              <% if (element.retried) { %><span class="label label-saffron"
+                                                              title="Re-runs : <%= element.retried %>">Re-runs : <%= element.retried %></span><% } %>
                               <% if (element.passed) { %><span class="label label-success"
                                                                title="<%= element.passed %> Steps Passed"><%= element.passed %></span><% } %>
                               <% if (element.notdefined) { %><span class="label label-info"

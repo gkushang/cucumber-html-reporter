@@ -1,6 +1,6 @@
 {
   "name": "cucumber-html-reporter",
-  "version": "5.2.0",
+  "version": "6.0.0",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "typings": "./index.d.ts",
@@ -141,14 +141,7 @@
       "name": "Fabienmrqs ",
       "url": "https://github.com/Fabienmrqs"
     }
-
-
   ],
-  "scripts": {
-    "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
-    "clean": "rm -rf screenshots",
-    "test": "node test/createHtmlReports.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gkushang/cucumber-html-reporter.git"
@@ -164,21 +157,26 @@
     "html report",
     "json to html"
   ],
+  "scripts": {
+    "pretest": "node --trace-deprecation node_modules/@cucumber/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --publish-quiet --no-strict || true",
+    "clean": "rm -rf screenshots",
+    "test": "node --trace-deprecation test/createHtmlReports.js"
+  },
   "license": "MIT",
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "4.1.2",
     "find": "^0.3.0",
-    "fs-extra": "^8.1.0",
-    "js-base64": "^2.3.2",
-    "jsonfile": "^5.0.0",
+    "fs-extra": "^11.1.0",
+    "js-base64": "^3.7.3",
+    "jsonfile": "^6.1.0",
     "lodash": "^4.17.11",
     "node-emoji": "^1.10.0",
-    "open": "^6.4.0",
-    "uuid": "^3.3.3"
+    "open": "^8.4.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "cucumber": "^5.1.0"
+    "@cucumber/cucumber": "^8.9.1",
+    "chai": "^4.2.0"
   }
 }
