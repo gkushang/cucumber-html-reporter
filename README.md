@@ -255,7 +255,7 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
 
   let world = this;
 
-  return browser.takeScreenshot().then((screenShot) => {
+  return driver.takeScreenshot().then((screenShot) => {
       // screenShot is a base-64 encoded PNG
       world.attach(screenShot, 'image/png');
   });
