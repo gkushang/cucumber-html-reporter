@@ -1,3 +1,8 @@
+### 6.0.0 (Mar-02-2023)
+* upgraded to be compatible with cucumber v8.9.1
+* upgraded all other dependencies to their latest versions
+
+
 ### 5.1.0 (Dec-15-2019)
 
 * Bootstrap theme filters [#198](https://github.com/gkushang/cucumber-html-reporter/pull/198) by [@srbarrios](https://github.com/srbarrios/)

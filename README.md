@@ -2,7 +2,7 @@
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter)  [![Dependency Status](https://david-dm.org/gkushang/cucumber-html-reporter.svg)](https://david-dm.org/gkushang/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)
+[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)
 
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
@@ -30,7 +30,8 @@ npm install cucumber-html-reporter --save-dev
 
 ***Notes:***
 
-* Latest version supports Cucumber 3
+* Latest version supports Cucumber 8
+* Install `cucumber-html-reporter@5.5.0` for cucumber version `< Cucumber@8`
 * Install `cucumber-html-reporter@2.0.3` for cucumber version `< Cucumber@3`
 * Install `cucumber-html-reporter@0.5.0` for cucumber version `< Cucumber@2`
 * Install `cucumber-html-reporter@0.4.0` for node version <0.12
@@ -40,7 +41,7 @@ npm install cucumber-html-reporter --save-dev
 
 Let's get you started:
 
-1. Install the package through npm 
+1. Install the package through npm or yarn
 2. Create an index.js and specify the options. Example of `bootstrap` theme:
 
 ```js
@@ -249,12 +250,15 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
 
 Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the screenshot image
 
-**for Cucumber V1**
+**for Cucumber V8**
 ```javascript
 
-  driver.takeScreenshot().then(function (buffer) {
-    return scenario.attach(new Buffer(buffer, 'base64'), 'image/png');
-  };
+  let world = this;
+
+  return browser.takeScreenshot().then((screenShot) => {
+      // screenShot is a base-64 encoded PNG
+      world.attach(screenShot, 'image/png');
+  });
 
 ```
 
@@ -265,6 +269,15 @@ Capture and Attach screenshots to the Cucumber Scenario and HTML report will ren
 
   driver.takeScreenshot().then(function (buffer) {
     return world.attach(buffer, 'image/png');
+  };
+
+```
+
+**for Cucumber V1**
+```javascript
+
+  driver.takeScreenshot().then(function (buffer) {
+    return scenario.attach(new Buffer(buffer, 'base64'), 'image/png');
   };
 
 ```
