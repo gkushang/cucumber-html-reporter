@@ -32,9 +32,6 @@ npm install klassijs-cucumber-html-reporter --save-dev
 
 * Latest version supports Cucumber 8
 * Install `cucumber-html-reporter@5.5.0` for cucumber version `< Cucumber@8`
-* Install `cucumber-html-reporter@2.0.3` for cucumber version `< Cucumber@3`
-* Install `cucumber-html-reporter@0.5.0` for cucumber version `< Cucumber@2`
-* Install `cucumber-html-reporter@0.4.0` for node version <0.12
 
 
 ## Usage
@@ -42,16 +39,16 @@ npm install klassijs-cucumber-html-reporter --save-dev
 Let's get you started:
 
 1. Install the package through npm or yarn
-2. Create an index.js and specify the options. Example of `bootstrap` theme:
+2. Create an reporter.js and specify the options. Example of `hierarchy` theme:
 
 ```js
 
-var reporter = require('klassijs-cucumber-html-reporter');
+const reporter = require('klassijs-cucumber-html-reporter');
 
-var options = {
-        theme: 'bootstrap',
-        jsonFile: 'test/report/cucumber_report.json',
-        output: 'test/report/cucumber_report.html',
+const reportOptions = {
+        theme: 'hierarchy',
+        jsonFile: 'reports/klassijs-cucumber_report.json',
+        output: 'reports/klassijs-cucumber_report.html',
         reportSuiteAsScenarios: true,
         scenarioTimestamp: true,
         launchReport: true,
@@ -65,7 +62,7 @@ var options = {
         }
     };
 
-    reporter.generate(options);
+    reporter.generate(reportOptions);
     
 
     //more info on `metadata` is available in `options` section below.
@@ -250,36 +247,30 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
 
 Capture and Attach screenshots to the Cucumber Scenario and HTML report will render the screenshot image
 
-**for Cucumber V8**
+**for Cucumber v8**
+```javascript
+
+  const world = this;
+
+  if (scenario.result.status === Status.FAILED) {
+    return browser.takeScreenshot().then((screenShot) => {
+      // screenShot is a base-64 encoded PNG
+      world.attach(screenShot, 'image/png');
+    });
+  }
+
+```
+
+**for Cucumber < v8**
 ```javascript
 
   let world = this;
-
-  return driver.takeScreenshot().then((screenShot) => {
-      // screenShot is a base-64 encoded PNG
-      world.attach(screenShot, 'image/png');
-  });
-
-```
-
-**for Cucumber V2 and V3**
-```javascript
-
-  var world = this;
-
-  driver.takeScreenshot().then(function (buffer) {
-    return world.attach(buffer, 'image/png');
-  };
-
-```
-
-**for Cucumber V1**
-```javascript
-
-  driver.takeScreenshot().then(function (buffer) {
-    return scenario.attach(new Buffer(buffer, 'base64'), 'image/png');
-  };
-
+  
+  if (scenario.result.status === Status.FAILED) {
+    browser.takeScreenshot().then(function (buffer) {
+      return world.attach(buffer, 'image/png');
+    };
+  }
 ```
 
 #### Attach Plain Text to HTML report
@@ -301,7 +292,8 @@ Attach JSON to HTML report
   scenario.attach(JSON.stringify(myJsonObject, undefined, 4));
 
 ```
-
+## Credits
+[Kushang Gajjar](https://github.com/gkushang)
 ## Changelog
 
 [changelog][10]

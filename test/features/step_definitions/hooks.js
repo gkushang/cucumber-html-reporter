@@ -1,12 +1,11 @@
 const { Before, After } = require('@cucumber/cucumber');
 
-// const chalk = require('chalk');
+const chalk = require('chalk');
 
-// Before(function (scenario, callback) {
-//     console.log( '\n' + chalk.blue.bgYellow.bold('TESTING: ') + chalk.white.bgBlue.bold(' console.log() should not break the report'));
-//     this.scenario = scenario;
-//     callback();
-// });
+Before(function (scenario, callback) {
+    console.log( '\n' + chalk.blue.bgYellow.bold('TESTING: ') + chalk.white.bgBlue(scenario.pickle.name));
+    callback();
+});
 
 Before({ tags: '@testPassing' }, function (scenario, callback) {
   this.attach(
