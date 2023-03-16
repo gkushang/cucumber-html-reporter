@@ -11,14 +11,7 @@ function drawChart(chartData) {
   ]);
 
   let total =
-    chartData.passed +
-      chartData.failed +
-      (chartData.pending || 0) +
-      (chartData.notdefined || 0) +
-      (chartData.ambiguous || 0) +
-      (chartData.skipped || 0) ||
-    chartData.rerun ||
-    0;
+    chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0) || chartData.rerun || 0;
   let title;
 
   if (total === 1) {

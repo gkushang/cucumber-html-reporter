@@ -1,8 +1,8 @@
-# cucumber-html-reporter
+# klassijs-cucumber-html-reporter
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![Build Status](https://travis-ci.org/gkushang/cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/gkushang/cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/cucumber-html-reporter.svg)](https://www.npmjs.com/package/cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/gkushang/cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/gkushang/cucumber-html-reporter) [![License](https://img.shields.io/npm/l/cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/gkushang/cucumber-html-reporter.svg)](https://github.com/gkushang/cucumber-html-reporter/graphs/contributors)
+[![Build Status](https://travis-ci.org/klassijs/klassijs-cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/klassijs/klassijs-cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/klassijs-cucumber-html-reporter.svg)](https://www.npmjs.com/package/klassijs-cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter) [![License](https://img.shields.io/npm/l/klassijs-cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/klassijs/klassijs-cucumber-html-reporter.svg)](https://github.com/klassijs/klassijs-cucumber-html-reporter/graphs/contributors)
 
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
@@ -18,14 +18,14 @@ Provide Cucumber JSON report file created from your framework and this module wi
 
 
 ## Snapshot of Bootstrap Report
-![Alt text](/samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
+![Alt text](./samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
 ###### More snapshots are availble [here][9]
 
 ## Install
 
 ``` bash
-npm install cucumber-html-reporter --save-dev
+npm install klassijs-cucumber-html-reporter --save-dev
 ```
 
 ***Notes:***
@@ -46,7 +46,7 @@ Let's get you started:
 
 ```js
 
-var reporter = require('cucumber-html-reporter');
+var reporter = require('klassijs-cucumber-html-reporter');
 
 var options = {
         theme: 'bootstrap',
@@ -73,7 +73,7 @@ var options = {
     //to generate consodilated report from multi-cucumber JSON files, please use `jsonDir` option instead of `jsonFile`. More info is available in `options` section below.
 
 ```
-> Please look at the [Options](https://github.com/gkushang/cucumber-html-reporter#options) section below for more options
+> Please look at the [Options](https://github.com/klassijs/klassijs-cucumber-html-reporter#options) section below for more options
 
 3. Run the above code in a node.js script after Cucumber execution:
 ```bash
@@ -309,15 +309,15 @@ Attach JSON to HTML report
 
 [1]: https://www.npmjs.com/package/grunt-cucumberjs "grunt-cucummberjs"
 [2]: https://github.com/cucumber/cucumber-js "CucumberJs"
-[3]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_hierarchy.html "Hierarchy Theme Reports"
-[4]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_bootstrap.html "Bootstrap Theme Reports"
-[5]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_foundation.html "Foundation Theme Reports"
-[6]: http://htmlpreview.github.io/?https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_simple.html "Simple Theme Reports"
+[3]: http://htmlpreview.github.io/?https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_hierarchy.html "Hierarchy Theme Reports"
+[4]: http://htmlpreview.github.io/?https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_bootstrap.html "Bootstrap Theme Reports"
+[5]: http://htmlpreview.github.io/?https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_foundation.html "Foundation Theme Reports"
+[6]: http://htmlpreview.github.io/?https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/html_reports/cucumber_report_simple.html "Simple Theme Reports"
 [7]: https://www.npmjs.com/package/cucumber-parallel "cucumber-parallel"
-[8]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
-[9]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md
-[10]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/CHANGELOG.md
-[11]: https://github.com/gkushang/cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
+[8]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/test/features/step_definitions/hooks.js#L13-L44
+[9]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/snapshots.md
+[10]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/CHANGELOG.md
+[11]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
 [twitter]: https://twitter.com/g_kushang
 
 

@@ -9,3 +9,5 @@ templates/.DS_Store
 templates/_common/.DS_Store
 test/.DS_Store
 test/features/.DS_Store
+cucumber-html-reporter.iml
+screenshots
