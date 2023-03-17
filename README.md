@@ -2,7 +2,7 @@
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![Build Status](https://travis-ci.org/klassijs/klassijs-cucumber-html-reporter.svg?branch=develop)](https://travis-ci.org/klassijs/klassijs-cucumber-html-reporter) [![npm](https://img.shields.io/npm/v/klassijs-cucumber-html-reporter.svg)](https://www.npmjs.com/package/klassijs-cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter) [![License](https://img.shields.io/npm/l/klassijs-cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/klassijs/klassijs-cucumber-html-reporter.svg)](https://github.com/klassijs/klassijs-cucumber-html-reporter/graphs/contributors)
+[![npm](https://img.shields.io/npm/v/klassijs-cucumber-html-reporter.svg)](https://www.npmjs.com/package/klassijs-cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter) [![License](https://img.shields.io/npm/l/klassijs-cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/klassijs/klassijs-cucumber-html-reporter.svg)](https://github.com/klassijs/klassijs-cucumber-html-reporter/graphs/contributors)
 
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
@@ -294,8 +294,8 @@ Attach JSON to HTML report
 ```
 ## Credits
 [Kushang Gajjar](https://github.com/gkushang)
-## Changelog
 
+## Changelog
 [changelog][10]
 
 
@@ -310,7 +310,7 @@ Attach JSON to HTML report
 [9]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/snapshots.md
 [10]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/CHANGELOG.md
 [11]: https://github.com/klassijs/klassijs-cucumber-html-reporter/blob/develop/samples/snapshots.md#with-metadata
-[twitter]: https://twitter.com/g_kushang
+[twitter]: https://twitter.com/larryg_01
 
 
 
