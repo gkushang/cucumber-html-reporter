@@ -2,7 +2,7 @@
 
 ***Generate Cucumber HTML reports with pie charts***
 
-[![npm](https://img.shields.io/npm/v/klassijs-cucumber-html-reporter.svg)](https://www.npmjs.com/package/klassijs-cucumber-html-reporter) [![Code Climate](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter/badges/gpa.svg)](https://codeclimate.com/github/klassijs/klassijs-cucumber-html-reporter) [![License](https://img.shields.io/npm/l/klassijs-cucumber-html-reporter.svg)](LICENSE) [![contributors](https://img.shields.io/github/contributors/klassijs/klassijs-cucumber-html-reporter.svg)](https://github.com/klassijs/klassijs-cucumber-html-reporter/graphs/contributors)
+![npm](https://img.shields.io/npm/v/klassijs-cucumber-html-reporter) [![Maintainability](https://api.codeclimate.com/v1/badges/aa67292c3ab413cb0d32/maintainability)](https://codeclimate.com/github/klassijs/klassi-js/maintainability) ![NPM](https://img.shields.io/npm/l/klassijs-cucumber-html-reporter) [![contributors](https://img.shields.io/github/contributors/klassijs/klassijs-cucumber-html-reporter.svg)](https://github.com/klassijs/klassijs-cucumber-html-reporter/graphs/contributors)
 
 
 > Available HTML themes: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
