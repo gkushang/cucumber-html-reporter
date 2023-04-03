@@ -1,6 +1,6 @@
 # klassijs-cucumber-html-reporter
 
-***Generate Cucumber HTML reports with pie charts***
+***Generates HTML reports with pie charts for Cucumber***
 
 ![npm](https://img.shields.io/npm/v/klassijs-cucumber-html-reporter) [![Maintainability](https://api.codeclimate.com/v1/badges/aa67292c3ab413cb0d32/maintainability)](https://codeclimate.com/github/klassijs/klassi-js/maintainability) ![NPM](https://img.shields.io/npm/l/klassijs-cucumber-html-reporter) [![contributors](https://img.shields.io/github/contributors/klassijs/klassijs-cucumber-html-reporter.svg)](https://github.com/klassijs/klassijs-cucumber-html-reporter/graphs/contributors)
 
@@ -9,7 +9,7 @@
 
 ## Preview of HTML Reports
 
-Provide Cucumber JSON report file created from your framework and this module will create pretty HTML reports. Choose your best suitable HTML theme and dashboard on your CI with available HTML reporter plugins.
+Provide a Cucumber JSON report file created from your framework and this module will generate a pretty HTML report. Choose the best suitable HTML theme and dashboard for your CI from the available HTML reporter style.
 
 1. [Bootstrap Theme Reports with Pie Chart][4]
 2. [Hierarchical Feature Structure Theme Reports With Pie Chart][3]
@@ -20,7 +20,7 @@ Provide Cucumber JSON report file created from your framework and this module wi
 ## Snapshot of Bootstrap Report
 ![Alt text](./samples/html_report_snapshots/cucumber_report_bootstrap_snapshot.png "Snapshot - Bootstrap Report")
 
-###### More snapshots are availble [here][9]
+###### More snapshots are available [here][9]
 
 ## Install
 
@@ -30,7 +30,7 @@ npm install klassijs-cucumber-html-reporter --save-dev
 
 ***Notes:***
 
-* Latest version supports Cucumber 8
+* Latest version supports Cucumber v8
 * Install `cucumber-html-reporter@5.5.0` for cucumber version `< Cucumber@8`
 
 
@@ -39,7 +39,7 @@ npm install klassijs-cucumber-html-reporter --save-dev
 Let's get you started:
 
 1. Install the package through npm or yarn
-2. Create an reporter.js and specify the options. Example of `hierarchy` theme:
+2. Create a reporter.js and specify the options. Example of `hierarchy` theme:
 
 ```js
 
@@ -103,7 +103,7 @@ $ cucumberjs test/features/ -f summary -f json:test/report/cucumber_report.json
 Available: `['bootstrap', 'hierarchy', 'foundation', 'simple']`
 Type: `String`
 
-Select the Theme for HTML report.
+Select the Theme for your HTML report.
 
 N.B: Hierarchy theme is best suitable if your features are organized under features-folder hierarchy. Each folder will be rendered as a HTML Tab. It supports up to 3-level of nested folder hierarchy structure.
 
@@ -143,9 +143,9 @@ Type: `Boolean`
 
 Automatically launch HTML report at the end of test suite
 
-`true`: Launch HTML report in the default browser
+`true`: Launch HTML report in the default browser at the end of test run
 
-`false`: Do not launch HTML report at the end of test suite
+`false`: Do not launch HTML report at the end of test run
 
 #### `ignoreBadJsonFile`
 Type: `Boolean`
@@ -293,7 +293,7 @@ Attach JSON to HTML report
 
 ```
 ## Credits
-[Kushang Gajjar](https://github.com/gkushang)
+Created by [Kushang Gajjar](https://github.com/gkushang)
 
 ## Changelog
 [changelog][10]

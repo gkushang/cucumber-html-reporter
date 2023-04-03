@@ -10,16 +10,16 @@
   },
   "contributors": [
     {
+      "name": "larryG",
+      "url": "https://github.com/larryg01"
+    },
+    {
       "name": "carlosbermejop",
       "url": "https://github.com/carlosbermejop"
     },
     {
       "name": "BatsFanatic",
       "url": "https://github.com/BatsFanatic"
-    },
-    {
-      "name": "larryG",
-      "url": "https://github.com/larryg01"
     }
   ],
   "repository": {
@@ -43,6 +43,7 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/klassijs/klassijs-cucumber-html-reporter#readme",
+
   "dependencies": {
     "chalk": "4.1.2",
     "find": "^0.3.0",
