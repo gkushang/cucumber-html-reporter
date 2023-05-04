@@ -1,5 +1,5 @@
 {
-  "name": "@abhay/cucumber-html-reporter-temp",
+  "name": "@abhaygarg/cucumber-html-reporter-temp",
   "version": "1.0.0",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
