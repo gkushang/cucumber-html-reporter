@@ -1,5 +1,5 @@
 {
-  "name": "cucumber-html-reporter-temp",
+  "name": "@abhay/cucumber-html-reporter-temp",
   "version": "1.0.0",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
@@ -153,7 +153,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gkushang/cucumber-html-reporter.git"
+    "url": "https://github.com/abhaygarg98/cucumber-html-reporter-temp.git"
   },
   "bugs": {
     "url": "https://github.com/gkushang/cucumber-html-reporter/issues",
