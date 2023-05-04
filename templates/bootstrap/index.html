@@ -178,14 +178,6 @@
         <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
       </div>
 
-      <div>
-        <p class="text-right">
-          <a id="expand_all">Expand All</a>
-          <span> | </span>
-          <a id="collapse_all">Collapse All</a>
-        </p>
-      </div>
-
       <% if (suite.metadata) { %>
       <div class="panel panel-default">
         <div class="panel-heading open">
@@ -219,6 +211,73 @@
 
       <%= features %>
 
+       <% if (suite.failedSummaryReport) { %>
+            <div class="panel panel-default">
+              <div class="panel-heading open">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#failed_summary">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Failed Test Scenarios Summary</b>
+                  </a>
+                </h4>
+              </div>
+
+              <div class="panel-collapse collapse in" id="failed_summary">
+                <div class="panel-body">
+                  <table class="table table-bordered table-condensed">
+                    <% if (suite.scenarios.failed===0) { %>
+                      <div>
+                        <p class="text-center">Nothing to show</p>
+                      </div>
+                      <% } %>
+                        <% if (suite.features) { %>
+                          <% _.each(suite.features, function(features, featureIndex) { %>
+
+                            <% _.each(features.elements, function(elements) { %>
+                              <% if (elements.failed) { %>
+                                <tr>
+                                  <th>Feature</th>
+                                  <th>Scenario</th>
+                                  <th>Tags</th>
+                                  <th>Step Failed</th>
+                                  <th>Failed Exception</th>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <%= features.name %>
+                                  </td>
+                                  <td>
+                                    <%= elements.name %>
+                                  </td>
+                                  <td>
+                                    <% _.each(elements.tags, function(tags) { %>
+                                      <span>
+                                        <%= tags.name %>
+                                      </span>
+                                      <% }); %>
+                                  </td>
+
+                                  <% _.each(elements.steps, function(steps) { %>
+                                    <% if (steps.result.status==='failed' ) { %>
+                                      <td>
+                                        <%= steps.name %>
+                                      </td>
+                                      <td>
+                                        <%= steps.result.error_message %>
+                                      </td>
+                                      <% } %>
+                                        <% }); %>
+                                          <% } %>
+                                            <% }); %>
+                                </tr>
+                                <% }); %>
+                                  <% } %>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <% } %>
     </div>
 
 
