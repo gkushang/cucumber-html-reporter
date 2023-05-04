@@ -62,7 +62,8 @@ var options = {
             "Platform": "Windows 10",
             "Parallel": "Scenarios",
             "Executed": "Remote"
-        }
+        },
+        failedSummaryReport: true,
     };
 
     reporter.generate(options);
@@ -243,6 +244,14 @@ Pass the _Key-Value_ pair as per your need, as shown in below example,
 * [HTML Report Preview with Metadata][4]
 * [Report Snapshot with Metadata][11]
 
+#### `failedSummaryReport`
+Type: `Boolean`
+
+A summary report of all failed scenarios will be listed in a grid, which its scenario title, tags, failed step and exception.
+
+`true`: Insert failed summary report.
+
+`false`: Failed summary report will not be inserted.
 
 ## Tips
 

@@ -40,6 +40,7 @@ function getOptions(theme) {
       Parallel: 'Scenarios',
       Executed: 'Remote',
     },
+    failedSummaryReport: true,
   };
 }
 
