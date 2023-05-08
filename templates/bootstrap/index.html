@@ -252,52 +252,54 @@
               <div class="panel-collapse collapse in" id="failed_summary">
                 <div class="panel-body">
                   <table class="table table-bordered table-condensed">
-                    <tr>
-                      <th>Feature</th>
-                      <th>Scenario</th>
-                      <th>Tags</th>
-                      <th>Step Failed</th>
-                      <th>Failed Exception</th>
-                    </tr>
                     <% if (suite.scenarios.failed===0) { %>
                       <div>
                         <p class="text-center">Nothing to show</p>
                       </div>
                       <% } %>
-                        <% if (suite.features) { %>
-                          <% _.each(suite.features, function(features, featureIndex) { %>
-                            <% _.each(features.elements, function(elements) { %>
-                              <% if (elements.failed) { %>
-                                <tr>
-                                  <td>
-                                    <%= features.name %>
-                                  </td>
-                                  <td>
-                                    <%= elements.name %>
-                                  </td>
-                                  <td>
-                                    <% _.each(elements.tags, function(tags) { %>
-                                      <span>
-                                        <%= tags.name %>
-                                      </span>
-                                      <% }); %>
-                                  </td>
+                        <% if (suite.scenarios.failed!==0) { %>
+                          <tr>
+                            <th>Feature</th>
+                            <th>Scenario</th>
+                            <th>Tags</th>
+                            <th>Step Failed</th>
+                            <th>Failed Exception</th>
+                          </tr>
+                          <% } %>
+                            <% if (suite.features) { %>
+                              <% _.each(suite.features, function(features, featureIndex) { %>
+                                <% _.each(features.elements, function(elements) { %>
+                                  <% if (elements.failed) { %>
+                                    <tr>
+                                      <td>
+                                        <%= features.name %>
+                                      </td>
+                                      <td>
+                                        <%= elements.name %>
+                                      </td>
+                                      <td>
+                                        <% _.each(elements.tags, function(tags) { %>
+                                          <span>
+                                            <%= tags.name %>
+                                          </span>
+                                          <% }); %>
+                                      </td>
 
-                                  <% _.each(elements.steps, function(steps) { %>
-                                    <% if (steps.result.status==='failed' ) { %>
-                                      <td>
-                                        <%= steps.name %>
-                                      </td>
-                                      <td>
-                                        <%= steps.result.error_message %>
-                                      </td>
-                                      <% } %>
-                                        <% }); %>
+                                      <% _.each(elements.steps, function(steps) { %>
+                                        <% if (steps.result.status==='failed' ) { %>
+                                          <td>
+                                            <%= steps.name %>
+                                          </td>
+                                          <td>
+                                            <%= steps.result.error_message %>
+                                          </td>
                                           <% } %>
                                             <% }); %>
-                                </tr>
-                                <% }); %>
-                                  <% } %>
+                                              <% } %>
+                                                <% }); %>
+                                    </tr>
+                                    <% }); %>
+                                      <% } %>
                   </table>
                 </div>
               </div>
