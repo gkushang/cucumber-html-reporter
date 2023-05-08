@@ -231,18 +231,19 @@
                         <p class="text-center">Nothing to show</p>
                       </div>
                       <% } %>
+                        <% if (suite.scenarios.failed!==0) { %>
+                          <tr>
+                            <th>Feature</th>
+                            <th>Scenario</th>
+                            <th>Tags</th>
+                            <th>Step Failed</th>
+                            <th>Failed Exception</th>
+                          </tr>
                         <% if (suite.features) { %>
                           <% _.each(suite.features, function(features, featureIndex) { %>
 
                             <% _.each(features.elements, function(elements) { %>
                               <% if (elements.failed) { %>
-                                <tr>
-                                  <th>Feature</th>
-                                  <th>Scenario</th>
-                                  <th>Tags</th>
-                                  <th>Step Failed</th>
-                                  <th>Failed Exception</th>
-                                </tr>
                                 <tr>
                                   <td>
                                     <%= features.name %>
