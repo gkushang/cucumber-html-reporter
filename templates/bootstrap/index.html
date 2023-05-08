@@ -252,6 +252,13 @@
               <div class="panel-collapse collapse in" id="failed_summary">
                 <div class="panel-body">
                   <table class="table table-bordered table-condensed">
+                    <tr>
+                      <th>Feature</th>
+                      <th>Scenario</th>
+                      <th>Tags</th>
+                      <th>Step Failed</th>
+                      <th>Failed Exception</th>
+                    </tr>
                     <% if (suite.scenarios.failed===0) { %>
                       <div>
                         <p class="text-center">Nothing to show</p>
@@ -259,16 +266,8 @@
                       <% } %>
                         <% if (suite.features) { %>
                           <% _.each(suite.features, function(features, featureIndex) { %>
-
                             <% _.each(features.elements, function(elements) { %>
                               <% if (elements.failed) { %>
-                                <tr>
-                                  <th>Feature</th>
-                                  <th>Scenario</th>
-                                  <th>Tags</th>
-                                  <th>Step Failed</th>
-                                  <th>Failed Exception</th>
-                                </tr>
                                 <tr>
                                   <td>
                                     <%= features.name %>
