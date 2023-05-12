@@ -1,45 +1,154 @@
 {
   "name": "cucumber-html-reporter-temp",
-  "version": "2.0.0",
+  "version": "6.0.0",
   "description": "Generates Cucumber HTML reports in three different themes",
   "main": "index.js",
   "typings": "./index.d.ts",
-  "author": "Kushang Gajjar <g.kushang@gmail.com>",
+  "author": {
+    "name": "Kushang Gajjar",
+    "email": "g.kushang@gmail.com"
+  },
   "contributors": [
-    "larryg01 (https://github.com/larryg01)",
-    "Galileo1 (https://github.com/Galileo1)",
-    "LiQiang (https://github.com/li-qiang)",
-    "Igor Muchychka (https://github.com/mucsi96)",
-    "Miguel Ángel Domínguez (https://github.com/eridem)",
-    "Thyagarajulu Atthipatla (https://github.com/thyagab)",
-    "Alexandros D (https://github.com/AlexandrosD)",
-    "spujar (https://github.com/spujar)",
-    "Craeg Strong (https://github.com/cstrong)",
-    "anrodkin (https://github.com/anrodkin)",
-    "spukst3r (https://github.com/spukst3r)",
-    "klimenko4 (https://github.com/klimenko4)",
-    "telaoumatenyanis (https://github.com/telaoumatenyanis)",
-    "jingfuxiang (https://github.com/jingfuxiang)",
-    "StefanPi-gfk (https://github.com/StefanPi-gfk)",
-    "binalabs (https://github.com/binalabs)",
-    "rakeshkumar5b4 (https://github.com/rakeshkumar5b4)",
-    "xywang68 (https://github.com/xywang68)",
-    "aurell14 (https://github.com/aurell14)",
-    "mkginfo (https://github.com/mkginfo)",
-    "tiborv (https://github.com/tiborv)",
-    "mgor (https://github.com/mgor)",
-    "mattvass (https://github.com/mattvass)",
-    "LoicL66 (https://github.com/LoicL66)",
-    "srbarrios (https://github.com/srbarrios)",
-    "glitchassassin (https://github.com/glitchassassin)",
-    "ncounter (https://github.com/ncounter)",
-    "eiszfuchs (https://github.com/eiszfuchs)",
-    "davestaab (https://github.com/davestaab)",
-    "hujunhaorobert (https://github.com/hujunhaorobert)",
-    "ErikGrigoriev (https://github.com/ErikGrigoriev)",
-    "roland-vachter (https://github.com/roland-vachter)",
-    "sv3k (https://github.com/sv3k)",
-    "Fabienmrqs (https://github.com/Fabienmrqs)"
+    {
+      "name": "larryg01",
+      "url": "https://github.com/larryg01"
+    },
+    {
+      "name": "Galileo1",
+      "url": "https://github.com/Galileo1"
+    },
+    {
+      "name": "LiQiang",
+      "url": "https://github.com/li-qiang"
+    },
+    {
+      "name": "Igor Muchychka",
+      "url": "https://github.com/mucsi96"
+    },
+    {
+      "name": "Miguel Ángel Domínguez",
+      "url": "https://github.com/eridem"
+    },
+    {
+      "name": "Thyagarajulu Atthipatla",
+      "url": "https://github.com/thyagab"
+    },
+    {
+      "name": "Alexandros D",
+      "url": "https://github.com/AlexandrosD"
+    },
+    {
+      "name": "spujar",
+      "url": "https://github.com/spujar"
+    },
+    {
+      "name": "Craeg Strong",
+      "url": "https://github.com/cstrong"
+    },
+    {
+      "name": "anrodkin",
+      "url": "https://github.com/anrodkin"
+    },
+    {
+      "name": "spukst3r",
+      "url": "https://github.com/spukst3r"
+    },
+    {
+      "name": "klimenko4",
+      "url": "https://github.com/klimenko4"
+    },
+    {
+      "name": "telaoumatenyanis",
+      "url": "https://github.com/telaoumatenyanis"
+    },
+    {
+      "name": "jingfuxiang",
+      "url": "https://github.com/jingfuxiang"
+    },
+    {
+      "name": "StefanPi-gfk",
+      "url": "https://github.com/StefanPi-gfk"
+    },
+    {
+      "name": "binalabs",
+      "url": "https://github.com/binalabs"
+    },
+    {
+      "name": "rakeshkumar5b4",
+      "url": "https://github.com/rakeshkumar5b4"
+    },
+    {
+      "name": "xywang68",
+      "url": "https://github.com/xywang68"
+    },
+    {
+      "name": "aurell14",
+      "url": "https://github.com/aurell14"
+    },
+    {
+      "name": "mkginfo",
+      "url": "https://github.com/mkginfo"
+    },
+    {
+      "name": "tiborv",
+      "url": "https://github.com/tiborv"
+    },
+    {
+      "name": "mgor",
+      "url": "https://github.com/mgor"
+    },
+    {
+      "name": "mattvass",
+      "url": "https://github.com/mattvass"
+    },
+    {
+      "name": "LoicL66",
+      "url": "https://github.com/LoicL66"
+    },
+    {
+      "name": "srbarrios",
+      "url": "https://github.com/srbarrios"
+    },
+    {
+      "name": "glitchassassin",
+      "url": "https://github.com/glitchassassin"
+    },
+    {
+      "name": "ncounter",
+      "url": "https://github.com/ncounter"
+    },
+    {
+      "name": "eiszfuchs",
+      "url": "https://github.com/eiszfuchs"
+    },
+    {
+      "name": "davestaab",
+      "url": "https://github.com/davestaab"
+    },
+    {
+      "name": "hujunhaorobert",
+      "url": "https://github.com/hujunhaorobert"
+    },
+    {
+      "name": "ErikGrigoriev",
+      "url": "https://github.com/ErikGrigoriev"
+    },
+    {
+      "name": "roland-vachter",
+      "url": "https://github.com/roland-vachter"
+    },
+    {
+      "name": "sv3k",
+      "url": "https://github.com/sv3k"
+    },
+    {
+      "name": "Fabienmrqs ",
+      "url": "https://github.com/Fabienmrqs"
+    },
+    {
+      "name": "abhaygarg98 ",
+      "url": "https://github.com/abhaygarg98"
+    }
   ],
   "scripts": {
     "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
@@ -48,7 +157,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhaygarg98/cucumber-html-reporter-temp.git"
+    "url": "git+https://github.com/gkushang/cucumber-html-reporter.git"
   },
   "bugs": {
     "url": "https://github.com/gkushang/cucumber-html-reporter/issues",
