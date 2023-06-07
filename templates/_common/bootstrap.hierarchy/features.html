@@ -61,7 +61,7 @@
                                         <div style="padding-right: <%= decideScenarioTitlePadding(element) %>">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b><%= element.keyword %>:</b><%= element.name %>
+                                            <b><%= element.keyword %>:</b><div class="ellipsis" data-text="<%= _.escape(element.name) %>"><%= element.name %></div>
                                         </div>
                                         <div>
                             <span class="label-container <% if (element.retried) { %>label-retries<% } %>">
