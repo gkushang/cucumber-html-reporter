@@ -253,6 +253,10 @@ pre {
     color: #616161;
 }
 
+.stepname {
+    word-wrap: break-word;
+}
+
 .feature-passed {
     display: block;
 }
