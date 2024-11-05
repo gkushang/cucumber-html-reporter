@@ -1,3 +1,4 @@
+/.yarn/cache/
 /.idea/
 /node_modules/
 test/report/*.html
