@@ -295,7 +295,7 @@
                                             <%= steps.name %>
                                           </td>
                                           <td>
-                                            <%= steps.result.error_message %>
+                                            <%= steps.result.error_message.replace(/</g, '(').replace(/>/g, ')') %>
                                           </td>
                                           <% } %>
                                             <% }); %>
