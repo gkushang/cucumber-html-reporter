@@ -1,3 +1,9 @@
+### 7.2.1 (Nov-25-2026)
+
+* Fix Bootstrap report accordions when failure messages contain HTML tags [#305](https://github.com/gkushang/cucumber-html-reporter/pull/305)
+* Update the es5-ext transitive dependency to 0.10.64 [#299](https://github.com/gkushang/cucumber-html-reporter/pull/299)
+* Exclude local tooling and dependency caches from the npm package
+
 ### 6.0.0 (Mar-02-2023)
 * upgraded to be compatible with cucumber v8.9.1
 * upgraded all other dependencies to their latest versions
