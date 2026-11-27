@@ -151,7 +151,7 @@
     }
   ],
   "scripts": {
-    "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
+    "pretest": "node node_modules/.bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
     "clean": "rm -rf screenshots",
     "test": "node test/createHtmlReports.js"
   },
@@ -173,23 +173,23 @@
   "license": "MIT",
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
-    "@cucumber/cucumber": "9.1.2",
-    "chalk": "^2.4.2",
+    "@cucumber/cucumber": "^11.2.0",
+    "chalk": "^5.4.1",
     "find": "^0.3.0",
-    "fs-extra": "^8.1.0",
-    "js-base64": "^2.3.2",
-    "jsonfile": "^5.0.0",
-    "lodash": "^4.17.11",
-    "node-emoji": "^1.10.0",
-    "open": "^6.4.0",
-    "uuid": "^3.3.3"
+    "fs-extra": "^11.3.0",
+    "js-base64": "^3.7.7",
+    "jsonfile": "^6.1.0",
+    "lodash": "^4.17.21",
+    "node-emoji": "^2.2.0",
+    "open": "^10.1.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "cucumber": "^5.1.0"
+    "chai": "^5.2.0"
   },
   "directories": {
     "lib": "lib",
     "test": "test"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
